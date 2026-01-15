@@ -8,7 +8,7 @@ However, a category must additionally respect the following laws:
 - If there exists a morphism `f` from `A` to `B` (henceforth denoted `f : A -> B`), and `g : B -> C`,
 there also exists a morphism `f . g` (also denoted as `g ∘ f`) from `A` to `C`. This is morphism composition.
 - Morphism composition is associative. That is, `(f . g) . h = f . (g . h)`
-- Composing with `id` morphisms does not change the result. that is, given `f : X -> Y`, `g : Y -> X`, 
+- Composing with `id` morphisms does not change the result. That is, given `f : X -> Y`, `g : Y -> X`, 
 we have `(id X) . f = f`, `g . (id X) = g`.
 
 ## What are the objects and morphisms?
