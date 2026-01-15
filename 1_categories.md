@@ -1,8 +1,6 @@
-# Category Theory
+# Part 1: Categories
 
-## Part 1: Categories
-
-### Definition
+## Definition
 A category is a set[^1] of objects, paired with a set of morphisms from some object `A` to some object `B`.
 It can be envisioned as a type of directed multigraph, with the objects acting as nodes and morphisms as edges.
 However, a category must additionally respect the following laws:
@@ -13,7 +11,7 @@ there also exists a morphism `f . g` (also denoted as `g ∘ f`) from `A` to `C`
 - Composing with `id` morphisms does not change the result. that is, given `f : X -> Y`, `g : Y -> X`, 
 we have `(id X) . f = f`, `g . (id X) = g`.
 
-### What are the objects and morphisms?
+## What are the objects and morphisms?
 
 A category is anything that can be modeled as a category, by the definition given above.
 Morphisms can be thought of as any sort of relation which is composable.
@@ -22,7 +20,7 @@ This is intentionally a very generic definition.
 It is useful to think of it as more akin to an interface that a structure must implement in order to be classified
 as a category, rather than a definition in the traditional sense.
 
-### What is the intuition behind this definition?
+## What is the intuition behind this definition?
 
 The most essential category is `Set`. It is a category where the objects are sets, and the morphisms are functions.
 It can be easily checked that for any set `S`, there is an id function `id S`, which maps each element to itself.
@@ -43,7 +41,7 @@ elements of this category can also be conceptualized as sets, but in `Set`, ther
 namely `{0 : 0, 1 : 0}`. However, in our new category (which is a preorder), that is not a valid morphism.
 This illustrates the sense in which category theory acts as a broad generalization of set theory.
 
-### Isomorphisms
+## Isomorphisms
 
 An isomorphism is a morphism `f` between two objects `A` and `B`, such that there is also a
 morphism `g` between `B` and `A`, so that `g . f = id A` and `f . g = id B`. `g` is the inverse morphism of `f`.
@@ -57,7 +55,7 @@ and by analogy for the other three cases, all morphism pairs are recoverable fro
 In other words, the morphisms going into and out of `A` and `B` have a one-to-one equivalence. Or simply put, any
 statement about `A` within a category also applies to `B`. So, in practice, the two objects can be used interchangeably.
 
-### Other categories
+## Other categories
 
 `FinSet` is the category of finite sets. Within `FinSet` (as well as within `Set`), if two objects (i.e. sets) have the
 same number of elements, they are isomorphic. This is because there is a bijective function between the two, which maps
