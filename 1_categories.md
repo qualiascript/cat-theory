@@ -66,7 +66,7 @@ So the inverse function can be easily defined by inverting the domain and codoma
 constant function, which is what `id` is within `FinSet` (as a subcategory of `Set`).
 
 As such, any set with `n` elements is isomorphic to the set `n`. So, without any loss of accuracy, we can simply state
-that the objects of FinSet are the natural numbers, `0`, `1`, `2`, etc.
+that the objects of `FinSet` are the natural numbers, `0`, `1`, `2`, etc.
 
 Another way of defining a category is by specifying its underlying directed multigraph. As such, we can define the
 following family of categories:
