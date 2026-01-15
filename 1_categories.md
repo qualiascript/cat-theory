@@ -7,8 +7,11 @@ A category is a set[^1] of objects, paired with a set of morphisms from some obj
 It can be envisioned as a type of directed multigraph, with the objects acting as nodes and morphisms as edges.
 However, a category must additionally respect the following laws:
 - For any object `X` in a category `C`, there is always at least one morphism from `X` to itself, denoted as `id X`
-- If there exists a morphism `f` from `A` to `B`, and a morphism `g` from `B` to `C`, there also exists a morphism
-`f . g` (also denoted as `g ∘ f`) from `A` to `C`
+- If there exists a morphism `f` from `A` to `B` (henceforth denoted `f : A -> B`), and `g : B -> C`,
+there also exists a morphism `f . g` (also denoted as `g ∘ f`) from `A` to `C`. This is morphism composition.
+- Morphism composition is associative. That is, `(f . g) . h = f . (g . h)`
+- Composing with `id` morphisms does not change the result. that is, given `f : X -> Y`, `g : Y -> X`, 
+we have `(id X) . f = f`, `g . (id X) = g`.
 
 ### What are the objects and morphisms?
 
@@ -24,7 +27,7 @@ as a category, rather than a definition in the traditional sense.
 The most essential category is `Set`. It is a category where the objects are sets, and the morphisms are functions.
 It can be easily checked that for any set `S`, there is an id function `id S`, which maps each element to itself.
 It can also be easily checked that for any two functions `f : A -> B`, `g : B -> C`, there is a composite function
-`f . g`, that maps any `x` in `A` to the result of `g(f(x))`.
+`f . g`, that maps any `x` in `A` to the result of `g(f(x))`. Associativity and composition with `id` also apply.
 
 In fact, `Set` can be seen as the archetypal category. Any mathematical object can be modeled as a set,
 but within `Set`, any function that can be defined is a valid morphism. Other categories can have a more restrictive
@@ -46,12 +49,13 @@ An isomorphism is a morphism `f` between two objects `A` and `B`, such that ther
 morphism `g` between `B` and `A`, so that `g . f = id A` and `f . g = id B`. `g` is the inverse morphism of `f`.
 
 This means that for any object `X`, if there is a morphism `X -> A`, it can be composed with f on the right 
-(i.e., `X -> A . f`) to get a morphism `X -> B`, and the other way around. As such, the set of morphisms that end
-in `A` is in one-to-one correspondence with the set of morphisms that end in `B`. Furthermore, the same can be shown for
-`A -> X` and `B -> X`, by precomposing (composing on the left) with `g` and `f` respectively.
+(i.e., `X -> A . f`) to get a morphism `X -> B`, and the other way around. The same can be shown for`A -> X` and
+`B -> X`, by precomposing (composing on the left) with `g` and `f` respectively. Furthermore, since
+`A -> B -> A = id A`, `X -> A = (X -> A -> B) -> A = X -> B -> A`, shows that `X -> A` is recoverable from `X -> B`,
+and by analogy for the other three cases, all morphism pairs are recoverable from one to another.
 
-In other words, the morphisms going into and out of `A` and `B` have an one-to-one mapping. Or simply put, anything you
-say about `A` within a category also applies to `B`. So, in practice, the two objects can be used interchangeably.
+In other words, the morphisms going into and out of `A` and `B` have a one-to-one equivalence. Or simply put, any
+statement about `A` within a category also applies to `B`. So, in practice, the two objects can be used interchangeably.
 
 ### Other categories
 
