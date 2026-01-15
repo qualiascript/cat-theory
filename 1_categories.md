@@ -46,11 +46,11 @@ An isomorphism is a morphism `f` between two objects `A` and `B`, such that ther
 morphism `g` between `B` and `A`, so that `g . f = id A` and `f . g = id B`. `g` is the inverse morphism of `f`.
 
 This means that for any object `X`, if there is a morphism `X -> A`, it can be composed with f on the right 
-to get a morphism `X -> B`, and the other way around. As such, the set of morphisms that end in `A` is in one-to-one
-correspondence with the set of morphisms that end in `B`. Furthermore, the same can be shown for `A -> X` and `B -> X`,
-by precomposing (composing on the left) with `g` and `f` respectively.
+(i.e., `X -> A . f`) to get a morphism `X -> B`, and the other way around. As such, the set of morphisms that end
+in `A` is in one-to-one correspondence with the set of morphisms that end in `B`. Furthermore, the same can be shown for
+`A -> X` and `B -> X`, by precomposing (composing on the left) with `g` and `f` respectively.
 
-In other words, the morphisms going into and out of `A` and `B` have a one to one mapping. Or simply put, anything you
+In other words, the morphisms going into and out of `A` and `B` have an one-to-one mapping. Or simply put, anything you
 say about `A` within a category also applies to `B`. So, in practice, the two objects can be used interchangeably.
 
 ### Other categories
@@ -73,7 +73,8 @@ following family of categories:
 
 These categories can be safely denoted using the natural numbers. This is because, as they have no non-trivial
 morphisms, they can be defined solely by their set of objects, and as we've seen, within `FinSet`, any set with
-`n` values is isomorphic to `n`.
+`n` values is isomorphic to `n`. Intuitively, the number `2` is an abstract representation of the existence of exactly
+two objects of some type, which the categorical definition illustrates.
 
 [^1]: Technically, it is only a set for so-called small categories, otherwise it is a class.
 However, due to Grothendieck universes, one can usually assume it to be a set
