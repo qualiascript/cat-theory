@@ -1,15 +1,16 @@
 # Part 1: Categories
 
 ## Definition
-A category is a set[^1] of objects, paired with a set of morphisms from some object `A` to some object `B`.
-It can be envisioned as a type of directed multigraph, with the objects acting as nodes and morphisms as edges.
-However, a category must additionally respect the following laws:
-- For any object `X` in a category `C`, there is always at least one morphism from `X` to itself, denoted as `id X`
+A category is a set[^1] of objects, paired with a set of morphisms from some object `A` to some object `B`. It can be
+envisioned as a type of directed multigraph (although not every directed multigraph makes for a valid category), with
+the objects acting as nodes and morphisms as edges. Additionally, a category must respect the following laws:
 - If there exists a morphism `f` from `A` to `B` (henceforth denoted `f : A -> B`), and `g : B -> C`,
 there also exists a morphism `f . g` (also denoted as `g ∘ f`) from `A` to `C`. This is morphism composition.
-- Morphism composition is associative. That is, `(f . g) . h = f . (g . h)`
-- Composing with `id` morphisms does not change the result. that is, given `f : X -> Y`, `g : Y -> X`, 
-we have `(id X) . f = f`, `g . (id X) = g`.
+- For any object `X` in a category `C`, there is always (at least) one morphism from `X` to itself, denoted as `id X`. 
+Composing with `id` morphisms does not change the result. that is, given `f : X -> Y`, `g : Y -> X`, we have
+`(id X) . f = f`, `g . (id X) = g`.
+- Morphism composition is associative. That is, `(f . g) . h = f . (g . h)` if the domains and codomains
+of `f`, `g`, `h` match up to make composition possible.
 
 ## What are the objects and morphisms?
 
@@ -49,8 +50,8 @@ morphism `g` between `B` and `A`, so that `g . f = id A` and `f . g = id B`. `g`
 This means that for any object `X`, if there is a morphism `X -> A`, it can be composed with f on the right 
 (i.e., `X -> A . f`) to get a morphism `X -> B`, and the other way around. The same can be shown for`A -> X` and
 `B -> X`, by precomposing (composing on the left) with `g` and `f` respectively. Furthermore, since
-`A -> B -> A = id A`, `X -> A = (X -> A -> B) -> A = X -> B -> A`, shows that `X -> A` is recoverable from `X -> B`,
-and by analogy for the other three cases, all morphism pairs are recoverable from one to another.
+`A -> B -> A = id A`, `X -> A = (X -> A -> B) -> A = X -> B -> A`, shows that given `X -> B`, one can reconstruct
+`X -> A`, and by analogy for the other three cases, all morphism pairs are recoverable from one to another.
 
 In other words, the morphisms going into and out of `A` and `B` have a one-to-one equivalence. Or simply put, any
 statement about `A` within a category also applies to `B`. So, in practice, the two objects can be used interchangeably.
@@ -78,5 +79,4 @@ morphisms, they can be defined solely by their set of objects, and as we've seen
 `n` values is isomorphic to `n`. Intuitively, the number `2` is an abstract representation of the existence of exactly
 two objects of some type, which the categorical definition illustrates.
 
-[^1]: Technically, it is only a set for so-called small categories, otherwise it is a class.
-However, due to Grothendieck universes, one can usually assume it to be a set
+[^1]: Technically, it is only a set for so-called small categories, otherwise it is a class. However, due to Grothendieck universes, one can usually assume it to be a set
