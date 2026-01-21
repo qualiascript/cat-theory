@@ -1,4 +1,4 @@
 # Category Theory Guide
 
 Chapters:
-- [I. Categories](1_categories.md)
+- [I. Categories](chapters/001_categories.md)

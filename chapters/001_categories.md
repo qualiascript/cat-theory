@@ -1,4 +1,4 @@
-# Part 1: Categories
+# Chapter 1: Categories
 
 ## Definition
 A category is a set[^1] of objects, paired with a set of morphisms from some object `A` to some object `B`. It can be
