@@ -7,7 +7,7 @@ the objects acting as nodes and morphisms as edges. Additionally, a category mus
 - If there exists a morphism `f` from `A` to `B` (henceforth denoted `f : A -> B`), and `g : B -> C`,
 there also exists a morphism `f . g` (also denoted as `g ∘ f`) from `A` to `C`. This is morphism composition.
 - For any object `X` in a category `C`, there is always (at least) one morphism from `X` to itself, denoted as `id X`. 
-Composing with `id` morphisms does not change the result. that is, given `f : X -> Y`, `g : Y -> X`, we have
+Composing with `id` morphisms does not change the result. That is, given `f : X -> Y`, `g : Y -> X`, we have
 `(id X) . f = f`, `g . (id X) = g`.
 - Morphism composition is associative. That is, `(f . g) . h = f . (g . h)` if the domains and codomains
 of `f`, `g`, `h` match up to make composition possible.
