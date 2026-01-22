@@ -59,10 +59,10 @@ statement about `A` within a category also applies to `B`. So, in practice, the 
 ## Other categories
 
 `FinSet` is the category of finite sets. Within `FinSet` (as well as within `Set`), if two objects (i.e. sets) have the
-same number of elements, they are isomorphic. This is because there is a bijective function between the two, which maps
-each element from `A` to a different element from `B` (is injective) and reaches all elements in `B` (is surjective).
-So the inverse function can be easily defined by inverting the domain and codomain, and composing the two returns a
-constant function, which is what `id` is within `FinSet` (as a subcategory of `Set`).
+same number of elements (i.e. cardinality), they are isomorphic. This is because there is a bijective function between 
+the two, which maps each element from `A` to a different element from `B` (is injective) and reaches all elements in `B`
+(is surjective). So the inverse function can be easily defined by inverting the domain and codomain, and composing the
+two returns a constant function, which is what `id` is within `FinSet` (as a subcategory of `Set`).
 
 As such, any set with `n` elements is isomorphic to the set `n`. So, without any loss of accuracy, we can simply state
 that the objects of `FinSet` are the natural numbers, `0`, `1`, `2`, etc.
