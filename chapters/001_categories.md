@@ -12,7 +12,7 @@ Composing with `id` morphisms does not change the result. That is, given `f : X 
 - Morphism composition is associative. That is, `(f . g) . h = f . (g . h)` if the domains and codomains
 of `f`, `g`, `h` match up to make composition possible.
 
-## What are the objects and morphisms?
+## Objects and morphisms
 
 A category is anything that can be modeled as a category, by the definition given above.
 Morphisms can be thought of as any sort of relation which is composable.
@@ -21,7 +21,7 @@ This is intentionally a very generic definition.
 It is useful to think of it as more akin to an interface that a structure must implement in order to be classified
 as a category, rather than a definition in the traditional sense.
 
-## What is the intuition behind this definition?
+## Category intuition
 
 The most essential category is `Set`. It is a category where the objects are sets, and the morphisms are functions.
 It can be easily checked that for any set `S`, there is an id function `id S`, which maps each element to itself.
@@ -57,6 +57,11 @@ In other words, the morphisms going into and out of `A` and `B` have a one-to-on
 statement about `A` within a category also applies to `B`. So, in practice, the two objects can be used interchangeably.
 
 ## Other categories
+
+For any two categories, `A` and `B`, there is a product category `A * B`. This is obtained by simply applying the
+Cartesian product operation to the underlying object sets and morphism sets of the two categories. Its elements
+are pairs of elements `(a, b)`, where `a` is an object of `A` and `b` an object of `B`. Its morphisms are
+`(f, g) : (x1, x2) -> (y1, y2)`. Products will be explored in more detail later on.
 
 `FinSet` is the category of finite sets. Within `FinSet` (as well as within `Set`), if two objects (i.e. sets) have the
 same number of elements (i.e. cardinality), they are isomorphic. This is because there is a bijective function between 

@@ -34,7 +34,7 @@ We observe this is trivially true for `(id A)(f . g) = f . g = ((id A) f) . ((id
 already respect the distributive law. And as we have conceptualized functors as a pair of functions, it is clear that
 composition and associativity also hold. 
 
-## What is the intuition behind functors?
+## Functor intuition
 
 Once again, a functor is defined as simply being a morphism in `Cat`, that respects the laws above. It is important to
 remember that intuitions are built on top of formal definitions, not the other way around.
@@ -61,11 +61,11 @@ be isomorphic.
 
 ## Examples of functors
 
-For any category `C`, there is a unique functor from `C` to `1`. It maps all objects of `C` to the singleton object,
+For any category `C`, there is a unique[^1] functor from `C` to `1`. It maps all objects of `C` to the singleton object,
 and all morphisms to the singleton object's identity morphism. In other words, it forgets everything there is to know
 about `C`. Trivially, it respects the distributivity law.
 
-There is a diagonal functor `D : FinSet -> FinSet * FinSet`, which maps each natural number to a pair of numbers[^1]
+There is a diagonal functor `D : FinSet -> FinSet * FinSet`, which maps each natural number to a pair of numbers
 using the formula `x -> (x, x)`. Notice that not all objects in the codomain category are reachable, as there is no
 object in `FinSet` that would result in `(1, 2)`. Also notice that any operation that can be done with an `x` can be
 immediately and losslessly transferred to `(x, x)`. This is the fundamental property of functors in action.
@@ -78,6 +78,6 @@ they also are within the real numbers. As the objects and morphisms are simply e
 The oppositization functor `op` operates on any category `C` and returns its opposite category, denoted `op C`.
 The opposite of a category is the category where every morphism from `A` to `B` in the original category becomes
 a morphism from `B` to `A`, and there are no other morphisms. In other words, it is the category whose underlying
-directed multigraph is the transpose of the original category's directed multigraph. Furthermore, `op op C = C`
+directed multigraph is the transpose of the original category's directed multigraph. Furthermore, `op op C = C`.
 
-[^1]: Specifically, in `FinSet * FinSet`, the elements are within the Cartesian product `N * N`, where `N` is the natural numbers. Products will be explored in more detail later on.
+[^1]: From now on, all uses of the word "unique" ought to be read as up to isomorphism, meaning if there are two objects that fulfill the property, they are isomorphic.
