@@ -75,7 +75,7 @@ number equivalent. It can be trivially seen that if two numbers are in a `<=` re
 they also are within the real numbers. As the objects and morphisms are simply embedded in a larger category,
 `(N, <=)` is a subcategory of `(R, <=)`, and the functor is called an inclusion functor.
 
-The oppositization functor `op` operates on any category `C` and returns its opposite category, denoted `op C`.
+The oppositization functor `op : Cat -> Cat` matches each object of `Cat`, which is a category, to its opposite.
 The opposite of a category is the category where every morphism from `A` to `B` in the original category becomes
 a morphism from `B` to `A`, and there are no other morphisms. In other words, it is the category whose underlying
 directed multigraph is the transpose of the original category's directed multigraph. Furthermore, `op op C = C`.
