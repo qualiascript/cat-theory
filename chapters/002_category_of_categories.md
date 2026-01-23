@@ -75,4 +75,9 @@ number equivalent. It can be trivially seen that if two numbers are in a `<=` re
 they also are within the real numbers. As the objects and morphisms are simply embedded in a larger category,
 `(N, <=)` is a subcategory of `(R, <=)`, and the functor is called an inclusion functor.
 
+The oppositization functor `op` operates on any category `C` and returns its opposite category, denoted `op C`.
+The opposite of a category is the category where every morphism from `A` to `B` in the original category becomes
+a morphism from `B` to `A`, and there are no other morphisms. In other words, it is the category whose underlying
+directed multigraph is the transpose of the original category's directed multigraph. Furthermore, `op op C = C`
+
 [^1]: Specifically, in `FinSet * FinSet`, the elements are within the Cartesian product `N * N`, where `N` is the natural numbers. Products will be explored in more detail later on.
