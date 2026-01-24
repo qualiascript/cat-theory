@@ -3,11 +3,11 @@
 Recall the homfunctor `hom : (op C) * C -> Set`. We have previously claimed that one can "fix" either the first
 or the second value in the product category in the domain and obtain a new functor. More generally, given a functor
 `F :: [X * Y, Z]`, there is a functor `alpha :: [X, Arr [X * Y, Z]]`, so that we have a natural transformation
-`(alpha x) :: Arr [X * Y, Z]` for each `x :: X`. This is a categorization of the idea of "fixing" `x :: X` in the
+`alpha x :: Arr [X * Y, Z]` for each `x :: X`. This is a categorization of the idea of "fixing" `x :: X` in the
 original functor.
 
-We can define `(alpha x)` component-wise: for each object `(x', y) :: X * Y`, one obtains `F (x', y) :: Z`. Then, we
-define `(alpha x)_x :: Arr Z`, `(alpha x)_x' : F (x', y) -> F (x, y)`. It can be checked that this fulfills the
+We can define `alpha x` component-wise: for each object `(x', y) :: X * Y`, one obtains `F (x', y) :: Z`. Then, we
+define `(alpha x)_x' :: Arr Z`, `(alpha x)_x' : F (x', y) -> F (x, y)`. It can be checked that this fulfills the
 naturality conditions.
 
 Let's then denote `G :: [X, [X * Y, Z]]`, `G (x) (x', y) = F (x, y)`. As the value of `x' :: x` is unused, 
