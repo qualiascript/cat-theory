@@ -4,9 +4,8 @@ It is a natural next step to consider what a category of categories would entail
 categories `Cat`. Clearly, its objects ought to be categories, but it is not immediately apparent what its
 morphisms ought to be.
 
-Recall that categories are defined by an object set and a set of morphisms (henceforth a homset). One idea could be that
-a morphism between objects in a category of categories is defined as a pair of functions, one between object sets and
-one between homsets. 
+Recall that categories are defined by an object set and a homset. One idea could be that a morphism between objects in
+a category of categories is defined as a pair of functions, one between object sets and one between homsets. 
 
 However, this definition is flawed. It would imply that any two categories with the same cardinality of objects and
 homsets are isomorphic, which is practically untrue due to the different configuration of morphisms encoding different
@@ -20,7 +19,7 @@ not all such pair of functions will make for a valid morphism in `Cat`.
 Morphisms respect composition. This must also be true for morphisms in `Cat`, which we will henceforth be referring to
 as functors. As such, we can immediately derive some laws any eventual definition of functors must follow:
 - Functors ought to compose, that is, if `F : A -> B`, `G : B -> C` then `F . G : A -> C`
-- There ought to be an identity functor for any category `A`, so that `id A . F = F`, `G . id A = G`
+- There ought to be an identity functor for any `A :: Cat`, so that `id A . F = F`, `G . id A = G`
 - Functor composition is associative. That is, `(F . G) . H = F . (G . H)`
 
 Practically speaking, the identity functor maps each object and morphism of a category to itself.
@@ -61,7 +60,7 @@ be isomorphic.
 
 ## Examples of functors
 
-For any category `C`, there is a unique[^1] functor from `C` to `1`. It maps all objects of `C` to the singleton object,
+For any `C :: Cat`, there is a unique[^1] functor `F : C -> 1`. It maps all objects of `C` to the singleton object,
 and all morphisms to the singleton object's identity morphism. In other words, it forgets everything there is to know
 about `C`. Trivially, it respects the distributivity law.
 
@@ -75,9 +74,9 @@ number equivalent. It can be trivially seen that if two numbers are in a `<=` re
 they also are within the real numbers. As the objects and morphisms are simply embedded in a larger category,
 `(N, <=)` is a subcategory of `(R, <=)`, and the functor is called an inclusion functor.
 
-The oppositization functor `op` operates on any category `C` and returns its opposite category, denoted `op C`.
-The opposite of a category is the category where every morphism from `A` to `B` in the original category becomes
-a morphism from `B` to `A`, and there are no other morphisms. In other words, it is the category whose underlying
-directed multigraph is the transpose of the original category's directed multigraph. Furthermore, `op op C = C`.
+The oppositization functor `op : Cat -> Cat` operates on any category `C` and returns its opposite category,
+denoted `op C`. The opposite of a category is the category where every morphism from `A` to `B` in the original category
+becomes a morphism from `B` to `A`, and there are no other morphisms. In other words, it is the category whose
+underlying directed multigraph is the transpose of the original category's graph. Furthermore, `op op C = C`.
 
 [^1]: From now on, all uses of the word "unique" ought to be read as up to isomorphism, meaning if there are two objects that fulfill the property, they are isomorphic.

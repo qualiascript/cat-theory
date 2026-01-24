@@ -1,34 +1,32 @@
-# Chapter 3: Homsets
+# Chapter 3: Homfunctors
 
 We have defined the homset of a category as the set of morphisms. This terminology comes from a shortening of
 "homomorphism set", where homomorphism acts as a synonym of morphism within the context of category theory.
 
-For some object `a` in a category `C`, we can obtain a subset of the homset in two different ways: by picking the
-elements of the homset where `a` is on the right side of the pair, or elements where `a` is on the left.
-In other words, the set of outbound morphisms starting in `a`, and the set of inbound morphisms ending in `a`.
-But recall that, for some category `C`, the category `op C` inverts all morphisms. In other words, we can think of
-the operation of obtaining the set of inbound morphisms of `a` as equal to obtaining the outbound morphisms of `a`
-when `a` is in `op C`.
+For some `a :: C`, we can obtain a subset of the homset in two different ways: by picking the elements of the homset
+where `a` is on the right side of the pair, or elements where `a` is on the left. In other words, the set of outbound
+morphisms starting in `a`, and the set of inbound morphisms ending in `a`. But recall that, for some `C :: Cat`, the 
+category `op C` inverts all morphisms. In other words, we can think of the operation of obtaining the set of inbound 
+morphisms of `a` as equal to obtaining the outbound morphisms of `a` when `a :: op C`.
 
 ## Homfunctors
 
 Observe that we then have a mapping from some `C` to `Set`. It is natural to ask whether this mapping forms a functor.
-If it does, its definition is `hom(a, -) : C -> Set`, where `a` is some object of `C`. When applied to some object `b`
-of `C`, `hom(a, -)(b) = hom(a, b)`, which is a set.
+If it does, its definition is `hom(a, -) : C -> Set`, where `a :: C`. When applied to some `b :: C`,
+`hom(a, -)(b) = hom(a, b)`, which is a set.
 
-When applied to some morphism of `C`, `f : x -> y`, we ought to obtain a function (that is, a morphism in `Set`) between
+When applied to some `f :: C`, `f : x -> y`, we ought to obtain a function `hom(a, f) :: Arr Set` between
 `hom(a, x)` and `hom(a, y)`. Recall that the elements of `hom(a, x)` are morphisms from `a` to `x`. As such, this
 function maps every morphism `g` of `hom(a, x)` to a morphism in `hom(a, y)`. This is equivalent to the morphism
 composition `g . f`.
 
-In order for this mapping to be a valid functor, for `f : x -> y`, `g : y -> z`, we must have
-`hom(a, f . g) = hom(a, f) . hom(a, g)`. Notice that `hom(a, f)` and `hom(a, g)` are functions, and as such they can be
-composed. The elements of the domain of `hom(a, f)` are `hom(a, x)`, and by applying the function, you get the result
-`hom(a, f x)`. By applying `hom(a, g)` to `hom(a, f x)`, you get `hom(a, g(f x))`. This is another notation for
-`hom(a, f . g)`, thus, this is a valid functor.
+In order for this mapping to be a valid functor, for `f, g :: Arr C`, `f : x -> y`, `g : y -> z`, we must have
+`hom(a, f . g) = hom(a, f) . hom(a, g)`. Notice that `hom(a, f) : hom(a, x) -> hom(a, y)` and
+`hom(a, g) : hom(a, y) -> hom(a, z)`, so `hom(a, f) . hom(a, g) : hom(a, x) -> hom(a, z)`, which has the same domain
+and codomain as `hom(a , f . g)`. As such, composition is respected.
 
 There is also a functor `hom(-, a) : op C -> Set`, which can be obtained easily by using the opposite category of `C`.
-For some category `C`, a functor `f : op C -> D` is known as a contravariant functor. A regular functor can also be
+For some `C :: Cat`, a functor `f : op C -> D` is known as a contravariant functor. A regular functor can also be
 denoted as a covariant functor.
 
 In the most general sense, `hom` can be envisioned as a functor `hom : (op C) * C -> Set`. The object `a` can be fixed
