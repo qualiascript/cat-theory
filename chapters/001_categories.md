@@ -82,13 +82,16 @@ that the objects of `FinSet` are the natural numbers, `0`, `1`, `2`, etc.
 Another way of defining a category is by specifying its underlying directed multigraph. As such, we can define the
 following family of categories:
 - The empty category `0`, with no objects and no morphisms
-- The singleton category `1`, with one object and no non-trivial (i.e. non-`id`) morphisms
-- The dual category `2`, with two objects and no non-trivial morphisms
+- The singleton category `1`, with exactly one object and no non-trivial (i.e. non-`id`) morphisms
+- The dual category `2`, with exactly two objects and no non-trivial morphisms
 - Etc.
 
 These categories can be safely denoted using the natural numbers. This is because, as they have no non-trivial
 morphisms, they can be defined solely by their set of objects, and as we've seen, for `n :: FinSet`, any set with
 `n` values is isomorphic to `n`. Intuitively, the number `2` is an abstract representation of the existence of exactly
 two objects of some type, which the categorical definition illustrates.
+
+Let us also define the category `I`. It is a category with exactly two objects, `A, B :: I`, and exactly one non-trivial
+morphism `f : A -> B`. This category is called the walking morphism, and it will be a useful construct later on.
 
 [^1]: Technically, it is only a set for so-called small categories, otherwise it is a class. However, due to Grothendieck universes, one can usually assume it to be a set

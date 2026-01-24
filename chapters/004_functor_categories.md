@@ -55,6 +55,34 @@ unique `f' :: Arr (D * D)` from `(F x, F y)` to `(G x, G y)`. This implies the v
 by `F x`. However, we have two methods of calculating it, namely `(F f) . alpha_y` and `alpha_x . (G f)`.
 Thus, `(F f) . alpha_y = alpha_x . (G f)`, which is known as the naturality condition of natural transformations.
 
+## Natural isomorphisms
+
+As the functor category is a category, every `F :: [C, D]` has an identity morphism `id F :: Arr [C, D]`, in other
+words, an identity functor. As natural transformations are defined piecewise as a morphism `(id F)_x` for
+`F x :: D`, and the mapping of morphisms `F f :: Arr D` is fully determined by the mapping of objects to morphisms,
+one can obtain an identity morphism for `F` by defining `(id F)_x = id (F x)`. Practically speaking, applying
+the identity natural transformation to a functor has no action.
+
+A composition between a functor and natural transformation can be defined using identity natural transformation.
+For `X :: [C, D]`, `alpha :: Arr [C, D]`, let's denote `X . alpha` as synonymous with `(id X) . alpha`, and
+`alpha . X` as synonymous with `alpha . (id X)`.
+
+If we have `F, G :: [C, D]`, `alpha, beta :: Arr [C, D]`, `alpha : F -> G`, `beta : G -> F`, `alpha . beta = id F`,
+`beta . alpha = id G`, then `alpha` is an isomorphism in `[C, D]`. The relation between `F` and `G` is denoted as a
+natural isomorphism. 
+
 ## Natural transformation intuition
 
-[TO BE COMPLETED]
+Natural transformations are named as such because they transform the nature of a functor into another functor in a
+composable manner. Recall that functors act as morphisms in `Cat` that transform some category to another. Natural
+transformations, then, are transformations of transformations. The naturality condition establishes that, given two
+functors `F, G :: [C, D]` and a natural transformation `alpha : Arr [C, D]`, we can safely perform operations using the
+functor `F`, ignoring `G`. When we apply the natural transformation, it will have the same result as if we operated 
+using `G` from the beginning. 
+
+Consider if the category `D` is a more complex category, like `Cat`. In that case, one can have two functors,
+`F :: [C, X]`, `F :: [C, Y]`, and if `X`, `Y` are subcategories of `Cat`, their domain can be widened to
+`F, G :: [C, Cat]`, despite not using the entire codomain. In this case, one can define a natural transformation
+`alpha :: Arr [C, Cat]` between thw two despite the codomains seemingly not matching up. Practically speaking,
+one can move around any `x :: C` through various categories without ever operating directly in `C`. This is the
+principle underpinning generic programming.
