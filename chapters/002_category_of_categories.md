@@ -74,9 +74,9 @@ number equivalent. It can be trivially seen that if two numbers are in a `<=` re
 they also are within the real numbers. As the objects and morphisms are simply embedded in a larger category,
 `(N, <=)` is a subcategory of `(R, <=)`, and the functor is called an inclusion functor.
 
-The oppositization functor `op : Cat -> Cat` operates on any category `C` and returns its opposite category,
-denoted `op C`. The opposite of a category is the category where every morphism from `A` to `B` in the original category
-becomes a morphism from `B` to `A`, and there are no other morphisms. In other words, it is the category whose
-underlying directed multigraph is the transpose of the original category's graph. Furthermore, `op op C = C`.
+The oppositization functor `op : Cat -> Cat` maps each object of `Cat`, which is a category, to its opposite.
+If `C :: Cat`, `op C` has the property that there is an `f' :: Arr(op C)`, `f : B -> A` for each`f :: Arr C`, 
+`f : A -> B`, and there are no other morphisms. In other words, it is the category whose underlying directed multigraph
+is the transpose of the original category's directed multigraph. It can be trivially seen that `op op C = C`.
 
 [^1]: From now on, all uses of the word "unique" ought to be read as up to isomorphism, meaning if there are two objects that fulfill the property, they are isomorphic.
