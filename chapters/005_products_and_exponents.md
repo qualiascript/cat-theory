@@ -41,6 +41,26 @@ We have, for instance, that `A * A = A ^ 2`. This applies even if `A :: Cat`.
 In this context, `X, Y, Z : FinSet`, `Z ^ (X * Y) = (Z ^ Y) ^ X` becomes a simple arithmetic rule. For instance,
 `2 ^ (3 * 4) = (2 ^ 3) ^ 4` can be seen as a purely categorical statement.
 
-## Cartesian Closed Categories
+## Adjoint functors
+
+If `A, B :: Cat`, we can define a functor `Exp : A * B -> A ^ B`. Let us fix `b :: B` in place. We can shorten this to
+`(-) ^ b : A -> A ^ B`. Similarly, we can fix `b` in place in `A * B` to get `(-) * b : A -> A * B`. Looking at
+`hom(X * Y, Z) = hom(X, Z ^ Y)`, let us rewrite it as `hom(A * C, B) = hom(A, B ^ C)`. Using our newly defined 
+functors, the formula can be rewritten as `hom( ((-) * C) A, B) = hom(A, (- ^ C) B)`. Let us denote`F = ((-) * C)`, 
+`G = (- ^ C)`. Then we have `hom(F A, B) = hom(Y, F B)`.
+
+In other words, the functors `F`, `G`, when applied to the left, respectively to the right of the homfunctor's product
+category domain, induce an isomorphism of sets. Let us generalize this property to any pair of functors. In this
+specific case, `F, G : [Cat, Cat]`, however, in general, `F` is some functor `F :: [C, D]`. In this case, the
+homfunctor on the left must be `hom : (op D) * D -> Set`, as `F A :: D`, and the one on the right must be
+`hom : (op C) * C -> Set`, as `A :: C`. This obliges `G :: [D, C]`, as `B :: D`, `F B :: C`.
+
+In other words, for `F :: [C, D]`,  `G :: [D, C]`, `homD : (op D) * D -> Set`, `homC : (Op C) * C -> Set`, we have
+`homD(F A, B) = homC(Y, F B)`. Let us call the relation between `F` and `G` an adjunction, denoted `F -| G`.
+`F` and `G` are called the adjoint functors, and we declare `F` as the left-adjoint of `G`, and `G` as the
+right-adjoint to `F`. This is due to `F` being on the left side of the homfunctor's product category domain,
+and `G` being on the right side.
+
+## Adjoint functors intuition
 
 [TO BE CONTINUED]
