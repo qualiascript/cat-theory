@@ -44,10 +44,10 @@ In this context, `X, Y, Z : FinSet`, `Z ^ (X * Y) = (Z ^ Y) ^ X` becomes a simpl
 ## Adjoint functors
 
 If `A, B :: Cat`, we can define a functor `Exp : A * B -> A ^ B`. Let us fix `b :: B` in place. We can shorten this to
-`(-) ^ b : A -> A ^ B`. Similarly, we can fix `b` in place in `A * B` to get `(-) * b : A -> A * B`. Looking at
-`hom(X * Y, Z) = hom(X, Z ^ Y)`, let us rewrite it as `hom(a * c, b) = hom(a, b ^ c)`. Using our newly defined 
-functors, the formula can be rewritten as `hom( ((-) * c) a, b) = hom(a, (- ^ c) b)`. Let us denote`F = ((-) * c)`, 
-`G = (- ^ c)`. Then we have `hom(F a, b) = hom(a, F b)`.
+`(-) ^ b : A -> A ^ B`. Similarly, we can fix `b` in place in `Prod : A * B -> A * B` to get `(-) * b : A -> A * B`.
+Looking at `hom(X * Y, Z) = hom(X, Z ^ Y)`, let us rewrite it as `hom(a * c, b) = hom(a, b ^ c)`. Using our newly
+defined functors, the formula can be rewritten as `hom( ((-) * c) a, b) = hom(a, (- ^ c) b)`. Let us denote
+`F = ((-) * c)`, `G = (- ^ c)`. Then we have `hom(F a, b) = hom(a, F b)`.
 
 In other words, the functors `F`, `G`, when applied to the left, respectively to the right of the homfunctor's product
 category domain, induce an isomorphism of sets. Let us generalize this property to any pair of functors. In this
