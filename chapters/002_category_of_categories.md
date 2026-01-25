@@ -75,7 +75,7 @@ they also are within the real numbers. As the objects and morphisms are simply e
 `(N, <=)` is a subcategory of `(R, <=)`, and the functor is called an inclusion functor.
 
 The oppositization functor `op : Cat -> Cat` maps each object of `Cat`, which is a category, to its opposite.
-If `C :: Cat`, `op C` has the property that there is an `f' :: Arr(op C)`, `f : B -> A` for each`f :: Arr C`, 
+If `C :: Cat`, `op C` has the property that there is an `f' :: (op C) ^ I`, `f : B -> A` for each `f :: C ^ I`, 
 `f : A -> B`, and there are no other morphisms. In other words, it is the category whose underlying directed multigraph
 is the transpose of the original category's directed multigraph. It can be trivially seen that `op op C = C`.
 

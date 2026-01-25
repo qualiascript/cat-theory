@@ -14,8 +14,8 @@ However, compared to a directed multigraph, a category must additionally respect
 - For any object `X :: C`, there is always a morphism `id X : X -> X`. There may be other morphisms `f : X -> X`
 distinct from `id X` as well.
 - Composing with `id` morphisms does not change the result. That is, given `f`, `g` morphisms of some `C` (henceforth
-denoted as `f, g :: Arr C`), if `f : X -> Y`, `g : Y -> X`, we have `(id X) . f = f`, `g . (id X) = g`.
-- Morphism composition is associative. That is, for `f, g, h :: Arr C`, `f : A -> B`. `g: B -> C`, `h : C -> D`,
+denoted as `f, g :: C ^ I`), if `f : X -> Y`, `g : Y -> X`, we have `(id X) . f = f`, `g . (id X) = g`.
+- Morphism composition is associative. That is, for `f, g, h :: C ^ I`, `f : A -> B`. `g: B -> C`, `h : C -> D`,
 we have `(f . g) . h = f . (g . h)`.
 
 ## Objects and morphisms
@@ -30,8 +30,8 @@ as a category, rather than a definition in the traditional sense.
 ## Category intuition
 
 The most essential category is `Set`. It is a category where the objects are sets, and the morphisms are functions.
-It can be easily checked that for any set `S :: Set`, there is an `id S :: Arr Set`, which maps each element to
-itself. Additionally, for any `f, g :: Arr Set`, `f : A -> B`, `g : B -> C`, there is a `f . g : A -> C`, that maps any
+It can be easily checked that for any set `S :: Set`, there is an `id S :: Set^I`, which maps each element to
+itself. Additionally, for any `f, g :: Set^I`, `f : A -> B`, `g : B -> C`, there is a `f . g : A -> C`, that maps any
 `x :: A` to `g(f(x)) :: C`, here `f`, `g` taken as functions. Associativity and composition with `id` also apply.
 
 In fact, `Set` can be seen as the archetypal category. Any mathematical object can be modeled as a set,
@@ -44,17 +44,17 @@ It can be easily checked that there is always an identity morphism, as `A <= A` 
 as well as that if `A <= B` and `B <= C`, then `A <= C`.
 
 Every natural number is defined in ZFC, the standard foundation of mathematics, as `x = {0, 1, ..., x-1}`, so the
-elements of this category can also be conceptualized as sets, and there is a `f :: Arr Set`, `f : 2 -> 1`,
+elements of this category can also be conceptualized as sets, and there is a `f :: Set^I`, `f : 2 -> 1`,
 namely `{0 : 0, 1 : 0}`. However, in our new category (which is a preorder), that is not a valid morphism.
 This illustrates the sense in which category theory acts as a broad generalization of set theory.
 
 ## Isomorphisms
 
-An isomorphism is a morphism `f :: Arr C` `f : A -> B`, such that there is a `g :: Arr C`, `g : B -> A`
+An isomorphism is a morphism `f :: C ^ I` `f : A -> B`, such that there is a `g :: C ^ I`, `g : B -> A`
 so that `f . g = id A` and `g . f = id B`. `g` is the inverse morphism of `f`.
 
-This means that for any `X :: C`, if there is a morphism `h :: Arr C`, `h : X -> A`, it can be composed with f on the
-right, i.e. `h . f : X -> B`. Same argument for `h' :: Arr C`, `h' : X -> B`. Then, for `j, j' :: Arr C`, `j : A -> X`,
+This means that for any `X :: C`, if there is a morphism `h :: C ^ I`, `h : X -> A`, it can be composed with f on the
+right, i.e. `h . f : X -> B`. Same argument for `h' :: C ^ I`, `h' : X -> B`. Then, for `j, j' :: C ^ I`, `j : A -> X`,
 `j' : B -> X`, one can obtain `g . j : B -> X`, `f . j' -> A : X` by precomposing, i.e., composing on the left. As such,
 all morphisms coming inbound towards `A` or outbound from `A` also induce a morphism with `B` and vice versa.
 
@@ -92,6 +92,7 @@ morphisms, they can be defined solely by their set of objects, and as we've seen
 two objects of some type, which the categorical definition illustrates.
 
 Let us also define the category `I`. It is a category with exactly two objects, `A, B :: I`, and exactly one non-trivial
-morphism `f : A -> B`. This category is called the walking morphism, and it will be a useful construct later on.
+morphism `f : A -> B`. This category is called the walking morphism, and `C ^ I` is a category representing all
+morphisms of `C`, for reasons that will be explained in due time.
 
 [^1]: Technically, it is only a set for so-called small categories, otherwise it is a class. However, due to Grothendieck universes, one can usually assume it to be a set

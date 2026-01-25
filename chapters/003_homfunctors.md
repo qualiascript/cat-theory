@@ -17,12 +17,12 @@ a functor whose definition is `hom(a, -) : C -> Set`, where `a :: C`. When appli
 
 ## Homfunctors
 
-The homfunctor, when applied to some `f :: C`, `f : x -> y`,  ought to obtain a function `hom(a, f) :: Arr Set` between
+The homfunctor, when applied to some `f :: C`, `f : x -> y`,  ought to obtain a function `hom(a, f) :: Set ^ I` between
 `hom(a, x)` and `hom(a, y)`. Recall that the elements of `hom(a, x)` are morphisms from `a` to `x`. As such, this
 function maps every morphism `m :: hom(a, x)` to a morphism in `hom(a, y)`. This is equivalent to the morphism
 composition `m . f`.
 
-In order for this mapping to be a valid functor, for `f, g :: Arr C`, `f : x -> y`, `g : y -> z`, we must have
+In order for this mapping to be a valid functor, for `f, g :: C ^ I`, `f : x -> y`, `g : y -> z`, we must have
 `hom(a, f . g) = hom(a, f) . hom(a, g)`. Notice that `hom(a, f) : hom(a, x) -> hom(a, y)` and
 `hom(a, g) : hom(a, y) -> hom(a, z)`, so `hom(a, f) . hom(a, g) : hom(a, x) -> hom(a, z)`, which has the same domain
 and codomain as `hom(a , f . g)`. As such, composition is respected.
@@ -47,7 +47,7 @@ is a set, and applying it to some function `f` returns a function, which is a mo
 ## Homfunctor intuition
 
 Envisioning `C : Cat` as a multigraph with extra structure, and setting some `a :: C`, `hom(a, -) : C -> Set` is a
-functor that, for some `b :: C`, returns the set of morphisms `f : Arr C` with `f: a -> b`. This puts the focus on the
+functor that, for some `b :: C`, returns the set of morphisms `f : C ^ I` with `f: a -> b`. This puts the focus on the
 morphism structure of the category, rather than its objects. It allows one to probe what morphisms start in `a` and
 end in another object, or, for the contravariant version, start in some object and end in `a`.
 
@@ -56,7 +56,7 @@ at first, because the underlying objects and morphisms have values that are not 
 structure. However, suppose you had another category `C :: Cat`, with a bijection between the object sets and homsets
 so that if `x :: C` goes to `x' :: C'` and `y :: C` goes to `y :: C'`, then morphism `(x, y, f)` is sent by the homset
 to value `(x', y', f')`. In this case one can define two functors, `F : C -> C'`, `F' : C -> C`, so that
-`F . F' = id C` and `F' . F = id C'`. Then, `F :: Arr Cat` is an isomorphism, so `C` and `C'` are isomorphic.
+`F . F' = id C` and `F' . F = id C'`. Then, `F :: Cat ^  I` is an isomorphism, so `C` and `C'` are isomorphic.
 
 One may still wonder whether `C` and `C'` truly are equivalent in every way, or whether the categorical perspective
 generates an isomorphism between two categories that encode different information in reality. In reality, `C` and
