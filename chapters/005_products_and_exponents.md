@@ -56,11 +56,25 @@ homfunctor on the left must be `hom : (op D) * D -> Set`, as `F a :: D`, and the
 `hom : (op C) * C -> Set`, as `a :: C`. This obliges `G :: [D, C]`, as `b :: D`, `F b :: C`.
 
 In other words, for `F :: [C, D]`,  `G :: [D, C]`, `hom_D : (op D) * D -> Set`, `hom_C : (Op C) * C -> Set`, we have
-`hom_D(F a, b) = hom_C(a, F b)`. Let us call the relation between `F` and `G` an adjunction, denoted `F -| G`.
-`F` and `G` are called the adjoint functors, and we declare `F` as the left-adjoint of `G`, and `G` as the
-right-adjoint to `F`. This is due to `F` being on the left side of the homfunctor's product category domain,
+`hom_D(F a, b) = hom_C(a, G b)`. Let us call the relation between `F` and `G` an adjunction, denoted `F -| G`.
+`F` and `G` are called the adjoint functors, and we declare `F` as the left adjoint of `G`, and `G` as the
+right adjoint to `F`. This is due to `F` being on the left side of the homfunctor's product category domain,
 and `G` being on the right side.
 
 ## Adjoint functors intuition
 
-[TO BE CONTINUED]
+Intuitions on adjunctions can be derived from the formula `hom_D(F a, b) = hom_C(a, G b)`. Recall that `a :: C`,
+`b :: D` are any values in their respective categories. As such, the adjoint functors have a relation that is both
+symmetric and opposite: by applying `F` to some object `a` and then going to some other object `b`, you get the same
+cardinality of morphisms as if you started at `a` and went to the application of `G` to `b`. 
+
+This can be seen with the product-exponent adjunction, which acts as the archetypal adjunction. `(-) * b` and
+`(-) ^ b` are not isomorphic, but they share some underlying structure. Applying a product to the left and then
+drawing morphisms going out of it is like adding an argument to a function's domain. Applying an exponent to the
+right and drawing morphisms going into it is like having a function return another function, which when applied to an
+argument, returns a result. Notice that these are practically equivalent, and correspond to the concept of currying.
+
+Adjunctions, in the general case, encode a duality of functors. There are a lot of adjunctions, and any intuition
+beyond that of a duality will not hold for all cases. However, because the left adjoint is on the left of the homset,
+it will often embed objects in a category in a manner that has nice outbound morphisms to other objects. Meanwhile, the
+right adjoint will often embed an object so that it can be reached nicely by inbound morphisms from other objects.
