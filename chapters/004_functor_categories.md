@@ -87,7 +87,7 @@ Consider if the category `D` is a more complex category, like `Cat`. In that cas
 one can move around any `x :: C` through various categories without ever operating directly in `C`. This is the
 principle underpinning generic programming.
 
-## Arrow category
+## Example of a functor category
 
 The arrow category of a category `C :: Cat` is the category whose objects are morphisms of `C`. It is denoted as
 `C ^ I`, where `I` is the walking morphism. In other words, it's the category of functors from `I` to `C`. 
