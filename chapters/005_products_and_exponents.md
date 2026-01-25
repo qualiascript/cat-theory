@@ -1,4 +1,4 @@
-# Products and Exponents [WIP]
+# Products and Exponents
 
 Recall the homfunctor `hom : (op C) * C -> Set`. We have previously claimed that one can "fix" either the first
 or the second value in the product category in the domain and obtain a new functor. More generally, given a functor
@@ -21,7 +21,7 @@ functors `first :: [X * Y, X]`, `first (x, y) = x`, `second :: [X * Y, Y]`, `sec
 
 Since we have an invertible function that maps any `F :: [X * Y, Z]` to `G :: [X, [Y, Z]]`. Alternatively, they can be
 denoted as `F :: Z ^ (X * Y)` and `G :: (Z ^ Y) ^ X`. Recall that functor categories are equivalent to internal
-homsets of `Cat`. So for functor `hom : (op Cat) * Cat -> Cat`, we have a bijection between `hom(X * Y, Z) :: Set` and
+homsets of `Cat`. So for functor `hom : (op Cat) * Cat -> Set`, we have a bijection between `hom(X * Y, Z) :: Set` and
 `hom(X, Z ^ Y) :: Set`. In other words, `hom(X * Y, Z) = hom(X, Z ^ Y)`.
 
 ## Products and Exponents in `Set`
@@ -33,7 +33,14 @@ Specifically, it is a set of functions. Applying `hom(X * Y, Z) = hom(X, Z ^ Y)`
 `X, Y, Z : Set`, `Z ^ (X * Y) = (Z ^ Y) ^ X`.
 
 Since this applies in `Set`, it applies in its subcategory `FinSet` as well. recall that the objects of `FinSet` are
-natural numbers. In this context, `X, Y, Z : FinSet`, `Z ^ (X * Y) = (Z ^ Y) ^ X` becomes a simple arithmetic rule.
-So for instance, `2 ^ (3 * 4) = (2 ^ 3) ^ 4` can be seen as a purely categorical statement.
+natural numbers. If `A, B :: Set`, `A * B` is the Cartesian product, whose cardinality is the product of `A` and `B`.
+`A ^ B` has to send every `b :: B` to some `a :: A`. In other words, it must make a selection of `a` exactly `B` times.
+As such, `A ^ B` is equivalent to the product of `A` with itself `B` times. This is natural number exponentiation.
+We have, for instance, that `A * A = A ^ 2`. This applies even if `A :: Cat`.
+
+In this context, `X, Y, Z : FinSet`, `Z ^ (X * Y) = (Z ^ Y) ^ X` becomes a simple arithmetic rule. For instance,
+`2 ^ (3 * 4) = (2 ^ 3) ^ 4` can be seen as a purely categorical statement.
+
+## Cartesian Closed Categories
 
 [TO BE CONTINUED]
