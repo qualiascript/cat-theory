@@ -48,17 +48,15 @@ alpha_x d            alpha_y d
 ```
 
 Then for all `d :: D`, `(alpha_x d) . (F f d) = (id x) . (alpha_y d)`, which simplifies to
-`alpha_y d = (alpha_x d) . (F f d)`. So we have that for any `d :: D`, `alpha_y d :: C`,
-`alpha_y d : x -> F y d`. Recall that `F :: [C, C ^ D]`, so `alpha_y :: [D, C] ^ I` is also a natural transformation.
+`alpha_y d = (alpha_x d) . (F f d)`. So we have that for any `d :: D`, `alpha_y d :: C`, `alpha_y d : x -> F y d`.
+Then, `alpha` can be seen as a function that maps each `c :: C` to a set of maps `alpha_c` from all `d :: D` to some
+`F c d :: C`. Let us name `Di = F c :: C ^ D`. As each `c` lands back in `C`, this can be  simplified into a set of
+morphisms from `c` to `Di b`, for all `b :: D`.
 
-Then, `alpha` can be seen as a function that maps each `c :: C` to a set of maps `alpha_c` from all `d :: D` to
-some `F c d :: C`. Let us name `Di = F c :: C ^ D`. As each `c` lands back in `C`, this can be simplified into a set
-of morphisms from `c` to `Di b`, for all `b :: D`.
-
-Furthermore, for any morphism `f :: D ^ I`, `f : x -> y`, `alpha_c y = (alpha_c x) . (F c f)`.
-This implies the diagram `Di = F c :: C ^ D` has the property that if `f, g :: D ^ I`, `f, g : x -> y`, then
-`Di f = Di g`. In other words, all morphisms between any two given objects are equal. A diagram `Di` that follows this
-property is denoted a commutative diagram.
+Recall that `F :: [C, C ^ D]`, so `alpha_y :: [D, C] ^ I` is also a natural transformation. As such, for any morphism
+`f :: D ^ I`, `f : x -> y`, `alpha_c y = (alpha_c x) . (F c f)`. This implies the diagram `Di = F c :: C ^ D` has the
+property that if `f, g :: D ^ I`, `f, g : x -> y`, then `Di f = Di g`. In other words, all morphisms between any two
+given objects are equal. A diagram `Di` that follows this property is denoted a commutative diagram.
 
 We then say that `alpha_c :: (C ^ D) ^ I` is a cone with apex `c :: C`, base `Di :: C ^ D` a commutative diagram, and a
 set of morphisms for any `C :: C`, as `f : d -> Di d`. By looking at `beta : F -> Diag_D` instead, one obtains the dual
@@ -111,18 +109,20 @@ the colimit will have the same name prefixed with "co-". In `Cat`, the coproduct
 category with all the objects and morphisms of each and no morphisms between any objects originating from different
 categories. In `FinSet`, the coproduct of two natural numbers is called addition.
 
-In fact, the definition of products and coproducts can be expanded further, from `2` to any diagram originating in
-`x :: Set`. The same underlying logic applies, but each morphism is bijective to a set of morphisms with the same
-cardinality as `x`. It is alternatively equivalent to iterated products and coproducts. If `x :: FinSet`, they are
-specifically referred to as finite product and coproducts. If `x = 1`, the products and coproducts can be trivially
-shown to have no effect.
+## n-ary Products and Coproducts
 
-Let us also consider the case for `x = 0`. A product of zero objects is the object `c :: C` with the property that, for
-each morphism from an object `x :: C` to it, there is a cone with apex `x` and diagram `0`. That cone is in category
-`[C, C ^ 0] ^ I = [C, 1] ^ I = 1 ^ I = 1`. In other words, for any `x`, there is exactly one morphism to the empty
+In fact, the definition of products and coproducts can be expanded further, from `2` to any diagram originating in
+`n :: Set`. The same underlying logic applies, but each morphism is bijective to a set of morphisms with the same
+cardinality as `n`. It is alternatively equivalent to iterated products and coproducts. We denote it n-ary products
+and coproducts. If `n :: FinSet`, they are additionally finite product and coproducts. If `n = 1`, the products and
+coproducts can be trivially shown to be equal to the selection of object.
+
+Let us also consider the case for `n = 0`. A product of zero objects is the object `c :: C` with the property that, for
+each morphism from an object `n :: C` to it, there is a cone with apex `n` and diagram `0`. That cone is in category
+`[C, C ^ 0] ^ I = [C, 1] ^ I = 1 ^ I = 1`. In other words, for any `n`, there is exactly one morphism to the empty
 product. As such, it is called the terminal object. Similarly, the initial object of a category is the result of a
 colimit over the diagram `0`. It has exactly one outbound morphism to any other object.
 
 In `Cat`, the initial object `x` is the object so that for any `C :: Cat`, we have `[x, C] = 1`. Observe that the
-solution is `x = 0`. The terminal object has the property that `[C, y] = 1`. Observe that `y = 1`. Same logic applies
-in `Set` and `FinSet`.
+solution is `x = 0`. The terminal object has the property that for any `C :: Cat`, `[C, y] = 1`. Observe that `y = 1`.
+Analogous logic shows that this also applies to  `Set` and `FinSet`.
