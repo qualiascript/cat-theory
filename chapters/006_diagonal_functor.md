@@ -85,7 +85,7 @@ to a family of morphisms from the objects picked by commutative diagram `x :: C 
 ## Products and Coproducts
 
 In order to illustrate limits and colimits, it is helpful to pick a specific category `D`. Let's set `D = 2` and
-`C = Set`. The diagonal functor is then a map from each `x :: FinSet` to a functor that sends each object of `2`
+`C = Set`. The diagonal functor is then a map from each `x :: Set` to a functor that sends each object of `2`
 to `x`. This is the same as a pair, meaning `Diag_2 x = (x, x)`.
 
 Then, we have `hom-{C^2}((x, x), (a, b)) ~= hom(x, Lim(a, b))`. The left side comprises families of morphisms from
