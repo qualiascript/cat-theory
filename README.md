@@ -6,3 +6,4 @@ Chapters:
 3. [Homfunctors](chapters/003_homfunctors.md)
 4. [Functor Categories](chapters/004_functor_categories.md)
 5. [Products and Exponents](chapters/005_products_and_exponents.md)
+6. [Diagonal Functor](chapters/006_diagonal_functor.md)
