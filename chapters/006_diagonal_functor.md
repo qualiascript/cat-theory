@@ -77,8 +77,8 @@ exactly for each cone with apex `x` and diagram `y`. Recall that a cone with ape
 set of morphisms from `x` to all objects in `y a` where `a :: C`, so that the diagram commutes.
 
 To simplify, for any commutative diagram `y :: C ^ D`, `F y` is the object with the property that each morphism from
-`x :: C` to `F y` is equivalent to a family of morphisms from `x` to the objects `y` picked in `C`. `F` is called the
-limit functor `Lim : C ^ D -> C`, and `Lim y` is called a limit.
+`x :: C` to `F y` is equivalent to a family of morphisms from `x` to the objects which `y` picked in `C`. `F` is called
+the limit functor `Lim : C ^ D -> C`, and `Lim y` is called a limit.
 
 By instead looking at the left adjoint of the diagonal functor, we can show it to be the colimit functor
 `Colim : C ^ D -> C`. It has the property that a morphism from `Colim x` to any object `y :: C` is equivalent
@@ -110,3 +110,19 @@ In general terms, for `a, b :: C`, `Colim(a, b)` is called their coproduct. In g
 the colimit will have the same name prefixed with "co-". In `Cat`, the coproduct of two categories creates a new
 category with all the objects and morphisms of each and no morphisms between any objects originating from different
 categories. In `FinSet`, the coproduct of two natural numbers is called addition.
+
+In fact, the definition of products and coproducts can be expanded further, from `2` to any diagram originating in
+`x :: Set`. The same underlying logic applies, but each morphism is bijective to a set of morphisms with the same
+cardinality as `x`. It is alternatively equivalent to iterated products and coproducts. If `x :: FinSet`, they are
+specifically referred to as finite product and coproducts. If `x = 1`, the products and coproducts can be trivially
+shown to have no effect.
+
+Let us also consider the case for `x = 0`. A product of zero objects is the object `c :: C` with the property that, for
+each morphism from an object `x :: C` to it, there is a cone with apex `x` and diagram `0`. That cone is in category
+`[C, C ^ 0] ^ I = [C, 1] ^ I = 1 ^ I = 1`. In other words, for any `x`, there is exactly one morphism to the empty
+product. As such, it is called the terminal object. Similarly, the initial object of a category is the result of a
+colimit over the diagram `0`. It has exactly one outbound morphism to any other object.
+
+In `Cat`, the initial object `x` is the object so that for any `C :: Cat`, we have `[x, C] = 1`. Observe that the
+solution is `x = 0`. The terminal object has the property that `[C, y] = 1`. Observe that `y = 1`. Same logic applies
+in `Set` and `FinSet`.
