@@ -108,21 +108,3 @@ In general terms, for `a, b :: C`, `Colim(a, b)` is called their coproduct. In g
 the colimit will have the same name prefixed with "co-". In `Cat`, the coproduct of two categories creates a new
 category with all the objects and morphisms of each and no morphisms between any objects originating from different
 categories. In `FinSet`, the coproduct of two natural numbers is called addition.
-
-## n-ary Products and Coproducts
-
-In fact, the definition of products and coproducts can be expanded further, from `2` to any diagram originating in
-`n :: Set`. The same underlying logic applies, but each morphism is bijective to a set of morphisms with the same
-cardinality as `n`. It is alternatively equivalent to iterated products and coproducts. We denote it n-ary products
-and coproducts. If `n :: FinSet`, they are additionally finite product and coproducts. If `n = 1`, the products and
-coproducts can be trivially shown to be equal to the selection of object.
-
-Let us also consider the case for `n = 0`. A product of zero objects is the object `c :: C` with the property that, for
-each morphism from an object `n :: C` to it, there is a cone with apex `n` and diagram `0`. That cone is in category
-`[C, C ^ 0] ^ I = [C, 1] ^ I = 1 ^ I = 1`. In other words, for any `n`, there is exactly one morphism to the empty
-product. As such, it is called the terminal object. Similarly, the initial object of a category is the result of a
-colimit over the diagram `0`. It has exactly one outbound morphism to any other object.
-
-In `Cat`, the initial object `x` is the object so that for any `C :: Cat`, we have `[x, C] = 1`. Observe that the
-solution is `x = 0`. The terminal object has the property that for any `C :: Cat`, `[C, y] = 1`. Observe that `y = 1`.
-Analogous logic shows that this also applies to  `Set` and `FinSet`.

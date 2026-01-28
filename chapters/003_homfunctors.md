@@ -40,9 +40,10 @@ equivalent to currying, and the argument will be made more rigorous later.
 ## Internal homfunctors
 
 For some category `C`, an internal homfunctor, if it exists is a homfunctor with the definition `hom : (op C) * C -> C`.
-In other words, the result of the homfunctor is also an object in `C`, hence it being called internal. It can be
-trivially seen that `Set` has an internal homfunctor, as the result of applying the generic homfunctor to some set `a`
-is a set, and applying it to some function `f` returns a function, which is a morphism in set.
+In other words, the result of the homfunctor is also an object in `C`, hence it being called internal. A category that
+has an internal homfunctor is called a closed category. It can be trivially seen that `Set` is closed, as the result of
+applying the generic homfunctor to some set `a` is a set, and applying it to some function `f` returns a function,
+which is a morphism in set.
 
 ## Homfunctor intuition
 
