@@ -59,8 +59,8 @@ property that if `f, g :: D ^ I`, `f, g : x -> y`, then `Di f = Di g`. In other 
 given objects are equal. A diagram `Di` that follows this property is denoted a commutative diagram.
 
 We then say that `alpha_c :: (C ^ D) ^ I` is a cone with apex `c :: C`, base `Di :: C ^ D` a commutative diagram, and a
-set of morphisms for any `C :: C`, as `f : d -> Di d`. By looking at `beta : F -> Diag_D` instead, one obtains the dual
-concept of a cocone, whose morphisms go `f : Di d -> d`.
+set of morphisms for any `C :: C`, as `f : c -> Di d`. By looking at `beta : F -> Diag_D` instead, one obtains the dual
+concept of a cocone, whose morphisms go `f : Di d -> c`.
 
 ## Adjunctions of the Diagonal Functor
 
