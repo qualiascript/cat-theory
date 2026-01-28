@@ -83,7 +83,7 @@ It can be made recursive by adding a morphism `Fix` so that `Fix f = f Fix f`, h
 be written directly in this language. In practice, most programming languages use more complex categories than CCC
 for their architecture, but this syntax can also serve in being a more convenient way to talk about CCCs.
 
-## Institutional logic
+## Intuitionistic logic
 
 A CCC can also serve as a model for intuitionistic logic, that is, a logical system that, unlike classical logic,
 does not admit the law of excluded middle (`P OR NOT P`) and double negation (`NOT NOT P`). The correspondence lies
