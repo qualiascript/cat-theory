@@ -8,3 +8,4 @@ Chapters:
 5. [Products and Exponents](chapters/005_products_and_exponents.md)
 6. [Diagonal Functor](chapters/006_diagonal_functor.md)
 7. [Cartesian Closed Categories](chapters/007_cartesian_closed_categories.md)
+8. [Presheaves](chapters/008_presheaves.md)
