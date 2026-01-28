@@ -62,7 +62,7 @@ We then say that `alpha_c :: (C ^ D) ^ I` is a cone with apex `c :: C`, base `Di
 set of morphisms for any `C :: C`, as `f : c -> Di d`. By looking at `beta : F -> Diag_D` instead, one obtains the dual
 concept of a cocone, whose morphisms go `f : Di d -> c`.
 
-## Adjunctions of the Diagonal Functor
+## Limits and Colimits
 
 We now have a diagonal functor `Diag_G : C -> C ^ D`, and we know that it's part of a functor category `[C, [D, C]]`,
 so that its outbound morphisms are cones and its inbound morphisms are cocones. Let us now consider what its right
@@ -95,7 +95,7 @@ are in `Set` and morphisms are functions. Thus, we get the property: there is a 
 `Lim(a, b)` if and only if there are two functions from `x` to `a` and from `x` to `b`. This means
 `Lim(a, b) = a * b`, the Cartesian product of the two sets. 
 
-This property can be generalized to other categories as well, and as such we denote `Lim(a, b)` to be the product
+This property can be generalized to other categories as well, and as such we denote `a * b` to be the product
 of `a, b :: C`, if it exists. Within `Cat`, it is the previously defined product category. Within `FinSet`,
 the product of two natural numbers is the result of multiplication.
 
@@ -104,7 +104,29 @@ function from `Colim(a, b)` to `x` if and only if there are two functions from `
 This is the case when `Colim(a, b)` is a disjoint union of `a` and `b`, which includes all elements from both `a`
 and `b` while keeping track what set they originate from, so that the functions don't collide.
 
-In general terms, for `a, b :: C`, `Colim(a, b)` is called their coproduct. In general, if a limit is given a name,
+In general terms, for `a, b :: C`, `a + b` is called their coproduct. In general, if a limit is given a name,
 the colimit will have the same name prefixed with "co-". In `Cat`, the coproduct of two categories creates a new
 category with all the objects and morphisms of each and no morphisms between any objects originating from different
 categories. In `FinSet`, the coproduct of two natural numbers is called addition.
+
+## Initial and Terminal Objects
+
+The definition of products and coproducts can be expanded further, from `2` to any diagram originating in
+`n :: Set`. The same underlying logic applies, but each morphism is bijective to a set of morphisms with the same
+cardinality as `n`. It is alternatively equivalent to iterated products and coproducts. We denote it n-ary products
+and coproducts. If `n :: FinSet`, they are additionally finite product and coproducts. If `n = 1`, the products and
+coproducts can be trivially shown to be equal to the selection of object.
+
+Let us also consider the case for `n = 0`. A product of zero objects is the object `c :: C` with the property that, for
+each morphism from an object `n :: C` to it, there is a cone with apex `n` and diagram `0`. That cone is in category
+`[C, C ^ 0] ^ I = [C, 1] ^ I = 1 ^ I = 1`. In other words, for any `n`, there is exactly one morphism to the empty
+product. As such, it is called the terminal object. Similarly, the initial object of a category is the result of a
+colimit over the diagram `0`. It has exactly one outbound morphism to any other object.
+
+In `Cat`, the initial object `x` is the object so that for any `C :: Cat`, we have `[x, C] = 1`. Observe that the
+solution is `x = 0`. The terminal object has the property that for any `C :: Cat`, `[C, y] = 1`. Observe that `y = 1`.
+Analogous logic shows that this also applies to  `Set` and `FinSet`.
+
+The product of some `x :: C` and the initial object of `C` is the initial object. The product of some object `x` and
+the terminal object is `x`. The coproduct of `x` with the initial object is `x`. In `FinSet`, we have: `x * 0 = 0`,
+`x * 1 = 1`, `x + 0 = x`.
