@@ -20,7 +20,7 @@ Analogous logic shows that this also applies to  `Set` and `FinSet`.
 
 A category `C :: Cat` is considered Cartesian if it has all finite products. That is, for any `n :: FinSet`, there is a
 functor `Prod_n : C ^ n -> C`. In particular, `Prod_0 : 1 -> C` implies it also has a terminal object. Products are
-associative, that is, `(A * B) * C = A * (B * C)`. This can be seen due to `Prod_2(Prod_x(a), Prod_y(b)) = Prod_(a*b)`,
+associative, that is, `(A * B) * C = A * (B * C)`. This can be seen due to `Prod_2(Prod_x(a), Prod_y(b)) = Prod_(x*y)(a*b)`,
 which can be shown by multiplying the number of induced morphisms in the adjunction.
 
 A Cartesian closed category, henceforth a CCC, is a Cartesian category that is closed. That is, if `C :: Cat`, it has
