@@ -24,8 +24,8 @@ transformation `coeval : X -> (X * Y) ^ Y`, which maps any object `x :: X` to an
 argument `y :: Y` and returns `x * y`. It is denoted the coevaluation map.
 
 In fact, given any adjunction `hom_D(F x, y) ~= hom_C(x, G y)`, one can use a similar construction to get two natural
-transformations `unit : id D -> G F` and `counit : F G -> id C`, where `id C, id D` are identity functors. The unit
-of the product exponent adjunction is the evaluation map, and the counit is the coevaluation map.
+transformations `unit : id D -> G F` and `counit : F G -> id C`, where `id C, id D` are identity functors. The counit
+of the product exponent adjunction is the evaluation map, and the unit is the coevaluation map.
 
 ## Simply typed lambda calculus
 
