@@ -91,4 +91,4 @@ for their architecture, but this syntax can also serve in being a more convenien
 A CCC can also serve as a model for intuitionistic logic, that is, a logical system that, unlike classical logic,
 does not admit the law of excluded middle (`P OR NOT P`) and double negation (`NOT NOT P`). The correspondence lies
 in taking `A * B` as `A AND B`, `A -> B` as `A IMPLIES B`, and the terminal element as `TRUE`. This link between
-category theory, type theory and logical systems is known as the Curry–Howard–Lambek correspondence.
+category theory, type theory and logical systems is known as the Curry-Howard-Lambek correspondence.
