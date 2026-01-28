@@ -50,26 +50,23 @@ A morphism `f :: () -> X` is the same as picking some `x :: X`, so its body `f (
 If an identifier name is used in a type definition which hasn't been defined before, assume its type is any object
 of `C`. However, during function application, it cannot be used to mean two different types.
 
-Then let us consider `C :: Cat` to be a CCC defined as having the following objects: the set of all natural numbers
-which we will denote `UInt`, the set of integers which we will denote `Int` and the set `Char` which contains all 255
-ASCII characters, whose values are written in single quotes such as `'a'`. In order to not confuse it with the number
-`1`, let us write the terminal object as `()`, the product of zero terms. We know that we always have a morphism
-`Eval :: (A -> B, A) -> B`, so instead of `Eval (f, x)` let us just write `f x`. Then we have:
+Then let us consider a toy example `C :: Cat` to be a CCC defined as having the following objects: `FinSet` and the
+set `Char` which contains all 255 ASCII characters, whose values are written in single quotes such as `'a'`. In order
+to not confuse it with the number `1`, let us write the terminal object as `()`, the product of zero terms. We know
+that we always have a morphism `Eval :: (A -> B, A) -> B`, so instead of `Eval (f, x)` we write `f x`. Then we have:
 
 ```
-Two :: UInt
+Two :: FinSet
 Two = 2
 
-String = UInt -> Char
-Hi :: Two -> String
+String = FinSet -> Char
+
+StringOf :: FinSet -> String
+StringOf n = n -> Char
+
+Hi :: StringOf Two
 Hi 0 = 'H'
 Hi 1 = 'i'
-
-First :: (Int, Int) -> Int
-First (a, b) = a
-
-Second :: (Int, Int) -> Int
-Second (a, b) = b
 
 Curry :: ((A, B), C) -> A -> B -> C
 Curry f = \x -> \y -> f (x, y)
