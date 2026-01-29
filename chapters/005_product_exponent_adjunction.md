@@ -1,4 +1,4 @@
-# Products and Exponents
+# Product-Exponent Adjunction
 
 Recall the homfunctor `hom : (op C) * C -> Set`. We have previously claimed that one can "fix" either the first
 or the second value in the product category in the domain and obtain a new functor. More generally, given a functor
@@ -22,7 +22,8 @@ functors `first :: [X * Y, X]`, `first (x, y) = x`, `second :: [X * Y, Y]`, `sec
 Since we have an invertible function that maps any `F :: [X * Y, Z]` to `G :: [X, [Y, Z]]`. Alternatively, they can be
 denoted as `F :: Z ^ (X * Y)` and `G :: (Z ^ Y) ^ X`. Recall that functor categories are equivalent to internal
 homsets of `Cat`. So for functor `hom : (op Cat) * Cat -> Set`, we have a bijection between `hom(X * Y, Z) :: Set` and
-`hom(X, Z ^ Y) :: Set`. In other words, `hom(X * Y, Z) = hom(X, Z ^ Y)`.
+`hom(X, Z ^ Y) :: Set`. In other words, `hom(X * Y, Z) = hom(X, Z ^ Y)`, which is known as the product-exponent
+adjunction.
 
 ## Natural Bijection
 
