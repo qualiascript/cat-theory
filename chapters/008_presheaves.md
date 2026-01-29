@@ -74,6 +74,6 @@ are determined by their morphisms. Or simply put: category theory works.
 
 In philosophical terms, the Yoneda lemma provides a basis for the position of mathematical structuralism.
 Structuralism asserts that mathematics is the study of morphisms, not of objects. Objects only exist insofar as they
-are the source and destination of morphisms. Category theory, as defined in this guide, still relies on the existence
+are the origin and destination of morphisms. Category theory, as defined in this guide, still relies on the existence
 of sets, but the category theory based Univalent foundations project is building a wholly structuralist approach
 to the study of mathematics.

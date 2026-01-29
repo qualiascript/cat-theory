@@ -50,17 +50,17 @@ alpha_x d            alpha_y d
 Then for all `d :: D`, `(alpha_x d) . (F f d) = (id x) . (alpha_y d)`, which simplifies to
 `alpha_y d = (alpha_x d) . (F f d)`. So we have that for any `d :: D`, `alpha_y d :: C`, `alpha_y d : x -> F y d`.
 Then, `alpha` can be seen as a function that maps each `c :: C` to a set of maps `alpha_c` from all `d :: D` to some
-`F c d :: C`. Let us name `Di = F c :: C ^ D`. As each `c` lands back in `C`, this can be  simplified into a set of
+`F c d :: C`. Let us name `Di = F c :: C ^ D`. As each `c` lands back in `C`, this can be simplified into a set of
 morphisms from `c` to `Di b`, for all `b :: D`.
 
 Recall that `F :: [C, C ^ D]`, so `alpha_y :: [D, C] ^ I` is also a natural transformation. As such, for any morphism
 `f :: D ^ I`, `f : x -> y`, `alpha_c y = (alpha_c x) . (F c f)`. This implies the diagram `Di = F c :: C ^ D` has the
-property that if `f, g :: D ^ I`, `f, g : x -> y`, then `Di f = Di g`. In other words, all morphisms between any two
-given objects are equal. A diagram `Di` that follows this property is denoted a commutative diagram.
+property that if `f, g :: D ^ I`, `f, g : x -> y` then `Di f = Di g`. In other words, all morphisms starting in `x`
+and ending in `y` are equal. We will call this property commutativity.
 
-We then say that `alpha_c :: (C ^ D) ^ I` is a cone with apex `c :: C`, base `Di :: C ^ D` a commutative diagram, and a
-set of morphisms for any `C :: C`, as `f : c -> Di d`. By looking at `beta : F -> Diag_D` instead, one obtains the dual
-concept of a cocone, whose morphisms go `f : Di d -> c`.
+We then say that `alpha_c :: (C ^ D) ^ I` is a cone with apex `c :: C`, base `Di :: C ^ D` a diagram, and a
+set of morphisms for any `C :: C`, as `f : c -> Di d`, which induce commutativity. By looking at `beta : F -> Diag_D`
+instead, one obtains the dual concept of a cocone, whose morphisms go `f : Di d -> c`.
 
 ## Limits and Colimits
 
@@ -72,15 +72,15 @@ We have `hom_{C^D}(Diag_D x, y) ~= hom_C(x, F y)`. This is a bijection between s
 is also equivalent to a set of cones. In other words, `F` maps a diagram `y :: C ^ D`, which selects objects and
 morphisms in `D`, to a value `c :: C` with the property that for any other `x :: C`, there is a morphism `f :: x -> c`
 exactly for each cone with apex `x` and diagram `y`. Recall that a cone with apex `x` and diagram `y` represents a
-set of morphisms from `x` to all objects in `y a` where `a :: C`, so that the diagram commutes.
+set of morphisms from `x` to all objects in `y a` where `a :: C` that respects commutativity.
 
-To simplify, for any commutative diagram `y :: C ^ D`, `F y` is the object with the property that each morphism from
-`x :: C` to `F y` is equivalent to a family of morphisms from `x` to the objects which `y` picked in `C`. `F` is called
-the limit functor `Lim : C ^ D -> C`, and `Lim y` is called a limit.
+To simplify, for any diagram `y :: C ^ D`, `F y` is the object with the property that each morphism from
+`x :: C` to `F y` is equivalent to a family of morphisms from `x` to the objects which `y` picked in `C` so that
+commutativity is respected. `F` is called the limit functor `Lim : C ^ D -> C`, and `Lim y` is called a limit.
 
 By instead looking at the left adjoint of the diagonal functor, we can show it to be the colimit functor
 `Colim : C ^ D -> C`. It has the property that a morphism from `Colim x` to any object `y :: C` is equivalent
-to a family of morphisms from the objects picked by commutative diagram `x :: C ^ D` to `y`.
+to a family of morphisms from the objects picked by diagram `x :: C ^ D` to `y` that respect commutativity.
 
 ## Products and Coproducts
 

@@ -9,3 +9,4 @@ Chapters:
 6. [Diagonal Functor](chapters/006_diagonal_functor.md)
 7. [Cartesian Closed Categories](chapters/007_cartesian_closed_categories.md)
 8. [Presheaves](chapters/008_presheaves.md)
+9. [Equalizers and Coequalizers](chapters/009_equalizers_coequalizers.md)
