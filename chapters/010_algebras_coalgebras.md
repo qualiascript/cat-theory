@@ -33,7 +33,7 @@ and `F f : F c -> F d` for the origins. Practically speaking, a morphism in the 
 given by a morphism between the carriers of the F-algebra.
 
 ## Initial algebra
-
+[TODO: complete proof for `a . f`]
 The initial object over `Alg`, if it exists, is referred to as an initial algebra. Let's assume that `a : F c -> c`
 is an initial algebra over `F`. Then, `b : F F c -> F c` is also an algebra, so there is exactly one morphism
 `f : c -> F c`. However, `a : F c -> c` is also a valid algebra homomorphism from `b` to `a`. Then, `f . a : c -> c`
