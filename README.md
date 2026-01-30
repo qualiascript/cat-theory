@@ -11,4 +11,4 @@ Chapters:
 8. [Presheaves](chapters/008_presheaves.md)
 9. [Equalizers and Coequalizers](chapters/009_equalizers_coequalizers.md)
 10. [Algebras and Coalgebras](chapters/010_algebras_coalgebras.md)
-11. [Monoids](chapters/011_moniods.md)
+11. [Monoids and Comonoids](chapters/011_moniods_comonoids.md)
