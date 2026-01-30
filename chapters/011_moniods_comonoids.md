@@ -73,10 +73,10 @@ to modify or utilize the value of `y :: Y` without explicit handling. This is ho
 Monads have a dual concept known as Comonads. A Comonoid in a Monoidal Category `C :: Cat` is the same as a monoid
 in the opposite category `op C`. Alternatively, it is an F-coalgebra of the form `a : C -> 1 + C # C`, where `#`
 is `C`'s tensor product. A comonad `W`, then, is a comonoid in a monoidal category of endofunctors. This induces
-two natural transformations, `counit : W -> id C` and `cojoin : W -> W . W`.
+two natural transformations, `counit : W -> id C` and `cojoin : W -> W . W`. Comonoids follow dual laws compared to
+monoids, known as coassociativity and counitality.
 
-Comonads follow the following laws: coassociativity `cojoin(W . cojoin(W . W)) = cojoin(cojoin(W . W) . W)` and
-counitality `counit(cojoin . W) = counit(W . cojoin) = W`. Similarly to monads, it is often helpful to define a cobind
-natural transformation, `cobind : (W a) * [W a, b] -> W b`. The evaluation map `eval : (Z ^ Y) * Y -> Z` is a counit,
-and as such, it induces a comonad, known as the store, or costate comonad `Store Y X = Y * [Y, X]`. This illustrates
-the usage of comonads as handling many potential options from which one can extract one in particular.
+Similarly to monads, it is often helpful to define a cobind natural transformation, `cobind : (W a) * [W a, b] -> W b`.
+The evaluation map `eval : (Z ^ Y) * Y -> Z` is a counit, and as such, it induces a comonad, known as the store or
+costate comonad `Store Y X = Y * [Y, X]`. This illustrates the usage of comonads as handling many potential options
+from which one can extract one in particular.
