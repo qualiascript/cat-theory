@@ -33,12 +33,15 @@ and `F f : F c -> F d` for the origins. Practically speaking, a morphism in the 
 given by a morphism between the carriers of the F-algebra.
 
 ## Initial algebra
-[TODO: complete proof for `a . f`]
+
 The initial object over `Alg`, if it exists, is referred to as an initial algebra. Let's assume that `a : F c -> c`
-is an initial algebra over `F`. Then, `b : F F c -> F c` is also an algebra, so there is exactly one morphism
-`f : c -> F c`. However, `a : F c -> c` is also a valid algebra homomorphism from `b` to `a`. Then, `f . a : c -> c`
-constitutes a homomorphism from `a` to `a`. However, as `a` is initial, its unique homomorphism is `id c`. Hence,
-`f . a = id c`, meaning `f : c -> F c` is an isomorphism, so `c = F c`. This is known as Lambek's theorem.
+is an initial algebra over `F`. Then, `b = F a : F F c -> F c` is also an algebra, so there is exactly one morphism
+`f : c -> F c`. By tracking naturality, we get that `a . f = (F f) . (F a) : F c -> Fc`.
+
+However, `a : F c -> c` is also a valid algebra homomorphism from `b` to `a`. Then, `f . a : c -> c` constitutes a
+homomorphism from `a` to `a`. However, as `a` is initial, its unique homomorphism is `id c`. Hence, `f . a = id c`. By
+applying `F` on both sides, we get `(F f) . (F a) = id(F c)`, so `a . f = id(F c)`, meaning `f : c -> F c` is an
+isomorphism. Thus, `c = F c`. This is known as Lambek's theorem.
 
 In other words, if an initial algebra over `F` exists, it is `a : F c -> F c` where `a` is an isomorphism. For
 instance, given `C, X :: Set`, `F C = 1 + X * C`, the initial algebra on `C` is `a : F C -> 1 + X * C`, so we
@@ -53,26 +56,11 @@ and a morphism `c -> F c`. A terminal coalgebra, if it exists, is the terminal o
 Similarly to F-Algebras, if it exists, the terminal coalgebra's value is given by `c = F c`.
 
 Coalgebras can be thought of as an encoding of potentially infinite sequential operations. For instance, for functor
-`F C = X + C * C`, there is no initial algebra, as the structure is necessarily infinite. However, as a terminal
-coalgebra `a : C -> X + C * C`, one obtains `C = X + C * C = X + (X + C * C) + (X + C * C)` etc. which is an infinite
-binary tree with leaves labeled some value `x :: X`. This works, as one would need to make infinite steps of unfolding
-in order to reach the infinite structure.
+`F C = X + C * C`, there is no initial algebra `a : F C -> C`. In order to construct a `c :: C`, one would need
+`F c` first, so there are infinite steps to be followed. However, as a terminal algebra, there is no such requirement,
+so one can have `C = X + C * C = X + (X + C * C) + (X + C * C)` etc. This is an infinite binary tree with each leaf
+labeled some value `x :: X`. Thus, coalgebras have the unique property of being able to encode infinite data structures.
 
-## Monoids
+## Catamorphisms, Anamorphisms and Hylomorphisms 
 
-A monoid is an F-algebra `a : 1 + X * X -> X`, meaning it has an element `i : X` and an operation `m : X * X -> X`,
-which respect the laws that `m(m(x, y), z) = m(x, m(y, z))` (associativity) and `m(i, x) = m(x, i) = x` (left and right
-identity). It is an important algebra in category theory. An example of a monoid can be constructed by setting
-`X = FinSet`, `i = 0`, `m : (a, b) -> a + b`. This is the monoid of natural numbers with addition, and it can be
-trivially checked to respect the monoid laws.
-
-Notice that the associativity and the identity laws are respected by morphism composition. This suggests another monoid
-construction, for some `M :: C`, set `X = hom(C, C)` in `a : 1 + X * X -> X`, alongside `i = id M`, `m(x, y) = x . y`.
-In other words, a monoid can be constructed from the set of endomorphisms of any object in a category, along with
-morphism composition. Since it is any category, we can also set `M :: Cat`. This demonstrates the set of endofunctors
-of a category, along with functor composition, also constitute a monoid.
-
-A monoidal category is given by an F-algebra `a : 1 + C * C -> C`, where `C :: Cat`, so that we have operations
-`i :: C`, `m : C * C -> C` that respect the laws `m(m(x, y), z) = m(x, m(y, z))` and `m(i, x) = m(x, i) = x`.
-An example of a monoidal category is given by the category of endofunctors `[D, D]`, with `i = id D` the identity
-endofunctor, and `m(F, G) = F . G` functor composition.
+[TO BE CONTINUED]
