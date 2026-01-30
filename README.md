@@ -10,3 +10,4 @@ Chapters:
 7. [Cartesian Closed Categories](chapters/007_cartesian_closed_categories.md)
 8. [Presheaves](chapters/008_presheaves.md)
 9. [Equalizers and Coequalizers](chapters/009_equalizers_coequalizers.md)
+10. [Algebras and Coalgebras](chapters/010_algebras_coalgebras.md)

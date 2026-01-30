@@ -25,9 +25,10 @@ as functors. As such, we can immediately derive some laws any eventual definitio
 Practically speaking, the identity functor maps each object and morphism of a category to itself.
 This is because, for any functor `F` and any object or morphism `x`, we have `F x = ((id A) . F) x = F((id A) x)`.
 
-We would like for functors to respect the composition structure of the underlying categories. That is the structure that
-categories exist to model in the first place. As such, we impose the following additional rule:
+We would like for functors to respect the composition structure of the underlying categories. That is the structure
+that categories exist to model in the first place. As such, we impose the following additional rules:
 - Functor application on morphism composition is distributive. That is, `F (f . g) = F f . F g`
+- Functor application to a identity morphism yields an identity morphism. That is, `F(id x) = id(F x)`
 
 We observe this is trivially true for `(id A)(f . g) = f . g = ((id A) f) . ((id A) g)`. As such, identity functors
 already respect the distributive law. And as we have conceptualized functors as a pair of functions, it is clear that

@@ -36,7 +36,7 @@ we label our natural transformation `alpha :: [op C, Set] ^ I`, we get:
   |                         |
 alpha_x                   alpha_y
   |                         |
-  |                         |
+  ↓                         ↓
   Pr x ------- Pr f ------→ Pr y
 ```
 
