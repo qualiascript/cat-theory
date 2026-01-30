@@ -37,7 +37,7 @@ given by a morphism between the carriers of the F-algebra.
 The initial object over `Alg`, if it exists, is referred to as an initial algebra. Let's assume that `a : F c -> c`
 is an initial algebra over `F`. Then, `b : F F c -> F c` is also an algebra, so there is exactly one morphism
 `f : c -> F c`. However, `a : F c -> c` is also a valid algebra homomorphism from `b` to `a`. Then, `f . a : c -> c`
-constitutes a homomorphism from `a` to `a`. However, as `a` is initial, its only endomorphism is `id c`. Hence,
+constitutes a homomorphism from `a` to `a`. However, as `a` is initial, its unique homomorphism is `id c`. Hence,
 `f . a = id c`, meaning `f : c -> F c` is an isomorphism, so `c = F c`. This is known as Lambek's theorem.
 
 In other words, if an initial algebra over `F` exists, it is `a : F c -> F c` where `a` is an isomorphism. For
