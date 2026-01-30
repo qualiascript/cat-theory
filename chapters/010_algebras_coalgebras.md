@@ -6,7 +6,7 @@ for a good candidate for categorification.
 We may start by considering a category `C :: Cat` and some functors representing possible operations. For
 instance, a binary operation could be given by `F :: [C * C, C]`. However, this would only work if all objects we
 want to operate on are `c :: C`. Instead, we could consider each `c :: C` as a data type, and then an operation would
-simply be a morphism `f :: C ^ I`, `f : c * c -> c`. In fact, a binary operation is always a morphism `c * c -> c`, for
+simply be a morphism `f :: C ^ I`, `f : c * c -> c`. In fact, a binary operation is always a morphism `c * c -> c` for
 all `c :: C`, so we could build an endofunctor `F :: [C, C]`, `F x = x * x`.
 
 Then, we could consider an algebraic operation to be a morphism `a : F x -> x`. It would seem, then, that in order

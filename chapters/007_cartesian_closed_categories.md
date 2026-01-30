@@ -28,10 +28,10 @@ and get a new value, `z :: Z`. In the adjunction, we can also set `Z = X * Y` to
 `coeval : X -> (X * Y) ^ Y`, which maps any object `x :: X` to an exponent object which takes argument `y :: Y` and
 returns `x * y`. It is denoted the coevaluation map.
 
-In fact, given any adjunction `hom_D(F x, y) ~= hom_C(x, G y)`, one can use a similar construction to get two natural
-transformations `unit : id D -> G F` and `counit : F G -> id C`, where `id C, id D` are identity functors. The counit
-of the product exponent adjunction is the evaluation map, and the unit is the coevaluation map. In general, they are
-natural transformations, but in a CCC, `eval` and `coeval` are also morphisms.
+In fact, given any adjunction `hom_D(F x, y) ~= hom_C(x, G y)`, one can use a similar construction, applied to the
+identity morphisms `id(G x)` and `id(F x)`, to get two natural transformations `unit : id D -> G F` and
+`counit : F G -> id C`, where `id C, id D` are identity functors. The counit of the product exponent adjunction is the
+evaluation map, and the unit is the coevaluation map. In a CCC, natural transformations are also morphisms.
 
 ## Simply typed lambda calculus
 

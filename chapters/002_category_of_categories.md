@@ -28,7 +28,7 @@ This is because, for any functor `F` and any object or morphism `x`, we have `F 
 We would like for functors to respect the composition structure of the underlying categories. That is the structure
 that categories exist to model in the first place. As such, we impose the following additional rules:
 - Functor application on morphism composition is distributive. That is, `F (f . g) = F f . F g`
-- Functor application to a identity morphism yields an identity morphism. That is, `F(id x) = id(F x)`
+- Functor application to an identity morphism yields an identity morphism. That is, `F(id x) = id(F x)`
 
 We observe this is trivially true for `(id A)(f . g) = f . g = ((id A) f) . ((id A) g)`. As such, identity functors
 already respect the distributive law. And as we have conceptualized functors as a pair of functions, it is clear that
