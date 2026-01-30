@@ -78,5 +78,5 @@ two natural transformations, `counit : W -> id C` and `cojoin : W -> W . W`.
 Comonads follow the following laws: coassociativity `cojoin(W . cojoin(W . W)) = cojoin(cojoin(W . W) . W)` and
 counitality `counit(cojoin . W) = counit(W . cojoin) = W`. Similarly to monads, it is often helpful to define a cobind
 natural transformation, `cobind : (W a) * [W a, b] -> W b`. The evaluation map `eval : (Z ^ Y) * Y -> Z` is a counit,
-and as such, it induces a comonad, known as the store, or costate comonad `Store Y X = Y * [Y, X]`. This illustrates
+and as such, it induces a comonad, known as the store or costate comonad `Store Y X = Y * [Y, X]`. This illustrates
 the usage of comonads as handling many potential options from which one can extract one in particular.
