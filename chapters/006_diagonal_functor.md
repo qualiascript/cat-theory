@@ -127,6 +127,5 @@ In `Cat`, the initial object `x` is the object so that for any `C :: Cat`, we ha
 solution is `x = 0`. The terminal object has the property that for any `C :: Cat`, `[C, y] = 1`. Observe that `y = 1`.
 Analogous logic shows that this also applies to  `Set` and `FinSet`.
 
-The product of some `x :: C` and the initial object of `C` is the initial object. The product of some object `x` and
-the terminal object is `x`. The coproduct of `x` with the initial object is `x`. In `FinSet`, we have: `x * 0 = 0`,
-`x * 1 = 1`, `x + 0 = x`.
+The product of some `x :: C` and the initial object of `C` is the initial object. The coproduct of `x` with the initial
+object is `x`. Then in `FinSet`, we have: `x * 1 = 1`, `x + 0 = x`.
