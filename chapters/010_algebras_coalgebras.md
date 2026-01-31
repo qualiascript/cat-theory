@@ -63,4 +63,13 @@ labeled some value `x :: X`. Thus, coalgebras have the unique property of being 
 
 ## Catamorphisms, Anamorphisms and Hylomorphisms 
 
-[TO BE CONTINUED]
+Given some F-algebra `a : F c -> c`, there is a unique homomorphism from the initial algebra `i : F d -> d` to it,
+which is given by a morphism `f : d -> c`. This morphism is denoted as a catamorphism. As an initial algebra is a
+fixed point, it denotes some sort of recursive data structure, and the catamorphism maps each inhabitant of `d` to an
+inhabitant of `c`. In other words, a catamorphism is a folding operation.
+
+Dually, an anamorphism is the unique morphism from some F-coalgebra to the terminal coalgebra. It is an unfolding
+operation, as it maps into a recursive data structure. After mapping an algebra to a terminal coalgebra using an
+anamorphism, the result can often be seen from a different perspective as an initial algebra, for which there is
+a suitable catamorphism. The composition of an anamorphism and a catamorphism is called a hylomorphism, and is
+equivalent to first unfolding then folding. It can be used to implement recursive functions.
