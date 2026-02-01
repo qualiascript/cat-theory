@@ -18,7 +18,7 @@ of notation and writing, which can hinder that intuition. On the other hand, oth
 intuition, which is detrimental as the abstraction layers increase. Furthermore, this guide derives concepts whenever
 possible, as to illustrate the motivation behind mathematical concepts beyond the formal definitions.
 
-This project is open source and hosted on GitHub Pages. You can find the project
+This project is open source and hosted on GitHub Pages. You can find the repository
 [here](https://github.com/qualiascript/cat-theory/). Issues and pull requests are welcome, however it is unlikely I
 will accept large contributions, as to keep a consistent style throughout. 
 
