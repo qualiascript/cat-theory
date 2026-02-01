@@ -6,7 +6,7 @@ that any fixed point must be part of both the domain and the codomain. Then for 
 its domains and codomains are equal and `f'` has the same fixed points as `f`. This shows that it is natural to define
 fixed points in terms of an endomorphism.
 
-Let us work in a CCC, `C :: Cat`. As such, we have that for any `X :: C`, its inhabitants `x :: X` are isomorphic
+We have that for any `X :: C`, its inhabitants `x :: X` are isomorphic
 to the set of morphisms `f : 1 -> X`. Then the definition of a fixed point becomes: an endomorphism `e : X -> X`
 has `x : 1 -> X` as its fixed point if and only if `x . e = x`. As we've previously seen, fixed points encode
 a sort of recursive structure, as repeated composition with `e` will not change the result, so if `e` has some
@@ -45,7 +45,7 @@ as a featureless point inside the space of the category. More specifically, a po
 ## Finding fixed points
 
 Does untyped lambda calculus have fixed points? Let us explore this question in more general terms:
-`L :: Cat`, but the following apply for any CCC, let us denote it `C : CCC`. We have two objects, `A, B :: C`
+`L :: Cat`, but the following apply for any CCC, let us denote it `C :: Cat`. We have two objects, `A, B :: C`
 and a morphism `m : A -> B ^ A` so that `m` is point surjective. In the case of our untyped lambda calculus model,
 we have that `A = B = L`, but this is not generally the case.
 
@@ -77,7 +77,7 @@ This construction, also known as the Y-combinator, finds the fixed point of any 
 
 The Lawvere Fixed Point Theorem says that if there is a point surjective map `m : A -> B ^ A`, then all endomorphisms
 of `B` has a fixed point. The contrapositive version implies that if there is an endomorphism `b : B -> B` with no
-fixed points, then there is no point surjective map. Let us select `A = Set`, `B = 2`. There is a function
+fixed points, then there is no point surjective map. Let us select `A :: Set`, `B = 2`. There is a function
 `f : 2 -> 2`, `f x = 1 - x`, which has no fixed points. As such, there is no surjection `m : B -> 2 ^ B`,
 meaning `2 ^ B` has a strictly higher cardinality than `B`. This is known as Cantor's Theorem.
 
