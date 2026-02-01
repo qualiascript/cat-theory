@@ -6,7 +6,7 @@ that any fixed point must be part of both the domain and the codomain. Then for 
 its domains and codomains are equal and `f'` has the same fixed points as `f`. This shows that it is natural to define
 fixed points in terms of an endomorphism.
 
-Let us work in a CCC, `C :: Cat`. As such, we have that for any `X :: C`, its inhabitants `x :: X` are isomorphic
+We have that for any `X :: C`, its inhabitants `x :: X` are isomorphic
 to the set of morphisms `f : 1 -> X`. Then the definition of a fixed point becomes: an endomorphism `e : X -> X`
 has `x : 1 -> X` as its fixed point if and only if `x . e = x`. As we've previously seen, fixed points encode
 a sort of recursive structure, as repeated composition with `e` will not change the result, so if `e` has some
