@@ -67,8 +67,8 @@ as inspiration, we can explicitly construct a fixed point combinator. We have fo
 `Q l = l . Diag_2 . (app * id) . eval . t`, and a `q :: L` so that `q . app = Q`, and `Q q` is a fixed point of `x`.
 Then we need a lambda function `Y :: L` so that `Y x = Q_x q_x`. 
 
-Starting with `Q l = l`, we have `\x. x`. Diagonalization induces `\x. x x`. The first term gets made into a function,
-so that we have `\x. \y. x x`, which then gets evaluated back to `\x. x x`. We then apply our morphism `t` to obtain
+Starting with `Q l = l`, we have `\x. x`. Diagonalization induces `\x. x x`. The next two operations evaluates the
+first term with the second term, which leaves the expression unchanged. We then apply our morphism `t` to obtain
 `\x. t x x`. Then, `Y = Q q` is the result of `(\x. t x x) (\x. t x x) = t (\x. t x x) (\x. t x x)`. In other words,
 `Y = t Y`, which is what we wanted. Then let us define the fixed point combinator as `Y = \t. (\x. t x x) (\x. t x x)`.
 This construction, also known as the Y-combinator, finds the fixed point of any lambda function.
