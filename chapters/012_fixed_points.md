@@ -77,7 +77,7 @@ This construction, also known as the Y-combinator, finds the fixed point of any 
 
 The Lawvere Fixed Point Theorem says that if there is a point surjective map `m : A -> B ^ A`, then all endomorphisms
 of `B` has a fixed point. The contrapositive version implies that if there is an endomorphism `b : B -> B` with no
-fixed points, then there is no point surjective map. Let us select `A = Set`, `B = 2`. There is a function
+fixed points, then there is no point surjective map. Let us select `A :: Set`, `B = 2`. There is a function
 `f : 2 -> 2`, `f x = 1 - x`, which has no fixed points. As such, there is no surjection `m : B -> 2 ^ B`,
 meaning `2 ^ B` has a strictly higher cardinality than `B`. This is known as Cantor's Theorem.
 
