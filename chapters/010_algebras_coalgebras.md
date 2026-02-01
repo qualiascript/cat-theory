@@ -12,7 +12,7 @@ all `c :: C`, so we could build an endofunctor `F :: [C, C]`, `F x = x * x`.
 Then, we could consider an algebraic operation to be a morphism `a : F x -> x`. It would seem, then, that in order
 to encode an algebra, we require a family of such morphisms. However, that is not the case: a unary and a binary
 operation can be encoded as a single morphism using the functor `F x = x + x * x`. Then, due to the behavior of
-coproducts, a morphism `a : F x -> x` is equivalent to two morphisms, `a1 : x -> x` and `a2 : x * x -> x`. An algebra
+coproducts, a morphism `a : F x -> x` is equivalent to two morphisms, `f : x -> x` and `g : x * x -> x`. An algebra
 can also include specific given values, which can be added to the functor as `F x = 1 + x + x * x`.
 
 This construction is called an algebra over an endofunctor, or an F-algebra. More specifically, the algebra is given
@@ -41,7 +41,7 @@ is an initial algebra over `F`. Then, `b = F a : F F c -> F c` is also an algebr
 However, `a : F c -> c` is also a valid algebra homomorphism from `b` to `a`. Then, `f . a : c -> c` constitutes a
 homomorphism from `a` to `a`. However, as `a` is initial, its unique homomorphism is `id c`. Hence, `f . a = id c`. By
 applying `F` on both sides, we get `(F f) . (F a) = id(F c)`, so `a . f = id(F c)`, meaning `f : c -> F c` is an
-isomorphism. Thus, `c = F c`. This is known as Lambek's theorem.
+isomorphism. Thus, `c = F c`, which we denote as `c` being a fixed point over `F`. This is known as Lambek's theorem.
 
 In other words, if an initial algebra over `F` exists, it is `a : F c -> F c` where `a` is an isomorphism. For
 instance, given `C, X :: Set`, `F C = 1 + X * C`, the initial algebra on `C` is `a : F C -> 1 + X * C`, so we

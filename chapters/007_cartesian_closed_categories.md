@@ -11,9 +11,9 @@ an internal homfunctor `hom : (op C) * C -> C`. All of `Cat`, `Set` and `FinSet`
 product-exponent adjunction in `Cat`, however, since we have only used the existence of products and exponents, the
 same logic can demonstrate it for a generic CCC.
 
-If `C :: Cat` a CCC, it has a terminal object `ter :: C`, so that for any `A :: C`, `A * ter = A`. If `ter` had
-multiple elements, the induced family of morphisms would be larger than the one induced by `A` alone, so `A` must
-have exactly one element. As such, we can denote it as `1 = ter :: C` going forward.
+As the product-exponent adjunction applies in any `C :: Cat` where C is a CCC. If we denote the terminal object as
+`1`, we have that `(X ^ 1) ^ Y = X ^ (1 * Y) = X ^ Y`. As this applies for any `Y`, we have that `X ^ 1 = X`. In other
+words, any morphism `f : 1 -> X` is isomorphic to a value `x :: X`.
 
 ## Evaluation map
 
@@ -36,13 +36,13 @@ evaluation map, and the unit is the coevaluation map. In a CCC, natural transfor
 ## Simply typed lambda calculus
 
 For any CCC, we now have equivalent constructions to currying, uncurrying and function evaluation. The similarity with
-programming is, in fact, not coincidental.
+programming is, in fact, not coincidental. Consider `C :: Cat` a CCC. Let us use an alternative notation, so that for
+`A, B :: C`, instead of `A ^ B` we write `B -> A`, and instead of `A * B` we write `(A, B)`.
 
-Consider `C :: Cat` a CCC. Let us use an alternative notation, so that for `A, B :: C`, instead of `A ^ B` we write
-`B -> A`, and instead of `A * B` we write `(A, B)`. Then, for a specific morphism `f :: A -> B`, it is defined by
-how it maps each `a :: A` to a `b :: B`. As such, to denote a morphism, we can write the object it belongs to
-(referred to as a type annotation), and then write one or more lines of form `f a = b`, meaning `a` gets mapped to
-`b`. The type annotation can be inferrable from context, in which case it can be skipped.
+Then, for a specific morphism `f :: A -> B`, it is defined by how it maps each `a :: A` to a `b :: B`. As such, to
+denote a morphism, we can write the object it belongs to (referred to as a type annotation), and then write one or more
+lines of form `f a = b`, meaning `a` gets mapped to `b`. The type annotation can be inferrable from context, in which
+case it can be skipped. Let us write the terminal object as `()`, the product of zero terms.
 
 Additionally, let us denote `\(a :: A) -> (b :: B)` a morphism from `a :: A` to `b :: B` which we do not give an
 identifier name, potentially skipping the type annotations as well. This expression must be defined for all `a :: A`.
@@ -51,8 +51,7 @@ If an identifier name is used in a type definition which hasn't been defined bef
 of `C`. However, during function application, it cannot be used to mean two different types.
 
 Then let us consider a toy example `C :: Cat` to be a CCC defined as having the following objects: `FinSet` and the
-set `Char` which contains all 255 ASCII characters, whose values are written in single quotes such as `'a'`. In order
-to not confuse it with the number `1`, let us write the terminal object as `()`, the product of zero terms. We know
+set `Char` which contains all 255 ASCII characters, whose values are written in single quotes such as `'a'`. We know
 that we always have a morphism `Eval :: (A -> B, A) -> B`, so instead of `Eval (f, x)` we write `f x`. Then we have:
 
 ```

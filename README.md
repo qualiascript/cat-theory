@@ -12,3 +12,4 @@ Chapters:
 9. [Equalizers and Coequalizers](chapters/009_equalizers_coequalizers.md)
 10. [Algebras and Coalgebras](chapters/010_algebras_coalgebras.md)
 11. [Monoids and Comonoids](chapters/011_moniods_comonoids.md)
+12. [Fixed Points](chapters/012_fixed_points.md)
