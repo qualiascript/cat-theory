@@ -1,3 +1,5 @@
+# `cattheory.org`
+
 ## Title of Contents
 1. [Categories](chapters/001_categories.md) (+ Isomorphisms)
 2. [Category of Categories](/chapters/002_category_of_categories.md) (+ Functors)
@@ -31,3 +33,7 @@ ways, acts as a sort of programming language of math itself. Many resources onli
 of notation and writing, which can hinder that intuition. On the other hand, other resources rely too much on
 intuition, which is detrimental as the abstraction layers increase. Furthermore, this guide derives concepts whenever
 possible, as to illustrate the motivation behind mathematical concepts beyond the formal definitions.
+
+This project is open source and hosted on GitHub Pages. You can find the project
+[here](https://github.com/qualiascript/cat-theory/). Issues and pull requests are welcome, however it is unlikely I
+will accept large contributions, as to keep a consistent style throughout. 

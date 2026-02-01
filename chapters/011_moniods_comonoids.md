@@ -1,4 +1,4 @@
-# Monoids and Comonoids
+# Chapter 11: Monoids and Comonoids
 
 A monoid is an F-algebra `m : 1 + X * X -> X`, meaning it has a unit element `i : X` and an operation `# : X * X -> X`
 (which we will infix, so that `a # b = #(a, b)`). which respect the laws that `(a # b) # c = a # (b # c)`

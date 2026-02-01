@@ -1,4 +1,4 @@
-# Fixed Points
+# Chapter 12: Fixed Points
 
 We have briefly introduced the concept of a fixed point over an endofunctor `F`, as a point `c` so that `F c = c`.
 This is similar to the concept of a fixed point of a function `f`, which is a value `x` so that `f x = x`. Note
@@ -64,14 +64,14 @@ surjective map `m : A -> B ^ A`, then every `f : B -> B` has fixed points.
 
 This demonstrates that every function in untyped lambda calculus always has a fixed point. In fact, using the proof
 as inspiration, we can explicitly construct a fixed point combinator. We have for any `t :: L` a morphism `Q : L -> L`,
-`Q l = l . Diag_2 . (app * id) . eval . t`, and a `q :: L` so that `q . app = Q`, and `Q q` is a fixed point of `x`.
-Then we need a lambda function `Y :: L` so that `Y x = Q_x q_x`. 
+`Q l = eval(l . app, l) . t`, and a `q :: L` so that `q . app = Q`, and `Q q` is a fixed point of `x`. Then we need a
+lambda function `Y :: L` so that `Y x = Q_x q_x`. 
 
-Starting with `Q l = l`, we have `\x. x`. Diagonalization induces `\x. x x`. The next two operations evaluates the
-first term with the second term, which leaves the expression unchanged. We then apply our morphism `t` to obtain
-`\x. t x x`. Then, `Y = Q q` is the result of `(\x. t x x) (\x. t x x) = t (\x. t x x) (\x. t x x)`. In other words,
-`Y = t Y`, which is what we wanted. Then let us define the fixed point combinator as `Y = \t. (\x. t x x) (\x. t x x)`.
-This construction, also known as the Y-combinator, finds the fixed point of any lambda function.
+Looking at `Q`, the `eval(l . app, l)` part applies the argument to itself, which can be written as `\x. x x`. Then the
+result is applied to the term `t`, so that we have `\x. t x x`. Then, `Y = Q q` is the result of
+`(\x. t x x) (\x. t x x) = t (\x. t x x) (\x. t x x)`. In other words, `Y = t Y`, which is what we wanted. Then let us
+define the fixed point combinator as `Y = \t. (\x. t x x) (\x. t x x)`. This construction, also known as the
+Y-combinator, finds the fixed point of any lambda function.
 
 ## Other applications
 

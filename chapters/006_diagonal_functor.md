@@ -1,4 +1,4 @@
-# Diagonal functor
+# Chapter 6: Diagonal Functor
 
 Recall that every `D :: Cat` induces a functor `F :: [C, 1]` that collapses the category to `1`. Furthermore,
 for any `C :: Cat`, `C = C ^ 1 = [1, C]`. This is a functor category in natural isomorphism to `C`, and as such,

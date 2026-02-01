@@ -1,4 +1,4 @@
-# Cartesian Closed Categories
+# Chapter 7: Cartesian Closed Categories
 
 A category `C :: Cat` is considered Cartesian if it has all finite products. That is, for any `n :: FinSet`, there is
 a functor `Prod_n : C ^ n -> C`. In particular, `Prod_0 : 1 -> C` implies it also has a terminal object. Products are

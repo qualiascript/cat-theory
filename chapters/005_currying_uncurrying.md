@@ -1,4 +1,4 @@
-# Currying and Uncurrying
+# Chapter 5: Currying and Uncurrying
 
 Recall the homfunctor `hom : (op C) * C -> Set`. We have previously claimed that one can "fix" either the first
 or the second value in the product category in the domain and obtain a new functor. More generally, given a functor
