@@ -42,7 +42,7 @@ point surjectivity. The terminology of point both in this instance and for fixed
 as a featureless point inside the space of the category. More specifically, a point surjective map is any morphism
 `m : A -> B` so that every `b : 1 -> B` has a corresponding `a : 1 -> A` so that `a . m = b`.
 
-## Finding fixed points
+## Constructing fixed points
 
 Does untyped lambda calculus have fixed points? Let us explore this question in more general terms:
 `L :: Cat`, but the following apply for any CCC, let us denote it `C :: Cat`. We have two objects, `A, B :: C`
@@ -52,7 +52,7 @@ we have that `A = B = L`, but this is not generally the case.
 Given any `x : B -> B`, we would like to find a `z : 1 -> B` so that `z . x = x`. In fact, this can be constructed
 by creating the following morphism: `Q : A -> B`, and for any `a :: A`, `Q a = a . Diag_2 . (m * id) . eval . x`.
 We are denoting `(m * id)` the morphism which given a product `a * a`, applies `m` on the left and `id a` on the right.
-This exists due to the universal property of products. By expanding, we get `Q a = eval(c . m, c) . x` Since
+This exists due to the universal property of products. By expanding, we get `Q a = eval(a . m, a) . x` Since
 `Q :: B ^ A`, it can also be denoted as `Q : 1 -> B ^ A`.
 
 Since `m` is a point surjective map, there is some `p : 1 -> A` so that `p . m = Q`. Let us denote `z = Q p : A -> B`.
