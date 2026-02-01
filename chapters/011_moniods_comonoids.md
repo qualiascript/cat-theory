@@ -9,8 +9,7 @@ with addition, and it can be trivially checked to respect the monoid laws.
 Notice that the associativity and the unitality laws are respected by morphism composition. This suggests another monoid
 construction, for some `M :: C`, set `X = hom(C, C)` in `a : 1 + X * X -> X`, alongside `i = id M`, `x # y = x . y`.
 In other words, a monoid can be constructed from the set of endomorphisms of any object in a category, along with
-morphism composition. Since it is any category, we can also set `M :: Cat`. This demonstrates the set of endofunctors
-of a category, along with functor composition, also constitute a monoid.
+morphism composition. In fact, an alternative definition is that a monoid is a category with a single object.
 
 A monoidal category is given by an F-algebra `a : 1 + C * C -> C`, where `C :: Cat`, so that we have operations
 `i :: C`, `# : C * C -> C` that respect the associativity and unitality laws. An example of a monoidal category is given
