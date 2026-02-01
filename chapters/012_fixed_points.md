@@ -45,7 +45,7 @@ as a featureless point inside the space of the category. More specifically, a po
 ## Finding fixed points
 
 Does untyped lambda calculus have fixed points? Let us explore this question in more general terms:
-`L :: Cat`, but the following apply for any CCC, let us denote it `C : CCC`. We have two objects, `A, B :: C`
+`L :: Cat`, but the following apply for any CCC, let us denote it `C :: Cat`. We have two objects, `A, B :: C`
 and a morphism `m : A -> B ^ A` so that `m` is point surjective. In the case of our untyped lambda calculus model,
 we have that `A = B = L`, but this is not generally the case.
 
