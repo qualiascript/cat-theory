@@ -1,4 +1,4 @@
-# Product-Exponent Adjunction
+# Currying and Uncurrying
 
 Recall the homfunctor `hom : (op C) * C -> Set`. We have previously claimed that one can "fix" either the first
 or the second value in the product category in the domain and obtain a new functor. More generally, given a functor
@@ -22,8 +22,11 @@ functors `first :: [X * Y, X]`, `first (x, y) = x`, `second :: [X * Y, Y]`, `sec
 Since we have an invertible function that maps any `F :: [X * Y, Z]` to `G :: [X, [Y, Z]]`. Alternatively, they can be
 denoted as `F :: Z ^ (X * Y)` and `G :: (Z ^ Y) ^ X`. Recall that functor categories are equivalent to internal
 homsets of `Cat`. So for functor `hom : (op Cat) * Cat -> Set`, we have a bijection between `hom(X * Y, Z) :: Set` and
-`hom(X, Z ^ Y) :: Set`. In other words, `hom(X * Y, Z) = hom(X, Z ^ Y)`, which is known as the product-exponent
-adjunction.
+`hom(X, Z ^ Y) :: Set`.
+
+In other words, `hom(X * Y, Z) = hom(X, Z ^ Y)`, which is known as the product-exponent adjunction. It is the category
+theory definition for currying and uncurrying. Currying is the process of transforming an object of the form
+`a : X * Y -> Z` into an object `b : X -> [Y, Z]`, and uncurrying is the reverse operation.
 
 ## Natural Bijection
 
@@ -77,7 +80,7 @@ This can be seen with the product-exponent adjunction, which acts as the archety
 `(-) ^ b` are not isomorphic, but they share some underlying structure. Applying a product to the left and then
 drawing morphisms going out of it is like adding an argument to a function's domain. Applying an exponent to the
 right and drawing morphisms going into it is like having a function return another function, which when applied to an
-argument, returns a result. Notice that these are practically equivalent, and correspond to the concept of currying.
+argument, returns a result. Notice that these are practically equivalent, which is why currying and uncurrying work.
 
 Adjunctions, in the general case, encode a duality of functors. There are a lot of adjunctions, and any intuition
 beyond that of a duality will not hold for all cases. However, because the left adjoint is on the left of the homset,
