@@ -22,17 +22,7 @@ perspective comes in handy in specific contexts.
 Then, objects of `[C, C ^ D]` send each `c :: C` to a constant diagram `Di :: C ^ D`, which maps each object
 `d :: D` to `c :: C` and each morphism `f :: D ^ I` to `id c :: C ^ I`. Let us now consider the meaning of
 a natural transformation in `alpha :: [C, C ^ D] ^ I`, with `alpha : Diag_D -> F`. `alpha_x` maps
-`Diag_D x :: C ^ D` to `F x :: C ^ D`. Let us draw the naturality condition for `f :: C ^ I`, `f : x -> y`:
-
-```
-  Diag_D x -- Diag_D f -→ Diag_D y
-  |                       |
-  |                       |
-alpha_x               alpha_y
-  |                       |
-  ↓                       ↓
-  F x ------- F f ------→ F y
-```
+`Diag_D x :: C ^ D` to `F x :: C ^ D`. 
 
 Recall that `Diag_D x` is a diagram `Di :: [D, C]` so that for any `d :: D`, `Di d = x`, and for any `f :: D ^ I`,
 `Di f = id x`. Then let's draw the naturality condition for any `d :: D`, which lands us back in `C`.
@@ -47,20 +37,19 @@ alpha_x d            alpha_y d
    F x d --- F f d --→ F y d
 ```
 
-Then for all `d :: D`, `(alpha_x d) . (F f d) = (id x) . (alpha_y d)`, which simplifies to
-`alpha_y d = (alpha_x d) . (F f d)`. So we have that for any `d :: D`, `alpha_y d :: C`, `alpha_y d : x -> F y d`.
-Then, `alpha` can be seen as a function that maps each `c :: C` to a set of maps `alpha_c` from all `d :: D` to some
-`F c d :: C`. Let us name `Di = F c :: C ^ D`. As each `c` lands back in `C`, this can be simplified into a set of
-morphisms from `c` to `Di b`, for all `b :: D`.
+Then for all `d :: D`, `alpha_y d = (alpha_x d) . (F f d)`. So we have that for any `d :: D`, `alpha_y d :: C`,
+`alpha_y d : x -> F y d`. Then, `alpha` can be seen as a function that maps each `c :: C` to a set of maps `alpha_c`
+from all `d :: D` to some `F c d :: C`. Let us name `Di = F c :: C ^ D`. As the maps of `c` always land back in `C`,
+this can be simplified into a set of morphisms from `c` to `Di b`, for all `b :: D`.
 
-Recall that `F :: [C, C ^ D]`, so `alpha_y :: [D, C] ^ I` is also a natural transformation. As such, for any morphism
+Recall that `Di :: [D, C]`, so `alpha_y :: [D, C] ^ I` is also a natural transformation. As such, for any morphism
 `f :: D ^ I`, `f : x -> y`, `alpha_c y = (alpha_c x) . (F c f)`. This implies the diagram `Di = F c :: C ^ D` has the
 property that if `f, g :: D ^ I`, `f, g : x -> y` then `Di f = Di g`. In other words, all morphisms starting in `x`
 and ending in `y` are equal. We will call this property commutativity.
 
 We then say that `alpha_c :: (C ^ D) ^ I` is a cone with apex `c :: C`, base `Di :: C ^ D` a diagram, and a
-set of morphisms for any `C :: C`, as `f : c -> Di d`, which induce commutativity. By looking at `beta : F -> Diag_D`
-instead, one obtains the dual concept of a cocone, whose morphisms go `f : Di d -> c`.
+set of morphisms from `c` to any `Di d :: D`, as `f : c -> Di d`, which induce commutativity. By looking at
+`beta : F -> Diag_D` instead, one obtains the dual concept of a cocone, whose morphisms go `f : Di d -> c`.
 
 ## Limits and Colimits
 
