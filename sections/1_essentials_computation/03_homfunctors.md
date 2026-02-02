@@ -1,4 +1,4 @@
-# Chapter 3: Homfunctors
+# I.3. Homfunctors
 
 We have defined the homset of a category as the set of morphisms. This terminology comes from a shortening of
 "homomorphism set", where homomorphism acts as a synonym of morphism within the context of category theory.

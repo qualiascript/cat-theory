@@ -1,4 +1,4 @@
-# Chapter 12: Fixed Points
+# I.12. Fixed Points
 
 We have briefly introduced the concept of a fixed point over an endofunctor `F`, as a point `c` so that `F c = c`.
 This is similar to the concept of a fixed point of a function `f`, which is a value `x` so that `f x = x`. Note

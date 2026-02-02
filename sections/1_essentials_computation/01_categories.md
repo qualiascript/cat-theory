@@ -1,4 +1,4 @@
-# Chapter 1: Categories
+# I.1. Categories
 
 ## Definition
 
