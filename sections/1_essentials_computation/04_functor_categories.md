@@ -1,4 +1,4 @@
-# Chapter 4: Functor Categories
+# I.4. Functor Categories
 
 Is there a category of functors? If there is, it is an object in `Cat`, as it is a valid category. Morphisms in `Cat`
 are exactly functors, so the existence of functor categories would imply the existence of an internal homfunctor over

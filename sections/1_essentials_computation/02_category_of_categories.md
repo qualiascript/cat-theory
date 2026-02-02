@@ -1,4 +1,4 @@
-# Chapter 2: Category of Categories
+# I.2. Category of Categories
 
 It is a natural next step to consider what a category of categories would entail. Let us name the category of all
 categories `Cat`. Clearly, its objects ought to be categories, but it is not immediately apparent what its

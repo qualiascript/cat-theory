@@ -1,4 +1,4 @@
-# Chapter 9: Equalizers and Coequalizers
+# I.9. Equalizers and Coequalizers
 
 So far, we have considered limits and colimits over diagrams whose underlying category is in `FinSet`, that is,
 diagrams with no non-trivial morphisms. Let us now explore the behavior of limits and colimits for other diagrams.

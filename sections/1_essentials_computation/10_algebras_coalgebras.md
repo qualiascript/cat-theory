@@ -1,4 +1,4 @@
-# Chapter 10: Algebras and Coalgebras
+# I.10. Algebras and Coalgebras
 
 Informally speaking, an algebra is a set and some operations over that set that follow some laws. This concept makes
 for a good candidate for categorification.

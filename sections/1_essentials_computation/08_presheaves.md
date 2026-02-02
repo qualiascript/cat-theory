@@ -1,4 +1,4 @@
-# Chapter 8: Presheaves
+# I.8. Presheaves
 
 For any `C :: Cat`, we have an external homfunctor `hom : (op C) * C -> Set`. By currying (that is, the product
 exponent adjunction), this induces a functor `Yo : C -> [op C, Set]`. This functor is known as the Yoneda embedding,

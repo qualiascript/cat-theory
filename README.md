@@ -23,7 +23,7 @@ This project is open source and hosted on GitHub Pages. You can find the reposit
 will accept large contributions, as to keep a consistent style throughout. 
 
 ## Table of Contents
-### Section 1: Essentials of Computation
+### Section I: Essentials of Computation
 1. [Categories](sections/1_essentials_computation/01_categories.md) (+ Isomorphisms)
 2. [Category of Categories](/sections/1_essentials_computation/02_category_of_categories.md) (+ Functors)
 3. [Homfunctors](sections/1_essentials_computation/03_homfunctors.md) (+ Internal Homfunctors)
