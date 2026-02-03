@@ -60,6 +60,12 @@ In particular, if we select `Pr = Yo d`, we get `hom(Yo c, Yo d) ~= Yo d c`, but
 function between homsets for any `c, d :: C`, and a faithful functor induces an injective function. As we have a
 natural bijection, the Yoneda embedding induces both.
 
+Let us consider a presheaf `Pr :: [op C, Set]` as an attempt to select the elements of every `c :: C`, in a suitable
+sense for whatever the category represents. The representable presheafs are the most canonical representation of the
+elements, insofar as any other presheaf is reducible to it. Then `hom(Yo c, Yo d) ~= hom(d, c)` represents the element
+set of `c` from the perspective of `d`. But this is just the set of morphisms inbound to `c`. Thus, we get to an odd
+conclusion: the morphisms inbound to an object can be thought of as their generalized elements.
+
 ## Yoneda Lemma intuition
 
 The Yoneda lemma is `hom(Yo c, Pr) ~= Pr c`. Recall that `Pr :: [op C, Set]`. This means that given some `c :: C`,
