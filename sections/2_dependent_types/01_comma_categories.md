@@ -46,7 +46,7 @@ represent the best possible approximation in the category. As we'll see, this ap
 ## Slice Category
 
 A specific type of comma category is given by a functor `F :: [1, C]`, which selects a `c :: C`, and the identity
-functor `id C :: [C, C]`. Then, the comma category `id C \/` is also known as the slice category `C / c`. It is
+functor `id C :: [C, C]`. Then, the comma category `id C \/ c` is also known as the slice category `C / c`. It is
 the category of morphisms whose destination is `c`. A morphism in the slice category between two objects
 `a : x -> c`, `b : y -> c` is given by a morphism `i : x -> y` so that `i . b = a`. There is a dual coslice category
 `c / C`, which is the category of morphisms whose origin is `c`.
