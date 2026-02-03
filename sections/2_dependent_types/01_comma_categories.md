@@ -28,7 +28,7 @@ consistency. Then for `Di : 1 -> C ^ D`, the cone category is `Diag_D \/ Di`, an
 
 A comma category on `C` can be conceptualized as a subcategory of the arrow category `C ^ I`. Then, a morphism in the
 comma category is a natural transformation simply given by its effect on the underlying two objects and the unique
-non-trivial morphism. If `f : A -> B`, `f' : A' -> B'` are objects of `F /\ G`, with `F :: [C, D]`, `G :: [E, D]`,
+non-trivial morphism. If `f : A -> B`, `f' : A' -> B'` are objects of `F \/ G`, with `F :: [C, D]`, `G :: [E, D]`,
 a morphism in the category is given by two morphisms `F a: A -> A'`, `G b: B -> B'` so that `F a . f' = f . G b`.
 Note that the morphisms are in the image of the functor in order to ensure their existence in the subcategory.
 
