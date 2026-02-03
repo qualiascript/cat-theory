@@ -56,3 +56,7 @@ the slice category consists of. Really, each morphism could correspond to multip
 terminal object, and as such it is referred to as a bundle. A bundle could map multiple elements of an object to the
 same element in the destination. One can obtain the elements mapped to a point, as a morphism from the terminal object,
 known as a global element, by doing a pullback with the bundle. This is known as the fiber over the point.
+
+## Base Changes
+
+[TO BE CONTINUED]
