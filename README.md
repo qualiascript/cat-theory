@@ -38,4 +38,4 @@ will accept large contributions, as to keep a consistent style throughout.
 12. [Fixed Points](sections/1_essentials_computation/12_fixed_points.md) (+ Fixed Point Combinator, Diagonal Arguments)
 
 ### Section II: Dependent Types
-1. [Comma Categories](sections/2_dependent_types/01_comma_categories.md)
+1. [Comma Categories](sections/2_dependent_types/01_comma_categories.md) (+ Slice Category, Base Change Functor)

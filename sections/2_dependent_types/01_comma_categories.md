@@ -41,7 +41,26 @@ to `Lim y` are morphisms `a : x -> Lim y`, so they're in bijection with the cone
 In other words, `Lim y` is the apex of the terminal cone. Similarly, `Col y` is the apex of the initial cocone. This
 demonstrates what is meant by limits and colimits having a universal property: any cone has a unique morphism to the
 universal object in question. If cones are seen as potential approximations of a result, limits and colimits
-represent the best possible approximation in the category. As we'll see, this applies to many other constructions.
+represent the best possible approximation in the category.
+
+## Universal constructions
+
+Consider `F -| G`, `F : C -> D`, `G : D -> C`, so that `hom_D(F a, b) ~= hom_C(a, G b)`. This is a natural bijection,
+so it induces a natural isomorphism of comma categories `F \/ id D ~= id C \/ G`. Then, for any `x :: C`, a terminal
+object in `F \/ x` induces a terminal object in `id C \/ G x`. The object is given by `id(G x)`, and by tracing it
+back, this induces the natural transformation `unit`. `F \/ x` also has an initial object given by `id(F x)`, which
+induces `counit`. Then, if `F \/ x` has a terminal object, it has a right adjoint. Similar for initial and left adjoint.
+
+Also consider the Yoneda lemma, `hom(Yo c, Pr) ~= Pr c`. Let us take `Yo : C -> [op C, Set]`, `Pr : 1 -> [op C, Set]`
+and create the comma category `Yo \/ Pr`. Objects in this category are given by `f : Yo a -> Pr`, so by the Yoneda
+Lemma, `f :: Pr a`. Let us state `f` is the terminal object. A morphism from `g :: Pr b` to `f` is given by
+`m : Yo b -> Yo a`, so `m : a -> b`, and `n : Pr -> Pr`, both unique. Then `Pr b ~= hom(Pr b, f) ~= hom(a, b)`, and
+since this is for any `b`, `Pr = hom(a, -)`. Thus, if the comma category has a terminal object, it is representable.
+
+This demonstrates that the universal property of various categorical objects, such as limits, colimits, adjunctions
+and representable presheafs, share in common that they can be characterized in terms of comma categories. This suggests
+that they could be generalized to a more generic construction which encodes the idea of a universal property.
+As we will later see, all these concepts are instances of what is known as Kan extensions.
 
 ## Slice Category
 
