@@ -55,7 +55,7 @@ Also consider the Yoneda lemma, `hom(Yo c, Pr) ~= Pr c`. Let us take `Yo : C -> 
 and create the comma category `Yo \/ Pr`. Objects in this category are given by `f : Yo a -> Pr`, so by the Yoneda
 Lemma, `f :: Pr a`. Let us state `f` is the terminal object. A morphism from `g :: Pr b` to `f` is given by
 `m : Yo b -> Yo a`, so `m : a -> b`, and `n : Pr -> Pr`, both unique. Then `Pr b ~= hom(Pr b, f) ~= hom(a, b)`, and
-since this is for any `b`, `Pr = hom(a, -)`. Thus, if the comma category has a terminal object, it is representable.
+since this is for any `b`, `Pr = hom(a, -)`. Thus, if `Yo \/ Pr` has a terminal object, `Pr` is representable.
 
 This demonstrates that the universal property of various categorical objects, such as limits, colimits, adjunctions
 and representable presheafs, share in common that they can be characterized in terms of comma categories. This suggests
