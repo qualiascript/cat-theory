@@ -50,3 +50,9 @@ functor `id C :: [C, C]`. Then, the comma category `id C \/` is also known as th
 the category of morphisms whose destination is `c`. A morphism in the slice category between two objects
 `a : x -> c`, `b : y -> c` is given by a morphism `i : x -> y` so that `i . b = a`. There is a dual coslice category
 `c / C`, which is the category of morphisms whose origin is `c`.
+
+Recall that the morphisms inbound into an object can be thought of as their generalized elements. This is exactly what
+the slice category consists of. Really, each morphism could correspond to multiple elements, unless the origin is the
+terminal object, and as such it is referred to as a bundle. A bundle could map multiple elements of an object to the
+same element in the destination. One can obtain the elements mapped to a point, as a morphism from the terminal object,
+by doing a pullback with the bundle. This is known as the fiber over the point.
