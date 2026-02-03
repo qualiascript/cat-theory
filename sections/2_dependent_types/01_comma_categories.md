@@ -38,7 +38,7 @@ Let us now look at the category of cones `Diag_D \/ Di`. Limits are given by the
 `id(Lim y) : Lim y -> Lim y`, which induces a cone with apex `Lim y`. Morphisms in the cone category from apex `a`
 to `Lim y` are morphisms `a : x -> Lim y`, so they're in bijection with the cones themselves, so they are unique.
 
-In other words, `Lim y` is the apex of the terminal cone. Similarly, `Col y` is the apex of the initial cone. This
+In other words, `Lim y` is the apex of the terminal cone. Similarly, `Col y` is the apex of the initial cocone. This
 demonstrates what is meant by limits and colimits having a universal property: any cone has a unique morphism to the
 universal object in question. If cones are seen as potential approximations of a result, limits and colimits
 represent the best possible approximation in the category. As we'll see, this applies to many other constructions.
@@ -55,4 +55,4 @@ Recall that the morphisms inbound into an object can be thought of as their gene
 the slice category consists of. Really, each morphism could correspond to multiple elements, unless the origin is the
 terminal object, and as such it is referred to as a bundle. A bundle could map multiple elements of an object to the
 same element in the destination. One can obtain the elements mapped to a point, as a morphism from the terminal object,
-by doing a pullback with the bundle. This is known as the fiber over the point.
+known as a global element, by doing a pullback with the bundle. This is known as the fiber over the point.
