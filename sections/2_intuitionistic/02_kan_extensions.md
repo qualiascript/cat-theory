@@ -35,9 +35,9 @@ The following is not yet a proof of that statement, but a demonstration of one c
 
 The problem of showing `Pr` is representable is the same as finding the terminal object of `Yo \/ Pr`. Given the Yoneda
 embedding `Yo :: [C, [op C, Set]]`, we wish to leave it unchanged, so that we have `id Yo` inducing the functor
-`P'`. Then the right Kan extension of `F` along `id Yo` is the terminal object of `Yo \/ F`, which exists if `F` is
-representable. A morphism from `id Yo` to `F` is the same as a morphism from `Yo` to `F`. Thus `F` is representable if
-and only if `Ran (id Yo) F` exists.
+`P' :: [[C, [op C, Set]], [C, [op C, Set]]]`. A morphism from `id Yo` to `F` is the same as a morphism from `Yo` to
+`F`. Then the right Kan extension of `F`along `id Yo` is the terminal object of `Yo \/ F`, which exists if `F` is
+representable. Thus `F` is representable if and only if `Ran (id Yo) F` exists.
 
 However, this induces a problem: we have defined Kan extensions as functors, and in this case, `Ran (id Yo)` is not
 defined over the entire domain of the functor. We can solve this by providing a definition of `Ran P F` specifically:
