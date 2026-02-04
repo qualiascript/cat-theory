@@ -46,10 +46,16 @@ represent the best possible approximation in the category.
 ## Universal constructions
 
 Consider `F -| G`, `F : C -> D`, `G : D -> C`, so that `hom_D(F a, b) ~= hom_C(a, G b)`. This is a natural bijection,
-so it induces a natural isomorphism of comma categories `F \/ id D ~= id C \/ G`. Then, for any `x :: C`, a terminal
-object in `F \/ x` induces a terminal object in `id C \/ G x`. The object is given by `id(G x)`, and by tracing it
-back, this induces the natural transformation `unit`. `F \/ x` also has an initial object given by `id(F x)`, which
-induces `counit`. Then, if `F \/ x` has a terminal object, it has a right adjoint. Similar for initial and left adjoint.
+so it induces a natural isomorphism of comma categories `F \/ id D ~= id C \/ G`. Then, for any `x :: D`, a terminal
+object in `F \/ x` is isomorphic to a terminal object in `id C \/ G x`. The terminal object is given by `id(G x)`,
+as morphisms in the comma category are exactly `hom_C(x, G x)`. As such, the right side `hom_C(G x, G x)` is
+isomorphic on the left with `hom_D(F G x, x)`, which is our `counit` natural transformation.
+
+We also have that `F \/ x` always has an initial object for any `x :: D`. It is given by `id(F x)`, so that we have
+`hom_D(F x, F x)` isomorphic to `hom_C(x, G F x)`. This gives us our `unit` operation, so `counit` is sufficient
+to create the adjunction. Thus, if `F \/ x` has a terminal object for all `x :: D`, or in other words, `F \/ id D`
+has a terminal object, it has a right adjoint. By similar logic, if `id c \/ G` has an initial object, it has a left
+adjoint.
 
 Also consider the Yoneda lemma, `hom(Yo c, Pr) ~= Pr c`. Let us take `Yo : C -> [op C, Set]`, `Pr : 1 -> [op C, Set]`
 and create the comma category `Yo \/ Pr`. Objects in this category are given by `f : Yo a -> Pr`, so by the Yoneda

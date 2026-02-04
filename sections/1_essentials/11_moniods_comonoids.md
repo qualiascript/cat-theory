@@ -59,7 +59,7 @@ Recall that an adjunction is a natural bijection of homsets. Given any `g : x ->
 `f : F x -> y` and then going back must yield the same result. Units are derived from applying this construction to
 `id (G y)`, so `id (G y) . unit = id (G y)`. As this is a natural bijection, this applies to any value of `y`, thus,
 `G . unit = id G`. Similarly, `counit . F = id F`. Using this fact, known as the triangle identities, the monad laws
-become trivial to check.
+become trivial to check. In fact, any `unit` and `counit` that follow the triangle identities induce an adjunction.
 
 The unit of the product-exponent adjunction is the coevaluation map `coeval : X -> (X * Y) ^ Y`. Thus, another example
 of a monad is `M X = (X * Y) ^ Y`, for any value `Y`. This is known as the state monad, `State Y X = [Y, X * Y]`.
