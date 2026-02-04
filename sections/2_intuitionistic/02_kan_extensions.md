@@ -30,17 +30,20 @@ as the right Kan extension, and the left adjoin is known as the left Kan extensi
 
 ## Examples of Kan Extensions
 
-We have seen that limits and colimits are instances of Kan extensions. In fact, so are representable presheaves. The
-problem of showing `Pr` is representable is the same as finding the terminal object of `Yo \/ Pr`. Given the Yoneda
+We have seen that limits and colimits are instances of Kan extensions. In fact, so are representable presheaves.
+The following is not yet a proof of that statement, but a demonstration of one connection between the two concepts.
+
+The problem of showing `Pr` is representable is the same as finding the terminal object of `Yo \/ Pr`. Given the Yoneda
 embedding `Yo :: [C, [op C, Set]]`, we wish to leave it unchanged, so that we have `id Yo` inducing the functor
-`P' :: [[C, [op C, Set]], [C, [op C, Set]]]`. Then the right Kan extension of `F` along `id Yo` is the terminal object
-of `Yo \/ F`, which exists if `F` is representable. Thus `F` is representable if and only if `Ran (id Yo) F` exists.
+`P'`. Then the right Kan extension of `F` along `id Yo` is the terminal object of `Yo \/ F`, which exists if `F` is
+representable. A morphism from `id Yo` to `F` is the same as a morphism from `Yo` to `F`. Thus `F` is representable if
+and only if `Ran (id Yo) F` exists.
 
 However, this induces a problem: we have defined Kan extensions as functors, and in this case, `Ran (id Yo)` is not
 defined over the entire domain of the functor. We can solve this by providing a definition of `Ran P F` specifically:
 `Ran P F :: C' -> D` is the functor so that `hom(P' x, F) ~= hom(x, Ran P F)`, similarly for `Lan P F`. This is simply
 applying the definition of the adjunction at a specific value `F`, so that the Kan extension is defined even if the 
-full adjunction doesn't exist. This is known as the Local Kan Extension, which we will be using going forward.
+full adjunction doesn't exist. This is known as the local Kan Extension, which we will be using going forward.
 
 In fact, we have previously talked about limits and colimits of diagrams without necessarily defining the limit and
 colimit functors, which is technically unfounded. However, since we have a concept for local Kan extensions, we can
