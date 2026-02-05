@@ -82,7 +82,7 @@ terminal object, and as such it is referred to as a bundle. A bundle could map m
 same element in the destination. One can obtain the elements mapped to a point, as a morphism from the terminal object,
 known as a global element, by doing a pullback with the bundle. This is known as the fiber over the point.
 
-## Base Change Functor
+## Base Changes
 
 Let `C :: Cat` be a complete category and `a :: C ^ I`, `a : x -> y`. Considering the category `C / y`, one of its
 elements is `a`. We would like to create a functor `F : C / y -> C / x`, known as the base change functor. Given
