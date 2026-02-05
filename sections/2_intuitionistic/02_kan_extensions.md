@@ -62,4 +62,14 @@ as all concepts that rely on the idea of a "best solution" can be defined as mer
 
 ## Kan Extensions as Natural Transformations
 
-[TO BE CONTINUED]
+Note that when defining local Kan extensions, we gave the formula `hom(P' x, F) ~= hom(x, Ran P F)`. As the categories
+of the homset are functors, this is a statement about natural transformation. The adjunction `P' -| Ran P`, defined
+locally at `F`, suggests that `Ran P F` is the terminal object in `P' \/ id F`. This induces the natural transformation
+`a : P' (Ran P F) -> F`, so `a : (Ran P F) P -> F`. which is terminal, so that any other `a' : G P -> F` factors
+uniquely to it. Similarly, the natural transformation `b : F -> (Lan P F) P` is initial.
+
+This suggests another definition for Kan extensions: the right Kan extension is a functor `Ran P F` along with a
+natural transformation `a : (Ran P F) P -> F` which is terminal in `G P \/ F` for any `G`. The left Kan extension is a
+functor `Lan P F` along with a natural transformation `b : F -> (Lan P F) P` which is terminal in `F \/ G P` for any
+`G`. This demonstrates the sense in which Kan Extensions find the best solution, from the left or from the right,
+to the problem of reconstructing `F` after it's been diverted through `P`.
