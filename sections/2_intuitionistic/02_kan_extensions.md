@@ -28,18 +28,15 @@ as the right Kan extension, and the left adjoin is known as the left Kan extensi
 `Ran P, Lan P :: [[C, D], [C', D]]` for the right and left version respectively. For some `F :: [C, D]`, we also denote
 `Ran P F` as the right Kan extension of `F` along `P`, and `Lan P F` as the left Kan extension of `F` along `P`.
 
-## Examples of Kan Extensions
+## Adjunctions as Kan Extensions
 
-We have seen that limits and colimits are instances of Kan extensions. In fact, so are representable presheaves.
-The following is not yet a proof of that statement, but a demonstration of one connection between the two concepts.
+We can also formulate the property of adjunctions `F -| G` in terms of Kan extensions. The right adjoint of `F : C -> D`
+is isomorphic to the terminal object of `F \/ id C`. By inverting the comma category, we find that we must obtain the
+initial object of `id C \/ F`. Let `F` induce `P' : [C, C] -> [D, C]`. Then we have `id C \/ F ~= id C \/ P' (id C)`.
+So the left adjoint of `P'` specifically at value `id C` is isomorphic to the left adjoint of `F`. As such,
+`G ~= Lan F (id C)`, and by analogy, `F ~= Ran G (id D)`. Note that the Kan extension and adjunction directions reverse!
 
-The problem of showing `Pr` is representable is the same as finding the terminal object of `Yo \/ Pr`. Given the Yoneda
-embedding `Yo :: [C, [op C, Set]]`, we wish to leave it unchanged, so that we have `id Yo` inducing the functor
-`P' :: [[C, [op C, Set]], [C, [op C, Set]]]`. A morphism from `id Yo` to `F` is the same as a morphism from `Yo` to
-`F`. Then the right Kan extension of `F`along `id Yo` is the terminal object of `Yo \/ F`, which exists if `F` is
-representable. Thus `F` is representable if and only if `Ran (id Yo) F` exists.
-
-However, this induces a problem: we have defined Kan extensions as functors, and in this case, `Ran (id Yo)` is not
+However, this induces a problem: we have defined Kan extensions as functors, and in this case, `Lan (id C)` is not
 defined over the entire domain of the functor. We can solve this by providing a definition of `Ran P F` specifically:
 `Ran P F :: C' -> D` is the functor so that `hom(P' x, F) ~= hom(x, Ran P F)`, similarly for `Lan P F`. This is simply
 applying the definition of the adjunction at a specific value `F`, so that the Kan extension is defined even if the 
@@ -49,12 +46,6 @@ In fact, we have previously talked about limits and colimits of diagrams without
 colimit functors, which is technically unfounded. However, since we have a concept for local Kan extensions, we can
 transfer that to local products and coproducts. As such, this usage of products and coproducts was in fact correct.
 
-We can also formulate the property of adjunctions `F -| G` in terms of Kan extensions. The right adjoint of `F : C -> D`
-exists if `F \/ id C` has a terminal object, and is, in fact, isomorphic to that terminal object. By inverting the
-comma category, we find that we must obtain the initial object of `id C \/ F`. This induces the constant functor
-`P' :: [[C, C], [C, C]]`, and finding the initial object is the same as finding the left Kan extension. As such,
-`G ~= Lan (id C) F`, and by analogy, `F ~= Ran(id D) G`. Note that the Kan extension and adjunction directions reverse!
-
-## Kan Extensions as Natural Transformations
+## Representable Presheaves as Adjunctions
 
 [TO BE CONTINUED]
