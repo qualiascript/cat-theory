@@ -46,6 +46,12 @@ In fact, we have previously talked about limits and colimits of diagrams without
 colimit functors, which is technically unfounded. However, since we have a concept for local Kan extensions, we can
 transfer that to local products and coproducts. As such, this usage of products and coproducts was in fact correct.
 
-## Representable Presheaves as Adjunctions
+## Representable Presheaves as Kan Extensions
 
-[TO BE CONTINUED]
+Consider `Lan A 1` for `A : C -> C`, `A x = a`, with `1 :: [C, Set]` a constant functor. Then the induced functor is
+`P' :: [[C, Set], [C, Set]]`, `P' X = H` so that `H p = X a`. Then we have `hom(Lan A 1, y) ~= hom(1, P' y)`. Then in
+`op C`, `hom(P' y, 1) ~= hom(y, Lan A 1)`. Let us set `y = Yo b`, then `hom(Yo b, Lan A 1) ~= Lan A 1 b` and
+`hom(P' (Yo b), 1) ~= hom(Yo b a, 1) ~= hom(a, b)`. Then, `Lan A 1 b ~= hom(a, b)`. Thus, representable presheaves
+are the left Kan extensions of `1` along the constant functor corresponding to the object in question.
+
+## Kan Extensions as Natural Transformations
