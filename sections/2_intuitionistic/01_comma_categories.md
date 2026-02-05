@@ -54,8 +54,8 @@ isomorphic on the left with `hom_D(F G x, x)`, which is our `counit` natural tra
 We also have that `F \/ x` always has an initial object for any `x :: D`. It is given by `id(F x)`, so that we have
 `hom_D(F x, F x)` isomorphic to `hom_C(x, G F x)`. This gives us our `unit` operation, so `counit` is sufficient
 to create the adjunction. Thus, if `F \/ x` has a terminal object for all `x :: D`, or in other words, `F \/ id D`
-has a terminal object, it has a right adjoint. By similar logic, if `id C \/ G` has an initial object, it has a left
-adjoint. In fact, the two concepts are naturally isomorphic for any functor application as well.
+has a terminal object, it has a right adjoint. In fact, the two concepts are naturally isomorphic both globally for
+`F` and for any `F x`.By similar logic, if `id C \/ G` has an initial object, it has a left adjoint. 
 
 Also consider the Yoneda lemma, `hom(Yo c, Pr) ~= Pr c`. Let us take `Yo : C -> [op C, Set]`, `Pr : 1 -> [op C, Set]`
 and create the comma category `Yo \/ Pr`. Objects in this category are given by `f : Yo a -> Pr`, so by the Yoneda
