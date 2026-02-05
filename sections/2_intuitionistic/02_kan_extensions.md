@@ -44,7 +44,7 @@ full adjunction doesn't exist. This is known as the local Kan Extension, which w
 
 In fact, we have previously talked about limits and colimits of diagrams without necessarily defining the limit and
 colimit functors, which is technically unfounded. However, since we have a concept for local Kan extensions, we can
-transfer that to local products and coproducts. As such, this usage of products and coproducts was in fact correct.
+transfer that to local limits and colimits. As such, this usage of limits and colimits was in fact correct.
 
 ## Representable Presheaves as Kan Extensions
 
