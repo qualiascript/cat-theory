@@ -34,7 +34,7 @@ We can also formulate the property of adjunctions `F -| G` in terms of Kan exten
 is isomorphic to the terminal object of `F \/ id C`. By inverting the comma category, we find that we must obtain the
 initial object of `id C \/ F`. Let `F` induce `P' : [C, C] -> [D, C]`. Then we have `id C \/ F ~= id C \/ P' (id C)`.
 So the left adjoint of `P'` specifically at value `id C` is isomorphic to the left adjoint of `F`. As such,
-`G ~= Lan F (id C)`, and by analogy, `F ~= Ran G (id D)`. Note that the Kan extension and adjunction directions reverse!
+`G ~= Lan F (id C)`, and by analogy, `F ~= Ran G (id D)`. Note that the directions mirror the adjunction's.
 
 However, this induces a problem: we have defined Kan extensions as functors, and in this case, `Lan (id C)` is not
 defined over the entire domain of the functor. We can solve this by providing a definition of `Ran P F` specifically:
@@ -48,10 +48,18 @@ transfer that to local products and coproducts. As such, this usage of products 
 
 ## Representable Presheaves as Kan Extensions
 
-Consider `Lan A 1` for `A : C -> C`, `A x = a`, with `1 :: [C, Set]` a constant functor. Then the induced functor is
-`P' :: [[C, Set], [C, Set]]`, `P' X = H` so that `H p = X a`. Then we have `hom(Lan A 1, y) ~= hom(1, P' y)`. Then in
-`op C`, `hom(P' y, 1) ~= hom(y, Lan A 1)`. Let us set `y = Yo b`, then `hom(Yo b, Lan A 1) ~= Lan A 1 b` and
-`hom(P' (Yo b), 1) ~= hom(Yo b a, 1) ~= hom(a, b)`. Then, `Lan A 1 b ~= hom(a, b)`. Thus, representable presheaves
-are the left Kan extensions of `1` along the constant functor corresponding to the object in question.
+Consider `Lan A 1'` for `A : C -> C`, `A x = a`, `1' : C -> Set`, `1' x = 1`. Then the induced functor is
+`P' :: [[C, Set], [C, Set]]`, `P' X = H` so that `H p = X a`. Then we have `hom(Lan A 1', y) ~= hom(1', P' y)`. Then
+in `op C`, `hom(P' y, 1') ~= hom(y, Lan A 1')`. Let us set `y = Yo b`, then `hom(Yo b, Lan A 1') ~= Lan A 1' b` and
+`hom(P' (Yo b), 1') ~= hom(Yo b a, 1') ~= hom(a, b)`. Then, `Lan A 1' b ~= hom(a, b)`. Thus, representable presheaves
+are the left Kan extensions of `1'` along the constant functor corresponding to the object in question.
+
+Intuitively, `1' :: [C, Set]` seeks to map any `b :: C` to the singleton set, but its path is diverted to `a`, so it
+seeks to return to `b`, and since it is the left version, it finds all solutions `hom(a, b)`. Limits, colimits, 
+adjunctions and representable presheaves all turn out to be Kan extensions, and as such, the concept does genuinely
+capture the idea of universal constructions. In this regard, Kan extensions hold a special role in category theory,
+as all concepts that rely on the idea of a "best solution" can be defined as mere instances of the general pattern.
 
 ## Kan Extensions as Natural Transformations
+
+[TO BE CONTINUED]
