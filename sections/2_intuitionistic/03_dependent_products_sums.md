@@ -50,3 +50,5 @@ that `M . (DP_g B) = A`. If we set `A = id Y`, we get that `M . (DP_G B) = id Y`
 `DP_g B`. Then, the sections of `DP_g B` are isomorphic to partial sections of `B` indexed by the fibers of `g`.
 
 ## Dependent Products Intuition
+
+[TO BE CONTINUED]
