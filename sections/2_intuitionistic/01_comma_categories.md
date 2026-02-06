@@ -94,4 +94,4 @@ Intuitively, we have a bundle `p : k -> y`, and we would like to change the base
 Given that we are only given a morphism `a : x -> y`, we seek to find the universal construction that corresponds
 to the bundle `p` viewed from the perspective of `a`. This is similar to a fiber of `p`, but for all elements
 encompassed in the bundle `a`. As such, pullbacks are also referred to as fiber products. One can check that
-`F : C / y -> C / x` also maps morphisms respecting functor laws, and as such, it is the base change functor.
+`Bc : C / y -> C / x` also maps morphisms respecting functor laws, and as such, it is the base change functor.
