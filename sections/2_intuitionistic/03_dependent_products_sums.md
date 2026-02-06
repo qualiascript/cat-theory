@@ -23,27 +23,30 @@ Recall that the base change functor `Bc : C / b -> C / a` induces by `h : a -> b
 determined, `f' ~= X * Y`. Its family of sections is `[X, Y]`. In other words, specifically in this instance, we find
 that the right-adjoint of `Bc`, which we will denote the dependent product `DP`, finds the family of sections.
 
-## Dependent Product as Adjunction [NOTE : WIP]
+## Dependent Product as Adjunction
 
 We wish to derive the dependent product functor and check whether it is able to find the section families of a bundle.
 We have `Bc_g : C / Y -> C / X`, which induces `DP_g : C / X -> C / Y` for some morphism `g : X -> Y`. The adjunction
-property is `hom_{C / X}(Bc_g A, B) ~= hom_{C / Y}(A, DP_g B)`. On the left side, a morphism between `Bc_g a` and `B`
-is given by a morphism `f : Bc_g a -> b` for `B : b -> X` so that `f . B = Bc_g a`. On the right side, morphisms are
-given by `f' : a -> DP b` for `A : a -> Y` so that `f' . DP_g b = A`. 
+property is `hom_{C / X}(Bc_g A, B) ~= hom_{C / Y}(A, DP_g B)`. On the left side, a morphism between `Bc_g A` and `B`
+is given by a morphism `f : Bc_g A -> b` for `B : b -> X` so that `f . B = Bc_g A`. On the right side, morphisms are
+given by `f' : a -> DP b` for `A : a -> Y` so that `f' . (DP_g B) = A`. 
 
 We know that `Bc_g A : Pb(A, g) -> X`, so we have `f : Pb(A, g) -> b` so that `f . B = Bc_g a`. Practically speaking,
-`Pb(A, g)` is the product of pairs of elements `(x, a') : 1 -> X * A` so that `x . g = a' . A`. Then `(x, a') . f`
-sends the pair to some `e : 1 -> b` so that `e . B = (x, a') . Bc_g A = x` due to how pullbacks work. In other words,
-`f` applied to `(x, a')` selects an element of the fiber of `X` at `x` for bundle `B`. Let us denote `q = a' . A`, then
-for any `x` so that `x . g = q`, the homset on the left comprises morphisms that select an element of the fiber at `x`. 
+`Pb(A, g)` is the product of pairs of elements `(x, a') : 1 -> X * A` so that `x . g = a' . A`, which we will denote
+`q`. Then `(x, a') . f` sends the pair to some `e : 1 -> b` so that `e . B = (x, a') . Bc_g A = x`. This means each
+`(x, a')` is mapped by `f` to some `e` which is in the fiber of `B` at `x`. However, given a specific value of
+`q : 1 -> Y`, the mapping is only done for values so that `x . g = q`. 
 
-Then going back to `hom(Bc_g A, B) ~= hom(A, DP_g B)`, the left side's property that `x . g = q` means that the values
-of `x` are organized into fibers of `Y` through bundle `g`. Then for each fiber, each element `x` is mapped to an
-element of `X` at fiber `x` through bundle `B`. Let us denote `B'` the bundle restricted to only the elements we
-obtained, then denote `s = (x, a') . f`. Then, `s . B' = id`, a partial section restricted for each fiber of `Y`.
+Let us name `H = Bc_g A . g : Pb(A, g) -> Y`. Then we can rephrase this as such: for each of the fibers of `H` at some
+`q`, `f` is a selection for all `x :: X` in the fiber product to an element `e` of `B` at the fiber of `B` at `x`.
+Then let us denote `B' : b' -> x'` the morphism `B` restricted to only the elements picked by a specific mapping `f`
+stemming from a specific fiber `X' : 1 -> x'`. Then denote `S = X' . f : x' -> b'`. We have that `S . B' = id b'`, so
+that `S` is a partial section of `B` over a specific fiber. Then, `hom(Bc_g A, B)` is a family of partial sections.
 
-On the right side, recall that `A : a -> Y`. Then, a morphism from `A` to `DP_g B` is isomorphic to a family of partial
-sections of `B` through the fibration `g`, as induced by the fibration of `A`. But recall that `A, DP_g B :: C / Y`,
-so `DP_g B : R -> Y` and a morphism from `A` is some `D : a -> R`, so that we have an object and a morphism.
+As such, `hom(A, DP_g B)` is isomorphic to a family of partial sections of `B` for each fiber in the space of `Y`
+which is obtained by restricting the bundle `g` to values parametrized by `A`. But recall that `DP_g B :: C / Y`,
+so that a morphism from `A : a -> Y` to `DP_g B : R -> Y` corresponds to a morphism `M : a -> R`, with the property
+that `M . (DP_g B) = A`. If we set `A = id Y`, we get that `M . (DP_G B) = id Y`, so that `M` is a section of
+`DP_g B`. Then, the sections of `DP_g B` are isomorphic to partial sections of `B` indexed by the fibers of `g`.
 
-
+## Dependent Products Intuition
