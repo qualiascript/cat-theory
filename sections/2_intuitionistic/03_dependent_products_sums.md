@@ -47,7 +47,13 @@ As such, `hom(A, DP_g B)` is isomorphic to a family of partial sections of `B` f
 which is obtained by restricting the bundle `g` to values parametrized by `A`. But recall that `DP_g B :: C / Y`,
 so that a morphism from `A : a -> Y` to `DP_g B : R -> Y` corresponds to a morphism `M : a -> R`, with the property
 that `M . (DP_g B) = A`. If we set `A = id Y`, we get that `M . (DP_G B) = id Y`, so that `M` is a section of
-`DP_g B`. Then, the sections of `DP_g B` are isomorphic to partial sections of `B` indexed by the fibers of `g`.
+`DP_g B`. Then, the sections of `DP_g B` are isomorphic to partial sections of `B` indexed by all fibers of `g`.
+
+Thus, `DP_g B : R -> Y` itself must correspond to a mapping, which sends the partial sections of `B` to the fiber of
+`g` it corresponds to. As such, its sections pick an element from each such fiber, so that the family of sections
+consists of the family of all such partial sections of `B` indexed by `g`. In particular, if `g : X -> Y`, this reduces
+to all mappings of elements of `X` to sections of `B`, and if `B : B' * X -> X` ignoring the first argument (known as 
+a trivial bundle), then its sections are simply `B'`, so that we obtain `R = [X, B']`.
 
 ## Dependent Products Intuition
 
