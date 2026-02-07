@@ -55,6 +55,19 @@ consists of the family of all such partial sections of `B` indexed by `g`. In pa
 to all mappings of elements of `X` to sections of `B`, and if `B : B' * X -> X` ignoring the first argument (known as 
 a trivial bundle), then its sections are simply `B'`, so that we obtain `R = [X, B']`.
 
-## Dependent Products Intuition
+## Dependent Sums
+
+Dependent sums, denoted `DS`, are the left adjoint of the base change functor, `hom(DS_g A, B) ~= hom(A, BC_g B)`.
+On the right side, we have morphisms `f : a -> PB(B, g)` for `A : a -> X` so that `f . (BC_g B) = A`. Then for
+`g : X -> Y`, `B : b -> Y`, the pullback selects elements `(x, b') :: X * B` so that `x . g = b' . B`. Then, `f`
+composes each `a' : 1 -> a` with a `(x, b')`, which we can denote `(ax, ab')`, so that `ax . g = ab . B`. Then,
+`a' . f . (BC_g B) = a' . A`, so that `ax = a' . A`, meaning `a' . A . g = ab . B`.
+
+Then, `hom(DS_g A, B)` is isomorphic to a family of morphisms `f` that for each `a' :: a` select an `ab :: b` so that
+`a' . A . g = ab . B`. In particular, if we select `B = id Y`, this sends each `a' :: a` to `ab = a' . A . g`. A
+morphism from `DS_g A` to `id Y` is given by `M : a -> Y` so that `M . (id Y) = DS_g A`. Then, in general, the action
+of `DS_g A` is to send each `a' :: a` to `a' . A . g`. In other words, for any `A :: C / X`, `DS_g A = A . g`.
+
+## Dependent Products and Sums Intuition
 
 [TO BE CONTINUED]
