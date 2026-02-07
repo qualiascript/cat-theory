@@ -51,7 +51,7 @@ that `M . (DP_g B) = A`. If we set `A = id Y`, we get that `M . (DP_G B) = id Y`
 
 Thus, `DP_g B : R -> Y` itself must correspond to a mapping, which sends the partial sections of `B` to the fiber of
 `g` it corresponds to. As such, its sections pick an element from each such fiber, so that the family of sections
-consists of the family of all such partial sections of `B` indexed by `g`. In particular, if `g : X -> Y`, this reduces
+consists of the family of all such partial sections of `B` indexed by `g`. In particular, if `g : X -> 1`, this reduces
 to all mappings of elements of `X` to sections of `B`, and if `B : B' * X -> X` ignoring the first argument (known as 
 a trivial bundle), then its sections are simply `B'`, so that we obtain `R = [X, B']`.
 
