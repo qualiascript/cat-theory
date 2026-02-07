@@ -85,7 +85,7 @@ By contrast, the dependent sum `DS_g B` is simply composing `B` with `g`. In thi
 indexed by their list of types, it maps the underlying list to its length. Notice the contrast: to inhabit `DP_g B`,
 one must provide a function that maps any list of types to a fitting heterogeneous tuple. Meanwhile, `DS_g B` is
 uniquely determined by the values of `B` and `g`. Dependent products are uninhabited if there is no universal mapping
-from a dependent type to another, meanwhile dependent sums are uninhabited if there is not a single valid mapping.
+from a dependent type to another, meanwhile dependent sums are uninhabited if the type composition is uninhabited.
 
 In fact, within the Curry-Howard-Lambek correspondence, `B` and `g` are propositions that depend on values. The fiber
 at some value could be uninhabited, which corresponds to false, or be inhabited by multiple ways in which the
