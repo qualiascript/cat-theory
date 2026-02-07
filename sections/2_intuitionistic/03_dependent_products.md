@@ -1,4 +1,4 @@
-# II. 3. Dependent Products and Dependent Sums
+# II. 3. Dependent Products
 
 Consider a bundle `f: A -> B`, `f :: C ^ I`. Given a global element `X : 1 -> B`, one can perform a fiber product of
 `f` and `X` to obtain a fiber of the bundle. This fiber `fb : Pb(f, X) -> B` maps all elements to `X`. We have that
@@ -41,17 +41,17 @@ Let us name `H = Bc_g A . g : Pb(A, g) -> Y`. Then we can rephrase this as such:
 `q`, `f` is a selection for all `x :: X` in the fiber product to an element `e` of `B` at the fiber of `B` at `x`.
 Then let us denote `B' : b' -> x'` the morphism `B` restricted to only the elements picked by a specific mapping `f`
 stemming from a specific fiber `X' : 1 -> x'`. Then denote `S = X' . f : x' -> b'`. We have that `S . B' = id b'`, so
-that `S` is a partial section of `B` over a specific fiber. Then, `hom(Bc_g A, B)` is a family of partial sections.
+that `S` is a local section of `B` over a specific fiber. Then, `hom(Bc_g A, B)` is a family of local sections.
 
-As such, `hom(A, DP_g B)` is isomorphic to a family of partial sections of `B` for each fiber in the space of `Y`
+As such, `hom(A, DP_g B)` is isomorphic to a family of local sections of `B` for each fiber in the space of `Y`
 which is obtained by restricting the bundle `g` to values parametrized by `A`. But recall that `DP_g B :: C / Y`,
 so that a morphism from `A : a -> Y` to `DP_g B : R -> Y` corresponds to a morphism `M : a -> R`, with the property
 that `M . (DP_g B) = A`. If we set `A = id Y`, we get that `M . (DP_G B) = id Y`, so that `M` is a section of
-`DP_g B`. Then, the sections of `DP_g B` are isomorphic to partial sections of `B` indexed by all fibers of `g`.
+`DP_g B`. Then, the sections of `DP_g B` are isomorphic to local sections of `B` indexed by all fibers of `g`.
 
-Thus, `DP_g B : R -> Y` itself must correspond to a mapping, which sends the partial sections of `B` to the fiber of
+Thus, `DP_g B : R -> Y` itself must correspond to a mapping, which sends the local sections of `B` to the fiber of
 `g` it corresponds to. As such, its sections pick an element from each such fiber, so that the family of sections
-consists of the family of all such partial sections of `B` indexed by `g`. In particular, if `g : X -> 1`, this reduces
+consists of the family of all such local sections of `B` indexed by `g`. In particular, if `g : X -> 1`, this reduces
 to all mappings of elements of `X` to sections of `B`, and if `B : B' * X -> X` ignoring the first argument (known as 
 a trivial bundle), then its sections are simply `B'`, so that we obtain `R = [X, B']`.
 
@@ -70,4 +70,25 @@ of `DS_g A` is to send each `a' :: a` to `a' . A . g`. In other words, for any `
 
 ## Dependent Products and Sums Intuition
 
-[TO BE CONTINUED]
+Consider `DP_g B` where `B : T -> X` is a bundle which indexes types that depend on a value to the value itself. This
+is known as a dependent type. Then consider `g : X -> Y` as another dependent type, whose fibers correspond to subtypes
+at a specific value. Then, `DP_g B : R -> Y` is a collection of maps for each inhabitant `x` of `g` at a specific value
+to an inhabitant of `B` whose underlying value corresponds to `x`.
+
+For a more concrete example, consider `g` to comprise a list of types, indexed by the integer length of the list. Then,
+let `B` comprise a tuple of values of different types, that is a heterogeneous tuple, indexed by a list of types. Then,
+`DP_g B` is the collection of maps from each list of types with a specific length to a heterogeneous tuple fulfilling
+the list of types. In other words, the dependent product is a function type whose domain and codomain are dependent
+types, and whose inhabitants are specific functions on the dependent types.
+
+By contrast, the dependent sum `DS_g B` is simply composing `B` with `g`. In this case, for each heterogeneous tuple
+indexed by their list of types, it maps the underlying list to its length. Notice the contrast: to inhabit `DP_g B`,
+one must provide a function that maps any list of types to a fitting heterogeneous tuple. Meanwhile, `DS_g B` is
+uniquely determined by the values of `B` and `g`. Dependent products are uninhabited if there is no universal mapping
+from a dependent type to another, meanwhile dependent sums are uninhabited if there is not a single valid mapping.
+
+In fact, within the Curry-Howard-Lambek correspondence, `B` and `g` are propositions that depend on values. The fiber
+at some value could be uninhabited, which corresponds to false, or be inhabited by multiple ways in which the
+proposition at some value can be constructed to be true. Then, `DP_g B` is a mapping for each `x` so that `g(x)` is
+true to a true value `B(x)`. If `DP_g B` is inhabited, it is true, and there is such a mapping. In other words, the
+dependent product is a universal quantifier, and similarly, the dependent sum is an existential quantifier.
