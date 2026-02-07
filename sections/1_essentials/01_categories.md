@@ -2,32 +2,26 @@
 
 ## Definition
 
-A category is a set[^1] of objects paired with a set of morphisms (named a homset). There are no limitations to what
-the object set can entail. The homset can be envisioned as a set of triple pairs `(x, y, f)`, where `x`, `y` are values
-of some category `C`'s object set (henceforth denoted `x, y :: C`) and `f` is a morphism which starts at object `x` and
-ends at object `y` (henceforth denoted `f : x -> y`).
+A category comprises a set[^1] of objects, a set of morphisms (denoted a homset), a partial function on pairs of
+morphisms known as morphism composition and denoted infix as `f . g`, and a function on objects denoted `id`. The homset
+is a set of triple pairs `(x, y, f)`, where `x`, `y` are objects of the category (henceforth denoted `x, y :: C`) and
+`f` is a morphism with origin `x` and destination `y` (denoted `f : x -> y`). A category's homset is a directed
+multigraph, but a directed multigraph is not always a homset. Additionally, categories by definition follow these laws:
 
-A category can be envisioned as a directed multigraph, with the objects acting as nodes and morphisms as edges.
-However, compared to a directed multigraph, a category must additionally respect the following laws:
-- If there exists a morphism `f: A -> B` and a morphism `g : B -> C` there also exists a morphism `f . g : A -> C`
-(also denoted as `g ∘ f`). This is morphism composition.
-- For any object `X :: C`, there is always a morphism `id X : X -> X`. There may be other morphisms `f : X -> X`
-distinct from `id X` as well.
-- Composing with `id` morphisms does not change the result. That is, given `f`, `g` morphisms of some `C` (henceforth
-denoted as `f, g :: C ^ I`), if `f : X -> Y`, `g : Y -> X`, we have `(id X) . f = f`, `g . (id X) = g`.
+- Morphism composition is defined if and only if the first morphism's destination is the second morphism's origin.
+In other words, for any two morphisms `f : A -> B`, `g : B -> C`, there exists a morphism `f . g : A -> C`.
+- For any object `x`, applying the `id` function yields `id x` known as an identity morphism. Composition with identity
+morphisms does not change the result. That is, given `f`, `g` morphisms of some `C` (denoted `f, g :: C ^ I`), if
+`f : X -> Y`, `g : Y -> X`, we have `(id X) . f = f`, `g . (id X) = g`.
 - Morphism composition is associative. That is, for `f, g, h :: C ^ I`, `f : A -> B`. `g: B -> C`, `h : C -> D`,
 we have `(f . g) . h = f . (g . h)`.
 
-## Objects and morphisms
-
-A category is anything that can be modeled as a category, by the definition given above.
-Morphisms can be thought of as any sort of relation which is composable.
-Objects can be thought of as the origin and destination of morphisms.
-This is intentionally a very generic definition.
-It is useful to think of it as more akin to an interface that a structure must implement in order to be classified
-as a category, rather than a definition in the traditional sense.
-
 ## Category intuition
+There are no limitations to what the object and morphisms entail. A category is anything that can be modeled as a
+category, by the definition given above. Morphisms can be thought of as any sort of relation which is composable.
+Objects can be thought of as the origin and destination of morphisms. This is intentionally a very generic definition.
+It is useful to think of it as more akin to an interface that a structure must implement in order to be classified as a
+category, rather than a definition in the traditional sense.
 
 The most essential category is `Set`. It is a category where the objects are sets, and the morphisms are functions.
 It can be easily checked that for any set `S :: Set`, there is an `id S :: Set^I`, which maps each element to

@@ -7,10 +7,10 @@ composable relations between objects known as morphisms. The so-called categoric
 information compared to traditional mathematics. It can be seen as a generalization of set theory and abstract algebra.
 
 This guide presupposes some basic knowledge of set theory (sets, functions, Cartesian products, injections, 
-surjections, bijections), and some familiarity with graph theory helps to visualize the categories. Additionally,
-familiarity with functional programming will make concepts more intuitive, however the guide can also serve as an
-introduction to the functional paradigm. While prerequisites are low, this guide is not easy. The writing is clear
-but dense, and it is recommended to pay attention to each sentence and re-read parts if necessary.
+surjections, bijections, partial functions), and some familiarity with graph theory helps to visualize the categories.
+Additionally, familiarity with functional programming will make concepts more intuitive, however the guide can also
+serve as an introduction to the functional paradigm. While prerequisites are low, this guide is not easy. The writing
+is clear but dense, and it is recommended to pay attention to each sentence and re-read parts if necessary.
 
 The motivation for this guide lies in bridging the gap between computation and mathematics. Category theory, in many
 ways, acts as a sort of programming language of math itself. Many resources online use a more mathematical style
