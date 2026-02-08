@@ -58,7 +58,7 @@ that we always have a morphism `Eval :: (A -> B, A) -> B`, so instead of `Eval (
 Two :: FinSet
 Two = 2
 
-String = FinSet -> Char
+InfiniteString = FinSet -> Char
 StringOfTwo = Two -> Char
 
 Hi :: StringOfTwo
