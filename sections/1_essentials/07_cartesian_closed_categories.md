@@ -59,11 +59,9 @@ Two :: FinSet
 Two = 2
 
 String = FinSet -> Char
+StringOfTwo = Two -> Char
 
-StringOf :: FinSet -> String
-StringOf n = n -> Char
-
-Hi :: StringOf Two
+Hi :: StringOfTwo
 Hi 0 = 'H'
 Hi 1 = 'i'
 
