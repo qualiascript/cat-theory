@@ -40,4 +40,4 @@ will accept large contributions, as to keep a consistent style throughout.
 ### Section II: Intuitionistic Computation 
 1. [Comma Categories](sections/2_intuitionistic/01_comma_categories.md) (+ Slice Category, Base Changes)
 2. [Kan Extensions](sections/2_intuitionistic/02_kan_extensions.md) (+ Universal Constructions)
-3. [Dependent Products](/sections/2_intuitionistic/03_dependent_products.md) (+ Dependent Sums) [wip]
+3. [Dependent Products](/sections/2_intuitionistic/03_dependent_products.md) (+ Dependent Sums)

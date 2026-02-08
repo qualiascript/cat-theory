@@ -72,8 +72,10 @@ they are easier to reason about if we assume that we have the product `d = a * c
 products. This makes a pullback into an instance of an equalizer.
 
 As such, a pullback is an object `Pb :: C` and two morphisms `x : Pb -> a`, `y : Pb -> c` with the property that
-`x . f = y . g` and `Pb` fulfills the universal property. In `Set`, `Pb :: X * Y` is the set of values so
-that `x :: X`, `y :: Y`, `f(x) = g(y)`. This is equivalent to an equation in two values.
+`x . f = y . g` and `Pb` fulfills the universal property. In particular, `x` and `y` are known as projection maps,
+as they project from `Pb`, which can be conceptualized as pairs of elements `i, j :: a, c`, the first or the second
+element and ignore the other. In `Set`, `Pb :: X * Y` is the set of values so that `x :: X`, `y :: Y`, `f(x) = g(y)`.
+This is equivalent to an equation in two values.
 
 Similarly, if coproducts exist, pushouts are instances of coequalizers. As such, a pushout is an object `Po :: C` and
 two morphisms `x : a -> Po`, `y : c -> Po` so that `f . x = g . y` and `Po` is the universal property. In `Set`, 

@@ -1,4 +1,4 @@
-# II. 3. Dependent Products [WIP]
+# II. 3. Dependent Products
 
 Consider a bundle `f: A -> B`, `f :: C ^ I`. Given a global element `X : 1 -> B`, one can perform a fiber product of
 `f` and `X` to obtain a fiber of the bundle. This fiber `fb : Pb(f, X) -> B` maps all elements to `X`. We have that
@@ -70,25 +70,26 @@ of `DS_g A` is to send each `a' :: a` to `a' . A . g`. In other words, for any `
 
 ## Dependent Products and Sums Intuition
 
-Consider `DP_g B` where `B : T -> X` is a bundle which indexes types that depend on a value to the value itself. This
-is known as a dependent type. Then consider `g : X -> Y` as another dependent type, whose fibers correspond to subtypes
-at a specific value. Then, `DP_g B : R -> Y` is a collection of maps for each inhabitant `x` of `g` at a specific value
-to an inhabitant of `B` whose underlying value corresponds to `x`.
+Consider the bundle `A : List FinSet -> FinSet`, which indexes each list of integers by its size, known as a dependent
+type. This naturally induces `B = A * A : (List FinSet) * (List FinSet) -> FinSet * FinSet`. Then consider the function
+`g : FinSet * FinSet -> FinSet`, `g a b = a + b`. Then, the dependent sum `DS_g B` is a mapping of pairs of lists of
+integers by their added sizes, of the form `H : (List FinSet) * (List FinSet) -> FinSet`. This demonstrates the
+properties of dependent sums, in using morphism composition to construct new indexed types.
 
-For a more concrete example, consider `g` to comprise a list of types, indexed by the integer length of the list. Then,
-let `B` comprise a tuple of values of different types, that is a heterogeneous tuple, indexed by a list of types. Then,
-`DP_g B` is the collection of maps from each list of types with a specific length to a heterogeneous tuple fulfilling
-the list of types. In other words, the dependent product is a function type whose domain and codomain are dependent
-types, and whose inhabitants are specific functions on the dependent types.
+Going back to `A : List FinSet -> FinSet`, consider the effect of the base change functor induced by
+`g : FinSet * FinSet -> FinSet` at `A`. It is given by `A' : Pb(A, g) -> FinSet * FinSet` so that for pairs
+`a', (x, y) :: List FinSet * (FinSet * FinSet)`, we have `a' . A = x . g`. In other words, the length of `a'` equals
+`x + y`. Thus, `A'` is the dependent type of lists indexed on two integers whose sum is the size of the list. This
+demonstrates the practical use of the base change functor, as substitution of a dependent type's indexing.
 
-By contrast, the dependent sum `DS_g B` is simply composing `B` with `g`. In this case, for each heterogeneous tuple
-indexed by their list of types, it maps the underlying list to its length. Notice the contrast: to inhabit `DP_g B`,
-one must provide a function that maps any list of types to a fitting heterogeneous tuple. Meanwhile, `DS_g B` is
-uniquely determined by the values of `B` and `g`. Dependent products are uninhabited if there is no universal mapping
-from a dependent type to another, meanwhile dependent sums are uninhabited if the type composition is uninhabited.
+Let us denote this as `Vec (a + b)` for simplicity. By similar logic, if `C / FinSet * FinSet` is a CCC, we can obtain
+the bundle `B = [(Vec a) * (Vec b), Vec (a + b)]`. Then, for `g : FinSet * FinSet -> 1`, consider `DP_g B`. Given that
+there is only one fiber of `g`, it is a mapping of each element of `z :: FinSet * FinSet` to an element of `B` at the
+corresponding `z` fiber. In other words, it is the family of morphisms `m : (Vec a) * (Vec b) -> Vec (a + b)` so that
+the addition property is respected in each list.
 
-In fact, within the Curry-Howard-Lambek correspondence, `B` and `g` are propositions that depend on values. The fiber
-at some value could be uninhabited, which corresponds to false, or be inhabited by multiple ways in which the
-proposition at some value can be constructed to be true. Then, `DP_g B` is a mapping for each `x` so that `g(x)` is
-true to a true value `B(x)`. If `DP_g B` is inhabited, it is true, and there is such a mapping. In other words, the
-dependent product is a universal quantifier, and similarly, the dependent sum is an existential quantifier.
+In fact, for `g' : FinSet * FinSet -> FinSet`, `g' a b = a * b`, consider `DP_g' B`. The fibers of `g'` consist of
+values `n :: FinSet` so that `a * b = n`, and for each such fiber, the same family of morphisms is constructed. As
+such, it is a family of morphisms `m : (Vec a) * (Vec b) -> Vec (a + b)` for each `n :: FinSet` so that `a + b = n`.
+This demonstrates the properties of dependent products, in terms of generalizing the concept of internal homsets for
+situations where morphisms must fulfill additional requirements related to their indexing.

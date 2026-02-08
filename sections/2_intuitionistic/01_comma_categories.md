@@ -87,7 +87,7 @@ known as a global element, by doing a pullback with the bundle. This is known as
 Let `C :: Cat` be a complete category and `a :: C ^ I`, `a : x -> y`. Considering the category `C / y`, one of its
 elements is `a`. We would like to create a functor `F : C / y -> C / x`, known as the base change functor. Given
 a bundle `p: k -> y` of `C / y`, we would like to map it to a bundle of `C / x`, `p': k' -> x`. We also know the
-morphism `a : x -> y`, which forms a cospan with `p : k -> y`. Then, the pullback `Pb(a, p)` induces two morphisms
+morphism `a : x -> y`, which forms a cospan with `p : k -> y`. Then, the pullback `Pb(a, p)` induces two projections
 `p': Pb(a, p) -> x`, `q: Pb(a, b) -> k` so that `p' . a = q . p`. Then, let `F` map `p` to `p'`.
 
 Intuitively, we have a bundle `p : k -> y`, and we would like to change the base of the slice category to be `x`.
