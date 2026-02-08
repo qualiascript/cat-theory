@@ -1,4 +1,4 @@
-# II. 3. Dependent Products
+# II. 3. Dependent Products [WIP]
 
 Consider a bundle `f: A -> B`, `f :: C ^ I`. Given a global element `X : 1 -> B`, one can perform a fiber product of
 `f` and `X` to obtain a fiber of the bundle. This fiber `fb : Pb(f, X) -> B` maps all elements to `X`. We have that
