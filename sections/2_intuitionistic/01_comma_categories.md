@@ -80,18 +80,4 @@ Recall that the morphisms inbound into an object can be thought of as their gene
 the slice category consists of. Really, each morphism could correspond to multiple elements, unless the origin is the
 terminal object, and as such it is referred to as a bundle. A bundle could map multiple elements of an object to the
 same element in the destination. One can obtain the elements mapped to a point, as a morphism from the terminal object,
-known as a global element, by doing a pullback with the bundle. This is known as the fiber over the point.
-
-## Sections
-
-Given a bundle `B : C -> D`, consider what it means for another bundle `A : D -> C` to be its right inverse, that is,
-`A . B = id D`. `A` must map each `d :: D` to some value `c :: C`, and we know that `c` is mapped to `d` when `c` is
-part of `B`'s fiber at `D`. Then, `d . A . B = d` suggests that the effect of `A` at `d` ought to be to map it to a
-value so that it gets mapped back to `d`. Then, `A` must map each `d` to an element of the fiber of `B` at `d`. `A` is
-known as a section of a bundle.
-
-One may have morphism that reverses the effect of a bundle only at specific values, and it is undefined outside of that
-range. By computing the pullback of two bundles `B : C -> D`, `F : E -> D`, one obtains a morphism `p : Pb(B, F) -> C`.
-This operation obtains a fiber of the bundle for each of the fibers of `F`, and as such pullbacks are also known as
-fiber products. By composing `H = p . B`, one obtains a new bundle whose action is only defined for some `c :: C`.
-This restricted bundle can also have sections, in which case, they are referred to as local sections.
+known as a global element, by doing a pullback with the bundle. This is known as the fiber over that point.

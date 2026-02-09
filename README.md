@@ -38,6 +38,6 @@ will accept large contributions, as to keep a consistent style throughout.
 12. [Fixed Points](sections/1_essentials/12_fixed_points.md) (+ Fixed Point Combinator, Diagonal Arguments)
 
 ### Section II: Intuitionistic Computation 
-1. [Comma Categories](sections/2_intuitionistic/01_comma_categories.md) (+ Slice Category, Base Changes)
+1. [Comma Categories](sections/2_intuitionistic/01_comma_categories.md) (+ Slice Category)
 2. [Kan Extensions](sections/2_intuitionistic/02_kan_extensions.md) (+ Universal Constructions)
-3. [Dependent Products](/sections/2_intuitionistic/03_dependent_products.md) (+ Dependent Sums)
+3. [Base Changes](/sections/2_intuitionistic/03_base_changes.md) (+ Dependent Products, Dependent Sums)
