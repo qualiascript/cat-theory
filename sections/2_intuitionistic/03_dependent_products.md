@@ -1,5 +1,19 @@
 # II. 3. Dependent Products
 
+Let `C :: Cat` be a complete category and `a :: C ^ I`, `a : x -> y`. Considering the category `C / y`, one of its
+elements is `a`. We would like to create a functor `F : C / y -> C / x`, known as the base change functor. Given
+a bundle `p: k -> y` of `C / y`, we would like to map it to a bundle of `C / x`, `p': k' -> x`. We also know the
+morphism `a : x -> y`, which forms a cospan with `p : k -> y`. Then, the pullback `Pb(a, p)` induces two projections
+`p': Pb(a, p) -> x`, `q: Pb(a, b) -> k` so that `p' . a = q . p`. Then, let `F` map `p` to `p'`.
+
+Intuitively, we have a bundle `p : k -> y`, and we would like to change the base of the slice category to be `x`.
+Given that we are only given a morphism `a : x -> y`, we seek to find the universal construction that corresponds
+to the bundle `p` viewed from the perspective of `a`. This is similar to a fiber of `p`, but for all elements
+encompassed in the bundle `a`. As such, pullbacks are also referred to as fiber products. One can check that
+`Bc : C / y -> C / x` also maps morphisms respecting functor laws, and as such, it is the base change functor.
+
+## Sections
+
 Consider a bundle `f: A -> B`, `f :: C ^ I`. Given a global element `X : 1 -> B`, one can perform a fiber product of
 `f` and `X` to obtain a fiber of the bundle. This fiber `fb : Pb(f, X) -> B` maps all elements to `X`. We have that
 for any `S : B -> Pb(f, X)`, if `H = X . S : 1 -> (Pb(f, x) ^ B)`, so `H : B -> Pb(f, X)`, `H . fb = id B`. That is,

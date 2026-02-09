@@ -74,7 +74,7 @@ A specific type of comma category is given by a functor `F :: [1, C]`, which sel
 functor `id C :: [C, C]`. Then, the comma category `id C \/ c` is also known as the slice category `C / c`. It is
 the category of morphisms whose destination is `c`. A morphism in the slice category between two objects
 `a : x -> c`, `b : y -> c` is given by a morphism `i : x -> y` so that `i . b = a`. There is a dual coslice category
-`c / C`, which is the category of morphisms whose origin is `c`. Additionally, `C / 1 = 1 / C = C`.
+`c / C`, which is the category of morphisms whose origin is `c`. Additionally, `C / 1 = 0 / C = C`.
 
 Recall that the morphisms inbound into an object can be thought of as their generalized elements. This is exactly what
 the slice category consists of. Really, each morphism could correspond to multiple elements, unless the origin is the
@@ -82,16 +82,16 @@ terminal object, and as such it is referred to as a bundle. A bundle could map m
 same element in the destination. One can obtain the elements mapped to a point, as a morphism from the terminal object,
 known as a global element, by doing a pullback with the bundle. This is known as the fiber over the point.
 
-## Base Changes
+## Sections
 
-Let `C :: Cat` be a complete category and `a :: C ^ I`, `a : x -> y`. Considering the category `C / y`, one of its
-elements is `a`. We would like to create a functor `F : C / y -> C / x`, known as the base change functor. Given
-a bundle `p: k -> y` of `C / y`, we would like to map it to a bundle of `C / x`, `p': k' -> x`. We also know the
-morphism `a : x -> y`, which forms a cospan with `p : k -> y`. Then, the pullback `Pb(a, p)` induces two projections
-`p': Pb(a, p) -> x`, `q: Pb(a, b) -> k` so that `p' . a = q . p`. Then, let `F` map `p` to `p'`.
+Given a bundle `B : C -> D`, consider what it means for another bundle `A : D -> C` to be its right inverse, that is,
+`A . B = id D`. `A` must map each `d :: D` to some value `c :: C`, and we know that `c` is mapped to `d` when `c` is
+part of `B`'s fiber at `D`. Then, `d . A . B = d` suggests that the effect of `A` at `d` ought to be to map it to a
+value so that it gets mapped back to `d`. Then, `A` must map each `d` to an element of the fiber of `B` at `d`. `A` is
+known as a section of a bundle.
 
-Intuitively, we have a bundle `p : k -> y`, and we would like to change the base of the slice category to be `x`.
-Given that we are only given a morphism `a : x -> y`, we seek to find the universal construction that corresponds
-to the bundle `p` viewed from the perspective of `a`. This is similar to a fiber of `p`, but for all elements
-encompassed in the bundle `a`. As such, pullbacks are also referred to as fiber products. One can check that
-`Bc : C / y -> C / x` also maps morphisms respecting functor laws, and as such, it is the base change functor.
+One may have morphism that reverses the effect of a bundle only at specific values, and it is undefined outside of that
+range. By computing the pullback of two bundles `B : C -> D`, `F : E -> D`, one obtains a morphism `p : Pb(B, F) -> C`.
+This operation obtains a fiber of the bundle for each of the fibers of `F`, and as such pullbacks are also known as
+fiber products. By composing `H = p . B`, one obtains a new bundle whose action is only defined for some `c :: C`.
+This restricted bundle can also have sections, in which case, they are referred to as local sections.
