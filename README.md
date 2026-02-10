@@ -41,3 +41,4 @@ will accept large contributions, as to keep a consistent style throughout.
 1. [Comma Categories](sections/2_intuitionistic/01_comma_categories.md) (+ Slice Category)
 2. [Kan Extensions](sections/2_intuitionistic/02_kan_extensions.md) (+ Universal Constructions)
 3. [Base Changes](/sections/2_intuitionistic/03_base_changes.md) (+ Dependent Products, Dependent Sums)
+4. [Locally Cartesian Closed Categories](/sections/2_intuitionistic/04_locally_ccc.md)
