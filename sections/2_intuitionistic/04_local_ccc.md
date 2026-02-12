@@ -76,7 +76,7 @@ if the dependent product is inhabited at `F(x)`, every `y` is mapped to an inhab
 the dependent product is inhabited by methods by which `P` is true for all inhabitants of `F` at `x`. If there is
 at least one inhabitant, there is such a mapping, and as such, it is true that for any `x` so that `F(x)`, `P(x)`.
 
-However, Heyting categories are not by themselves sufficient to be a full model of Intuitionistic Logic. We are lacking
+However, Heyting categories are not by themselves sufficient to represent all of Intuitionistic Logic. We are lacking
 a suitable construction for representing subobjects. A subobject is the categorification of a subset, and it can be
 represented as a monomorphism. We seek a subobject classifier, a method of describing subobjects in the internal
 language of a category. If a Heyting category has a subobject classifier, it is an instance of a Topos. Topos, plural
