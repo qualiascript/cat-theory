@@ -58,7 +58,7 @@ property logically holds in mathematical deduction.
 
 Then, Heyting Categories have the property that any slice of the category, taken as a poset, is a Heyting algebra. 
 Thus, Heyting algebras represent a model of intuitionistic logic. The initial object is `FALSE`, which implies anything,
-but in fact every false statement implies everything, including false, and no true statement implies false. Then, we can
+but in fact every false statement implies everything, including `FALSE`, and no true statement implies `FALSE`. Then, we can
 define the negation operation as simply `NOT X = X IMPLIES FALSE`. However, we do not have that `NOT NOT X = X` by
 necessity. This is known as the law of excluded middle, and a Heyting algebra that respects it is a Boolean algebra.
 
