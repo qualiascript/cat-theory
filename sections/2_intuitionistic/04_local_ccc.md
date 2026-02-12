@@ -30,7 +30,7 @@ By the Curry-Howard correspondence, if `C` is a CCC, we have that `A * B` is an 
 `[A, B]`) is an `IMPLIES` operation, and the terminal object is `TRUE`. Furthermore, if it is an LCCC, the base change
 functor is a substitution, dependent products are universal quantifiers, and dependent sums are existential
 quantifiers. We also have that `C` has all finite limits. What is currently missing are coproducts, corresponding to
-`OR`, or more generally, colimits. In this case, an LCCC is an instance of a Heyting category.
+`OR`, or more generally, colimits. An LCCC that is finitely cocomplete is denoted as a Heyting category.
 
 In a Heyting category, we have that pullbacks preserve colimits. That is because pullbacks are given by Base Change
 functors, which are left adjoint to dependent products. It is oftentimes the case that left adjoints preserve colimits
@@ -58,8 +58,8 @@ property logically holds in mathematical deduction.
 
 Then, Heyting Categories have the property that any slice of the category, taken as a poset, is a Heyting algebra. 
 Thus, Heyting algebras represent a model of intuitionistic logic. The initial object is `FALSE`, which implies anything,
-but in fact every false statement implies everything, including `FALSE`, and no true statement implies `FALSE`. Then, we can
-define the negation operation as simply `NOT X = X -> FALSE`. However, we do not have that `NOT NOT X -> X` by
+but in fact every false statement implies everything, including `FALSE`, and no true statement implies `FALSE`. Then,
+we can define the negation operation as simply `NOT X = X -> FALSE`. However, we do not have that `NOT NOT X -> X` by
 necessity. This is known as the law of excluded middle, and a Heyting algebra that respects it is a Boolean algebra.
 
 ## Heyting Categories as Dependent Types
@@ -79,5 +79,5 @@ at least one inhabitant, there is such a mapping, and as such, it is true that f
 However, Heyting categories are not by themselves sufficient to represent all of Intuitionistic Logic. We are lacking
 a suitable construction for representing subobjects. A subobject is the categorification of a subset, and it can be
 represented as a monomorphism. We seek a subobject classifier, a method of describing subobjects in the internal
-language of a category. If a Heyting category has a subobject classifier, it is an instance of a Topos. Topos, plural
+language of a category. If a Heyting category has a subobject classifier, it is known as a Topos. Topos, plural
 Topoi, are a place to do mathematics in. They are what this entire guide has been building towards.
