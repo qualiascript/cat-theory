@@ -79,5 +79,5 @@ at least one inhabitant, there is such a mapping, and as such, it is true that f
 However, Heyting categories are not by themselves sufficient to be a full model of Intuitionistic Logic. We are lacking
 a suitable construction for representing subobjects. A subobject is the categorification of a subset, and it can be
 represented as a monomorphism. We seek a subobject classifier, a method of describing subobjects in the internal
-language of a category. If a Heyting algebra has a subobject classifier, it is an instance of a Topos. Topos, plural
+language of a category. If a Heyting category has a subobject classifier, it is an instance of a Topos. Topos, plural
 Topoi, are a place to do mathematics in. They are what this entire guide has been building towards.
