@@ -73,7 +73,7 @@ excluding the axiom of choice, can be derived in this manner, and the axiom of c
 a so-called choice object. In these terms, all mainstream mathematics can be seen as living within the logic of a topos.
 
 An example of a topos, in fact, the archetypal example, is `Set`. This guide relies on set theory for its foundations,
-but this can be retroactively seen as merely using the internal language of `Set` as a topos. In fact, as all topoi
+but this can be retroactively seen as merely using the internal language of `Set` as a topos[^1]. In fact, as all topoi
 hold the same structure, sans for excluded middle and the axiom of choice, a statement about sets which does not rely
 on these axioms holds in any topos, by simply replacing the word choices. By constructing a topos that is not `Set`,
 one obtains a lot of mathematical theorems for free. Simply find a finitely complete CCC with a subobject classifier.
@@ -83,3 +83,5 @@ category theory. In fact, there is one more level: as the name "Topos" suggests,
 subobject classifier is not limited to binary true or false values, and this provides the necessary structure for such
 topological models. As such, a generalization of topoi known as (infinity,1)-topos provides the inner language of
 Homotopy Type Theory, which unifies all four concepts under one framework.
+
+[^1]: Equipped for all sets with a Grothendieck universe that contains it.

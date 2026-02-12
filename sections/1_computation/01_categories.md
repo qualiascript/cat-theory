@@ -89,4 +89,4 @@ Let us also define the category `I`. It is a category with exactly two objects, 
 morphism `f : A -> B`. This category is called the walking morphism, and `C ^ I` is a category representing all
 morphisms of `C`, for reasons that will be explained in due time.
 
-[^1]: Technically, it is only a set for so-called small categories, otherwise it is a class. However, due to Grothendieck universes, one can usually assume it to be a set
+[^1]: We are assuming the existence of Grothendieck universes containing any set in order to avoid size issues.
