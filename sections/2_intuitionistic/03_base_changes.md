@@ -83,7 +83,7 @@ whose sum index its size. Dependent sums yield function types that are inhabited
 Consider the functor category `X = [(Vec UInt a) * (Vec UInt b), Vec UInt (a + b)]`. By itself, this does not impose a
 consistency condition, however, consider a bundle `B : X -> FinSet * Finset` so that `X` is an internal homset of the
 slice category. Then, given `g : FinSet * FinSet -> 1`, as `g` has one fiber, `DP_g B` is the family of sections of `B`.
-As `X` comprises morphisms, it is the family of morphisms `m : (Vec UInt a) * (Vec UInt b), Vec UInt (a + b)` that 
+As `X` comprises morphisms, it is the family of morphisms `m : (Vec UInt a) * (Vec UInt b) -> Vec UInt (a + b)` that 
 respect consistency. As such, dependent products generalize homsets within slice categories.
 
 In fact, for `g' : FinSet * FinSet -> FinSet`, `g' a b = a * b`, consider `DP_g' B`. The fibers of `g'` consist of
