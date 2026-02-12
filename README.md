@@ -37,9 +37,9 @@ will accept large contributions, as to keep a consistent style throughout.
 11. [Monoids and Comonoids](sections/1_computation/11_moniods_comonoids.md) (+ Monads, Comonads)
 12. [Fixed Points](sections/1_computation/12_fixed_points.md) (+ Fixed Point Combinator, Diagonal Arguments)
 
-### Section II: Mathematics 
-1. [Comma Categories](sections/2_topoi/01_comma_categories.md) (+ Slice Category)
-2. [Kan Extensions](sections/2_topoi/02_kan_extensions.md) (+ Universal Constructions)
-3. [Base Changes](/sections/2_topoi/03_base_changes.md) (+ Dependent Products, Dependent Sums)
-4. [Locally Cartesian Closed Categories](/sections/2_topoi/04_local_ccc.md) (+ Heyting Algebra)
+### Section II: Logic 
+1. [Comma Categories](sections/2_logic/01_comma_categories.md) (+ Slice Category)
+2. [Kan Extensions](sections/2_logic/02_kan_extensions.md) (+ Universal Constructions)
+3. [Base Changes](/sections/2_logic/03_base_changes.md) (+ Dependent Products, Dependent Sums)
+4. [Locally Cartesian Closed Categories](/sections/2_logic/04_local_ccc.md) (+ Heyting Algebra)
 5. Subobject Classifiers [COMING SOON]
