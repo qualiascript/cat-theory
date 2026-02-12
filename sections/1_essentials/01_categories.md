@@ -17,7 +17,7 @@ morphisms does not change the result. That is, given `f`, `g` morphisms of some 
 we have `(f . g) . h = f . (g . h)`.
 
 ## Category intuition
-There are no limitations to what the object and morphisms entail. A category is anything that can be modeled as a
+There are no limitations to what the objects and morphisms entail. A category is anything that can be modeled as a
 category, by the definition given above. Morphisms can be thought of as any sort of relation which is composable.
 Objects can be thought of as the origin and destination of morphisms. This is intentionally a very generic definition.
 It is useful to think of it as more akin to an interface that a structure must implement in order to be classified as a
