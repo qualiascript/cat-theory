@@ -87,4 +87,5 @@ two morphisms `x : a -> Po`, `y : c -> Po` so that `f . x = g . y` and `Po` is t
 A category is complete if it has all limits, and cocomplete if it has all colimits. If it has all limits and colimits,
 it is referred to as bicomplete. In fact, for a category to be complete, it is sufficient that it has all products and
 equalizers, or alternatively, all pullbacks and a terminal object. Similarly, a category is cocomplete if it has all
-coproducts and coequalizers, or alternatively, all pushouts and an initial object.
+coproducts and coequalizers, or alternatively, all pushouts and an initial object. A category is finitely complete
+or cocomplete if it has all finite limits or colimits.

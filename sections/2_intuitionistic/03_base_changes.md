@@ -94,6 +94,6 @@ product at each fiber is inhabited if there is at least one morphism for any giv
 
 In fact, by the Curry-Howard-Lambek correspondence, dependent types are additionally propositions that depend on values.
 The fiber at some value could be uninhabited, meaning the proposition is false at that value, or be inhabited by
-multiple proofs of the proposition at the value. Then, `DP_g B` is a mapping for each `x` so that `g(x)` is true to a
-true value `B(x)`. If `DP_g B` is inhabited at some `x`, it is true, and there is such a mapping. In other words, the
-dependent product is a universal quantifier, and similarly, the dependent sum is an existential quantifier.
+multiple proofs of the proposition at the value. As we will soon see, dependent products are a categorification of the
+universal quantifier, and dependent sums for existential quantifiers. As such, they are elementary building blocks
+in providing a categorical model whose inner logic corresponds to mathematical proofs.
