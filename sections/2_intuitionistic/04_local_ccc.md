@@ -53,13 +53,13 @@ known as a lattice. As the category is thin, this is in fact the same as all fin
 Then, a Heyting algebra is a lattice that is also an CCC. As any internal homset can be obtained as a result of the
 product-exponent adjunction in a CCC, the existence of the product-exponent adjunction is enough to demonstrate that
 a lattice is a Heyting algebra. The internal homfunctor of a Heyting algebra is known as implication, and as such,
-we derive that a Heyting algebra is a lattice where `(A AND B) IMPLIES C = A IMPLIES (B IMPLIES C)`. Trivially, this
+we derive that a Heyting algebra is a lattice where `(A AND B) -> C = A -> (B -> C)`. Trivially, this
 property logically holds in mathematical deduction.
 
 Then, Heyting Categories have the property that any slice of the category, taken as a poset, is a Heyting algebra. 
 Thus, Heyting algebras represent a model of intuitionistic logic. The initial object is `FALSE`, which implies anything,
 but in fact every false statement implies everything, including `FALSE`, and no true statement implies `FALSE`. Then, we can
-define the negation operation as simply `NOT X = X IMPLIES FALSE`. However, we do not have that `NOT NOT X = X` by
+define the negation operation as simply `NOT X = X -> FALSE`. However, we do not have that `NOT NOT X -> X` by
 necessity. This is known as the law of excluded middle, and a Heyting algebra that respects it is a Boolean algebra.
 
 ## Heyting Categories as Dependent Types
