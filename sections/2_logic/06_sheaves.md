@@ -58,6 +58,6 @@ Yoneda Lemma, `Sh c ~= hom(U(c)_i, Sh)`. Note that this is the case for all cove
 agree on all such covers. In other words, if `Sh` is a sheaf over site `(C, J)`, it maps any `c :: C` to a natural
 transformation that maps the elements of all covers of `J` to elements of `Sh` in a globally consistent manner.
 
-## Restriction and Gluing
+## Sheaves Intuition
 
 [TO BE CONTINUED]
