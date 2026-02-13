@@ -43,4 +43,4 @@ will accept large contributions, as to keep a consistent style throughout.
 3. [Base Changes](/sections/2_logic/03_base_changes.md) (+ Dependent Products, Dependent Sums)
 4. [Locally Cartesian Closed Categories](/sections/2_logic/04_local_ccc.md) (+ Heyting Algebra)
 5. [Subobject Classifiers](sections/2_logic/05_subobject_classifiers.md) (+ Topoi)
-6. Sheaves [COMING SOON]
+6. [Sheaves](sections/2_logic/06_sheaves.md)

@@ -6,7 +6,7 @@ for reasons that will become apparent shortly. An object in the category of `[op
 It is a covariant functor, meaning for `Pr :: [op C, Set]`, `f, g :: C ^ I` composable morphisms, we have
 `Pr(f . g) = Pr g . Pr f`.
 
-The presheaves induced by the Yoneda embedding are given by `Yo c = hom(c, -)`, but in the general case, a presheaf
+The presheaves induced by the Yoneda embedding are given by `Yo c = hom(-, c)`, but in the general case, a presheaf
 is simple a functorial mapping of each object of `C` (as they are the same as the objects of `op C`) to a set.
 This induces a category of presheaves `[op C, Set]`, which is a functor category whose morphisms are natural
 transformations. 
@@ -26,12 +26,12 @@ in order to obtain a representable presheaf, we must select an object `c :: C`. 
 transformations between `Yo c` and `Pr`.
 
 Natural transformations are morphisms between functors, and as such, we can use the external homfunctor to define the
-set of natural transformations as `Hom_{[op C, Set]}(Yo c, Pr) :: Set`. We know that `Yo c = Hom(c, -)`, so we get
-`Hom(Hom(c, -), Pr)`. We must check what the naturality condition does for a morphism `f :: C ^ I`, `f : x -> y`. If
+set of natural transformations as `Hom_{[op C, Set]}(Yo c, Pr) :: Set`. We know that `Yo c = hom(-, c)`, so we get
+`Hom(hom(-, c), Pr)`. We must check what the naturality condition does for a morphism `f :: C ^ I`, `f : x -> y`. If
 we label our natural transformation `alpha :: [op C, Set] ^ I`, we get:
 
 ```
-  Hom(c, x) -- Hom(c, f) -→ Hom(c, y)
+  Hom(x, c) -- Hom(f, c) -→ Hom(y, c)
   |                         |
   |                         |
 alpha_x                   alpha_y
@@ -40,12 +40,12 @@ alpha_x                   alpha_y
   Pr x ------- Pr f ------→ Pr y
 ```
 
-Thus, `alpha_x . Pr f = Hom(c, f) . alpha_y`. However, we also know one element of `Hom(c, x)` which must exist: the
+Thus, `alpha_x . Pr f = Hom(f, c) . alpha_y`. However, we also know one element of `Hom(x, c)` which must exist: the
 identity morphism of `c`, `id c`. The natural transformation then maps `id c` to some `u :: Pr c`. Meanwhile, for
-some morphism `g : Hom(c, c) -> Hom(c, y)`, it will send `id c` to `id c . g = g`. Then, by applying the naturality
+some morphism `g : Hom(c, c) -> Hom(y, c)`, it will send `id c` to `id c . g = g`. Then, by applying the naturality
 condition for the case of `id c`, we get `Pr g u = g . alpha_y`. 
 
-But we have `g : Hom(c, c) -> Hom(c, y)`, which is equivalent to `g : c -> y`. Thus, for any `g`, `y`, we have that
+But we have `g : Hom(c, c) -> Hom(y, c)`, which is equivalent to `g : c -> y`. Thus, for any `g`, `y`, we have that
 the component of the natural transformation `alpha_y` at `g` is `Pr g u`, meaning it is determined by the selection
 of `u :: Pr c`. Given some morphism `f : x -> y`, both the value of `alpha_x` and `alpha_y` is also determined by
 `u`, and so is the mapping of the morphism.
@@ -54,7 +54,7 @@ In other words, there is a natural bijection `hom(Yo c, Pr) ~= Pr c`. This is kn
 
 ## Yoneda Embedding
 
-In particular, if we select `Pr = Yo d`, we get `hom(Yo c, Yo d) ~= Yo d c`, but `Yo d = hom(d, -)`, so we have
+In particular, if we select `Pr = Yo d`, we get `hom(Yo c, Yo d) ~= Yo d c`, but `Yo d = hom(-, d)`, so we have
 `hom(Yo c, Yo d) ~= hom(d, c)`, for any `c, d :: C`. This demonstrates that `Yo` is a natural isomorphism for
 `op C`, or `Yo = op C`. Thus, `Yo` is referred to as a full and faithful functor. A full functor induces a surjective
 function between homsets for any `c, d :: C`, and a faithful functor induces an injective function. As we have a
