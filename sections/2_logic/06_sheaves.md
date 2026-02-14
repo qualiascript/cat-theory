@@ -56,8 +56,18 @@ Let us unpack this. `hom_{Psh(C)}(-, Sh) : op(Psh(C)) -> Set` is contravariant, 
 inverses the morphism. Let us denote `M` the result, `M : hom(Yo c, Sh) -> hom(U(c)_i, Sh)` an isomorphism. By the
 Yoneda Lemma, `Sh c ~= hom(U(c)_i, Sh)`. Note that this is the case for all coverings `U(c)_i`. Then, the sheaf must
 agree on all such covers. In other words, if `Sh` is a sheaf over site `(C, J)`, it maps any `c :: C` to a natural
-transformation that maps the elements of all covers of `J` to elements of `Sh` in a globally consistent manner.
+transformation that maps the elements of all covers of `J` to elements of `Sh` in a globally coherent manner.
 
 ## Sheaves Intuition
 
-[TO BE CONTINUED]
+Sheaves are oftentimes described in terms of locality and gluing conditions. These fall naturally from the categorical
+definition, but it's worth making explicit. Locality says that if two sieves are mapped by the sheaf in agreement at
+all elements, they are isomorphic. Gluing states that if a family of sieves are mapped by the sheaf in agreement at
+all intersections, the union sieve is also in agreement with all the sieves that constructed it. The latter is what
+makes sheaves represent continuity. It is immediately apparent that the categorical sheaf respects these conditions.
+
+Since sheaves are comprised of natural transformations, they are given component-wise. For each `f :: U(c)_i`, so
+that `f : b -> c`, `Sh c f` maps it to some `d :: Sh c`. This mapping is global to all sieves at `c`, but also coherent
+locally for each individual sieve. The sheaf can significantly alter the topology, to the extent that the image of
+an object through a sheaf can have properties that the underlying object does not. For an intuitive example, a Möbius
+strip is isomorphic to a circle from the perspective of its unique edge, but has non-trivial structure in its topology.
