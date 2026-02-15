@@ -55,15 +55,14 @@ In other words, there is a natural bijection `hom(Yo c, Pr) ~= Pr c`. This is kn
 ## Yoneda Embedding
 
 In particular, if we select `Pr = Yo d`, we get `hom(Yo c, Yo d) ~= Yo d c`, but `Yo d = hom(-, d)`, so we have
-`hom(Yo c, Yo d) ~= hom(d, c)`, for any `c, d :: C`. This demonstrates that `Yo` is a natural isomorphism for
-`op C`, or `Yo = op C`. Thus, `Yo` is referred to as a full and faithful functor. A full functor induces a surjective
-function between homsets for any `c, d :: C`, and a faithful functor induces an injective function. As we have a
-natural bijection, the Yoneda embedding induces both.
+`hom(Yo c, Yo d) ~= hom(c, d)` for any `c, d :: C`.  Thus, `Yo` is referred to as a full and faithful functor. A full
+functor induces a surjective function between homsets for any `c, d :: C`, and a faithful functor induces an injective
+function. As we have a natural bijection, the Yoneda embedding induces both.
 
-Let us consider a presheaf `Pr :: [op C, Set]` as an attempt to select the elements of every `c :: C`, in a suitable
+Let us consider a presheaf `Pr :: [op C, Set]` as an attempt to select the elements of every `d :: C`, in a suitable
 sense for whatever the category represents. The representable presheafs are the most canonical representation of the
-elements, insofar as any other presheaf is reducible to it. Then `hom(Yo c, Yo d) ~= hom(d, c)` represents the element
-set of `c` from the perspective of `d`. But this is just the set of morphisms inbound to `c`. Thus, we get to an odd
+elements, insofar as any other presheaf is reducible to it. Then `hom(Yo c, Yo d) ~= hom(c, d)` represents the element
+set of `d` from the perspective of `c`. But this is just the set of morphisms inbound to `d`. Thus, we get to an odd
 conclusion: the morphisms inbound to an object can be thought of as their generalized elements.
 
 ## Yoneda Lemma intuition
