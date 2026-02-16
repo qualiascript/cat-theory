@@ -72,7 +72,7 @@ locally for each individual sieve. The sheaf can significantly alter the topolog
 an object through a sheaf can have properties that the underlying object does not. For an intuitive example, a Möbius
 strip is isomorphic to a circle from the perspective of its unique edge, but has non-trivial structure in its topology.
 
-## Matching Families and Amalgamation
+## Matching Families and Amalgamations
 
 Given a sieve `Si : R -> Yo c` and a presheaf `Pr : op C -> Set` so that `c :: C`. At some `Si x`, it is a subobject
 of `hom(x, c)`. Then, a natural transformation component-wise `A_x : Si x -> Pr x` sends each such morphism to an
