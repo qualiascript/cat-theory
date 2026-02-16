@@ -38,4 +38,22 @@ Then, a natural transformation `M : Pr -> B`, given as `M_c : Pr c -> B c`, is i
 transformations between presheaves have exactly this property, as shown in the proof for the Yoneda Lemma. Thus,
 the natural isomorphism is correct, and for any `Pr :: [op C, Set]`, `Pr = Colim (G Pr)`.
 
-[TO BE CONTINUED]
+But recall that `G Pr` sends a presheaf to a diagram that selects Yoneda embeddings. Thus, every presheaf is a colimit
+of representable presheaves. This suggests that taking colimits over representable presheaves can act as a method
+for constructing new presheaves. In fact, colimits over sieves, which are subobjects of representable presheaves, could
+play a similar role. If the construction is able to send presheaves to corresponding sheaves, and also to preserve
+finite limits, then we have that the category of sheaves on a site is a topos.
+
+## Sheafification
+
+Given a sieve `Si : R -> Yo c` and a presheaf `Pr : op C -> Set` so that `c :: C`. At some `Si x`, it is a subobject
+of `hom(x, c)`. Then, a natural transformation component-wise `A_x : Si x -> Pr x` sends each such morphism to an
+element of `Pr x`. In fact, the naturality condition imposes that for some morphism `f : d -> c` of the sieve,
+for some other morphism `g : e -> d`, `A_d (g . f) = Pr g (A_c f)`. The natural transformation is known as a matching
+family, and it is a mapping of morphisms of a sieve to elements so that composability is respected.
+
+Let us denote `M_f` the element the matching family sent for morphism `f`. Note that a matching family is not
+necessarily a component of a sheaf. Given two morphisms `f, g : d -> c`, `M_f = Pr f c` could differ from
+`M_g = Pr g c`. Then, let us define an amalgamation as an element `c` so that for all `f : d -> c`, `M_f = Pr f c`.
+If for any matching family of `hom(Si, Pr)`, there is a unique amalgamation, then `Pr` is a sheaf. That is because
+each such matching family corresponds to a natural transformation that respects the gluing condition.
