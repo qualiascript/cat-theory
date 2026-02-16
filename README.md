@@ -44,3 +44,4 @@ will accept large contributions, as to keep a consistent style throughout.
 4. [Locally Cartesian Closed Categories](/sections/2_logic/04_local_ccc.md) (+ Heyting Algebra)
 5. [Subobject Classifiers](sections/2_logic/05_subobject_classifiers.md) (+ Topoi)
 6. [Sheaves](sections/2_logic/06_sheaves.md) (+ Grothendieck Topologies)
+7. [Category of Sheaves](sections/2_logic/07_category_of_sheaves.md) [WIP]
