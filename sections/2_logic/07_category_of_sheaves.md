@@ -1,4 +1,4 @@
-# II. 7. Category Of Sheaves [WIP]
+# II. 7. Category Of Sheaves
 
 We would like to show that, given a site, its category of sheaves is a topos. Firstly, let us show that a category
 of presheaves `Psh(C)` is a topos. We need a subobject classifier on presheaves. Consider the meaning of a monomorphism
@@ -39,11 +39,51 @@ transformations between presheaves have exactly this property, as shown in the p
 the natural isomorphism is correct, and for any `Pr :: [op C, Set]`, `Pr = Colim (G Pr)`.
 
 But recall that `G Pr` sends a presheaf to a diagram that selects Yoneda embeddings. Thus, every presheaf is a colimit
-of representable presheaves. This suggests that taking colimits over representable presheaves can act as a method
-for constructing new presheaves. In fact, colimits over sieves, which are subobjects of representable presheaves, could
-play a similar role. If the construction is able to send presheaves to corresponding sheaves, and also to preserve
-finite limits, then we have that the category of sheaves on a site is a topos.
+of representable presheaves. This implies that taking colimits over representable presheaves can act as a method
+for constructing new presheaves. Then, we should explore whether taking colimits can also construct sheaves. If the
+construction is able to send presheaves to corresponding sheaves, and also to preserve finite limits, then we have that
+the category of sheaves on a site is a topos.
 
 ## Sheafification
 
-[TO BE CONTINUED]
+For some site, consider `J c`, the covering sieves on `c`. They naturally form a poset by inclusion, and they also
+induce matching families, but the two are contravariant. Then let us define `Match_c` as a presheaf from the covering
+sieves on `c` as a poset to the set comprised of the sieve's matching families with some presheaf `Pr`. Intuitively,
+a colimit over `Match_c` would create equivalence classes over sets of matching families, which seems to be on the
+right track for constructing a sheaf. We denote this construction `Pr+`, so that `Pr+ c` is the colimit over `Match_c`.
+
+As it is a colimit, the elements of `Pr+ c` are equivalence classes of matching families. The equivalence classes are
+given by reverse inclusion, so that any two matching families that restrict to the same matching family are equivalent.
+This means that any amalgamation on each matching family is unique, as a different amalgamation would define another
+matching family, but the two have been made equivalent. One can also check that `Pr+` is indeed a presheaf. However,
+it is not necessarily a sheaf: we have not demonstrated that each matching family does have such an amalgamation.
+
+`Pr+` is denoted as a separated presheaf. In fact, `Pr++` is a sheaf. This can be shown as follows: consider what
+`Pr++` entails on the maximal sieve: it is a collection of matching families so that any amalgamation is unique. They
+are to be made equivalent, so that if any such matching family has an amalgamation, this yields a sheaf. In fact, such
+an amalgamation ought to exist, given by a representable presheaf which is trivially a sheaf. Then the maximal sieve
+has an amalgamation, and so do all covering sieves by base change. Thus, `Pr++` is a sheaf.
+
+Then, for `Pr` any presheaf, `Pr++` is denoted the sheafification of `Pr`. If `Pr` is already a sheaf, it leaves it
+unchanged, and as sheaves are by definition presheaves, this suggests that the specification on all objects in a
+category of presheaves, given some site, yields a category of sheaves. The plus construction also preserves limits;
+proving this is beyond the scope, but it stems from matching families having all cocones, which makes it a filtered
+colimit. Filtered colimits preserve limits, and as such, the category of sheaves is a topos.
+
+In fact, sheafification is left adjoint to the inclusion functor which maps each object in the category of sheaves
+to its canonical object in the category of presheaves. This can be shown as the unit of the adjunction can be simply
+given by identity, and the counit sends a presheaf to its canonical sheaf representation, viewed as a presheaf.
+
+## Sheaf Topos intuition
+
+By the Density Theorem, every sheaf is a colimit over representable presheaves, which themselves are sheaves. As the
+category of sheaves is a topos, all finite limits and colimits on sheaves are also sheaves. The subobject classifier
+is given by `J`, which maps elements to covering sieves, which is already a sheaf by the definition of Grothendieck
+topologies. The construction for exponential objects also remains the same, and always yields a sheaf. In general,
+this implies that one can do mathematics on sheaves, similar to if they were sets.
+
+In fact, a trivially valid site is given on the category `1` by covering sieves `0` and `1`. Plugging this in, a sheaf
+`Sh : 1 -> Set` is exactly a set, and the sheaf topos is reduced to a set topos. This illustrates that the sheaf topos
+is a formal model for sets whose values depend on objects in a well-behaved manner, which is exactly what a sheaf is.
+In a sheaf topos, truth is multivalued, but `TRUE` corresponds to the maximal sieve, or universal truth. However,
+excluded middle does not hold: a property that does not hold globally does not necessarily hold locally either.

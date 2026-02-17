@@ -82,6 +82,6 @@ family, and it is a mapping of morphisms of a sieve to elements so that composab
 
 Let us denote `M_f` the element the matching family sent for morphism `f`. Note that a matching family is not
 necessarily a component of a sheaf. Given two morphisms `f, g : d -> c`, `M_f = Pr f c` could differ from
-`M_g = Pr g c`. Then, let us define an amalgamation as an element `c` so that for all `f : d -> c`, `M_f = Pr f c`.
+`M_g = Pr g c`. Then, let us define an amalgamation as an `x :: c` so that for all `f : d -> c`, `M_f = Pr f x`.
 If for any matching family of `hom(Si, Pr)`, there is a unique amalgamation, then `Pr` is a sheaf. That is because
 each such matching family corresponds to a natural transformation that respects the gluing condition.
