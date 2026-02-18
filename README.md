@@ -45,4 +45,4 @@ will accept large contributions, as to keep a consistent style throughout.
 5. [Subobject Classifiers](sections/2_logic/05_subobject_classifiers.md) (+ Topoi)
 6. [Sheaves](sections/2_logic/06_sheaves.md) (+ Sieves, Grothendieck Topologies)
 7. [Category of Sheaves](sections/2_logic/07_category_of_sheaves.md) (+ Sheafification, Density Theorem)
-8. n-Categories [COMING SOON]
+8. [n-Categories](sections/2_logic/08_n_categories.md) (+ n-Groupoids)
