@@ -42,7 +42,7 @@ Then, we have that monoids are 1-categories with one object, and monoidal catego
 at the first level. Let us denote monoids as `(0,1)`-categories and monoidal categories as `(1,1)`-categories, and, in
 general, let a `(n, k)`-category be a `(n + k)`-category which has one object at the first `k` levels. Alternatively,
 this can be phrased as a `(k-1)`-connected `(n+k)`-category, where a `j`-connected category is one where all
-`l`-cells for `l < j` are equivalent (i.e. either isomorphic or equal depending on strictness).
+`l`-cells for `j >= l` are equivalent (i.e. either isomorphic or equal depending on strictness).
 
 Consider a `(0,2)`-category. It is given by a 2-category whose 1-cell is a monoid. In fact, it is a monoid in two
 different ways: by horizontal and vertical composition. The two monoids have the same identity, which we will denote
