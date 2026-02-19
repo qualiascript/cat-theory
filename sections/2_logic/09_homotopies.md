@@ -50,6 +50,22 @@ so that the homotopies we discussed are denoted left homotopies, with an opposit
 not induce merely infinity-categories, but in fact, infinity-groupoids, by taking the 0-cells to be points in a space,
 1-cells to be paths between points, and `n`-cells to be `(n-1)`-homotopies. This is known as the Homotopy hypothesis.
 
-## Fundamental groups
+## Fundamental groupoids
 
-[TO BE CONTINUED]
+Given a topological space, such as a locale, one can form its fundamental groupoid by letting the objects be points
+and the morphisms be paths between points. If two spaces have naturally isomorphic fundamental groupoids, they are
+equivalent up to homotopy. This is a trivial consequence of homotopies being 2-morphisms. By similar logic, if two
+spaces have isomorphic fundamental `n`-groupoids, they are equivalent up to `n`-homotopy. Thus, the fundamental
+infinity-groupoid of a space is sufficient to define the space up to any homotopy level.
+
+Given a space and a point of the space, one can define its fundamental group at the point, as a group is a one object
+groupoid. This is done by tracing its endomorphisms, which can traverse other objects before returning. If the
+fundamental groupoid is 0-connected, its fundamental group does not depend on the choice of point. Similarly, if the 
+fundamental groupoid is `n`-connected, its fundamental `(n+1)`-group is uniquely defined. The fundamental group of a
+circle is the set of integers equipped with addition, as one can perform laps in either direction any number of times.
+
+Then, homotopies provide the right semantics for infinity-groupoids, and infinite-groupoids model spaces up to any
+homotopy level. This suggests taking a geometric approach to constructing infinity-groupoids. The inspiration comes
+from infinity-dimensional Euclidean geometry: using regular polygons, one can construct elaborate n-dimensional shapes,
+which can then act as homotopy equivalents for any topological space. This requires careful formalization, but if it is
+possible, it provides the necessary semantics for a categorical construction of infinity-groupoids.
