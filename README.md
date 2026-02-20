@@ -47,4 +47,4 @@ will accept large contributions, as to keep a consistent style throughout.
 7. [Category of Sheaves](sections/2_logic/07_category_of_sheaves.md) (+ Sheafification, Density Theorem)
 8. [n-Categories](sections/2_logic/08_n_categories.md) (+ n-Groupoids)
 9. [Homotopies](sections/2_logic/09_homotopies.md) (+ Frames, Locales)
-10. [Simplicial Sets](sections/2_logic/10_simplicial_sets.md) [WIP]
+10. [Simplicial Sets](sections/2_logic/10_simplicial_sets.md) (+ Kan complexes)
