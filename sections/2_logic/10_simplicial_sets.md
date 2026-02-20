@@ -81,3 +81,8 @@ In fact, consider three morphisms, `f : 0 -> 1`, `g : 1 -> 2`, `h : 2 -> 3`. Thi
 just true up to isomorphism, but, in fact, an equality. In fact, each `1`-morphism composition yields a `2`-morphism
 as a composer, and each composer yield a `3`-morphism known as an associator in two different ways. Similarly, the
 composition of any `k`-morphisms is associative. Thus, a Kan complex is a model for a strict infinity-groupoid.
+
+In a Kan complex, an equivalence is given by any `k`-morphism. But as it is a strict model, such an equivalence within
+the internal language of the Kan complex, is, within the language of category theory, isomorphic to an equality of sets.
+In other words, equivalence is equivalent to equality, or `(a ~= b) ~= (a = b)`. This is known as the univalence axiom.
+It is the fundamental building block of the Univalent Foundations project, and forms the basis for Homotopy Type Theory.
