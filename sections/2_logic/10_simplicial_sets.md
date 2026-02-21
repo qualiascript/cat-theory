@@ -46,12 +46,12 @@ is a morphism `f : H n k -> Sim n` so that the canonical `g : Sim n -> H n k` is
 
 A Kan Complex is defined as a simplicial set where all horns have fillers. This can be conceptualized constructively:
 a Kan complex is a simplicial set equipped with a surjective function `f : FinSet -> Set`, mapping to a set of fillers
-for each simplex dimension. Clearly, Kan complexes exist for any simplicial set. Consider a `2`-horn. Let us order the
-faces lexicographically, by the origin and, at equality, destination. Then, we have `H 2 0` missing `0 -> 1`, `H 2 1`
-missing `0 -> 2` and `H 2 2` missing `1 -> 2`. Consider what it means for each to have a filling.
+for each simplex dimension. Clearly, Kan complexes exist for any simplicial set. Consider a `2`-horn. Let us order the 
+faces so that the `k`th face is the one that lacking `k` in its composition. Then, we have `H 2 0` missing `1 -> 2`,
+`H 2 1` missing `0 -> 2` and `H 2 2` missing `0 -> 1`. Consider what it means for each to have a filling.
 
 For `H 2 1`, we have `f : 0 -> 1`, `g : 1 -> 2` and can obtain `h : 0 -> 2`. This is akin to morphism composition,
-however, it is not yet clear that this operation is associative. Let us assume it is for now. Then consider `H 2 2`,
+however, it is not yet clear that this operation is associative. Let us assume it is for now. Then consider `H 2 0`,
 so that we have `f : 0 -> 1` and `h : 0 -> 2`. If `f` had an inverse `f' : 1 -> 0`, then we could define the composition
 `f' . h` to obtain `g`. Then, practically, this is the action of the horn filling, and as this is a generic argument,
 assuming associativity, a Kan complex limited to at most `2`-simplices would form exactly a groupoid.
