@@ -73,7 +73,7 @@ property that, for any `g : Globes (n-1) -> Globes n`, given by a pair `(So (n-1
 The first oriental (corresponding to `0`-simplices) sends a point to an origin and destination, which we can assume
 different (degeneracy is fine, it corresponds to identity morphisms). Up to isomorphism, it is `0 -> 1`. The second
 oriental sends two edges to a triangle in a coherent manner, which can be checked to be `0 -> 1` and `1 -> 2`. The
-third oriental has two options: either `0 -> 1 -> 2` or `1 -> 2 -> 3` can act as a source. This implies `2`-morphisms
+third oriental has two options: either `0 -> 1 -> 2` or `1 -> 2 -> 3` can act as an origin. This implies `2`-morphisms
 have two different compositions, which is correct. The fourth ordinal induces five compositions.
 
 In fact, consider three morphisms, `f : 0 -> 1`, `g : 1 -> 2`, `h : 2 -> 3`. This induces composite morphisms
