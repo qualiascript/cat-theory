@@ -64,8 +64,28 @@ fundamental groupoid is 0-connected, its fundamental group does not depend on th
 fundamental groupoid is `n`-connected, its fundamental `(n+1)`-group is uniquely defined. The fundamental group of a
 circle is the set of integers equipped with addition, as one can perform laps in either direction any number of times.
 
-Then, homotopies provide the right semantics for infinity-groupoids, and infinite-groupoids model spaces up to any
-homotopy level. This suggests taking a geometric approach to constructing infinity-groupoids. The inspiration comes
-from infinity-dimensional Euclidean geometry: using regular polygons, one can construct elaborate n-dimensional shapes,
-which can then act as homotopy equivalents for any topological space. This requires careful formalization, but if it is
-possible, it provides the necessary semantics for a categorical construction of infinity-groupoids.
+## Homotopies with Higher Categories
+
+In order to model topological spaces and their homotopies, one would require an infinity-category whose `1`-morphisms
+are not necessarily invertible, but whose `k`-morphisms for `k > 1` are. In other words, this is a category whose
+homsets are infinity-groupoids, which we can refer to as a category enriched on infinity-groupoids. Alternatively, if
+one considers the objects to be paths in a space, the correct model is simply an infinity-groupoid. Let us denote a
+`(n, k)`-category as an `n`-category whose `j`-cells for `j >= k` are invertible.
+
+In this case, an infinity-groupoid is a `(inf, 0)`-category, and we can denote the category that models topological
+spaces as an `(inf, 1)`-category. In both cases, the `0`-cells are simple objects, but `1`-cells are equivalence
+classes of objects. However, given two `k`-morphisms, by choosing a specific path for each, their composition is in fact
+an equality. By extension, their associativity is also an equality, and so is the inverse of a `k`-morphism that leads
+to a specific composition with another `k`-morphism. Our model ought to reflect this structure.
+
+In fact, we can use homotopy theory as inspiration to constructing such enriched categories. Geometrically, one can
+construct Euclidean `n`-dimensional shapes, treating its inside as a `n`-morphism and its faces as `n-1`-morphisms.
+Recall that a `k`-cell is a morphism between `k-1`-cells, but the two `k-1`-cells have the same origin and destination.
+Thus, a `k`-cell is given by `k` `1`-cells. It could seem then that a `k`-morphism has too many faces, but note that
+`k`-morphism composition is similar to a `k+1`-morphism, and for `k > 1`, there are multiple morphism compositions.
+
+This is not a proof that this construction works, merely the starting point that requires formalization. This
+construction must also take into account the laxness properties we defined, and respect the usual laws of categories,
+such as the existence of identity morphisms and associativity. However, once properly defined, the bridge between
+homotopy theory and category theory, extended to the Curry-Howard-Lambek correspondence, implies Homotopy Type Theory
+can be defined as the internal language of an `(inf, 1)`-topos. This is the direction we will follow.
