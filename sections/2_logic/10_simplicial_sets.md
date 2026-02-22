@@ -86,6 +86,6 @@ perform Homotopy Type Theory, we require that `inf`-groupoids themselves form a 
 
 Consider the category of Kan Complexes, `KanCplx`. A morphism in this category is an equivalence of Kan complexes up
 to homotopy, given by a difference in fillers. Taking the fillers as homotopies, this is a homotopy of homotopies for
-all `n`-simplicea of a Kan Complex. This corresponds exactly to fillers, so that `KanCplx` is enriched on itself. In
+all `n`-simplices of a Kan Complex. This corresponds exactly to fillers, so that `KanCplx` is enriched on itself. In
 this sense, there is for any Kan Complex a strict version whose fillers are unique. Thus, given any equivalence in a
 Kan complex, it is equivalent to an equality. This is the Univalence axiom: `(a ~= b) ~= (a = b)`.
