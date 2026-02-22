@@ -64,7 +64,7 @@ fundamental groupoid is 0-connected, its fundamental group does not depend on th
 fundamental groupoid is `n`-connected, its fundamental `(n+1)`-group is uniquely defined. The fundamental group of a
 circle is the set of integers equipped with addition, as one can perform laps in either direction any number of times.
 
-## Homotopies with Higher Categories
+## Homotopies as Higher Categories
 
 In order to model topological spaces and their homotopies, one would require an infinity-category whose `1`-morphisms
 are not necessarily invertible, but whose `k`-morphisms for `k > 1` are. In other words, this is a category whose
