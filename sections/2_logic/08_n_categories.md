@@ -15,7 +15,7 @@ as a natural transformation, but `X` is not `Cat`. In fact, a category with morp
 Then, a 2-category is defined by objects, morphisms and 2-morphisms (i.e. morphisms between morphisms), subject to the
 associativity and unit (identity) laws of regular categories. Note, however, that 2-morphisms can be composed in two
 different ways: two natural transformations `a, b : [C, D] ^ I` can simply be applied successively in the functor
-category, which is known as vertical composition. Alternatively, `x : [C, D] ^ I`, `y : [D, E] ^ I` can be horizontally
+category, which is denoted vertical composition. Alternatively, `x :: [C, D] ^ I`, `y :: [D, E] ^ I` can be horizontally
 composed to yield `z : [C, E] ^ I`, by composing them on each side of `F . G` for functors `F : C -> D`, `G : D -> E`.
 
 Let us denote `a * b` horizontal composition and `a . b` vertical composition for 2-morphisms. Then, we have the
