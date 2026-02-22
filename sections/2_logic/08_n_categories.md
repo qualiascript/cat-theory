@@ -33,27 +33,27 @@ precisely a monoidal category. This suggests a connection between higher categor
 ## Delooping
 
 2-categories have regular categories, which we will refer to as 1-categories, as their morphisms. Going further,
-3-categories have 2-categories as morphisms, and in general, n-categories have `(n-1)`-categories as morphisms. They
+3-categories have 2-categories as morphisms, and in general, n-categories have `n-1`-categories as morphisms. They
 also have equivalent laxer bicategories, tricategories etc. by imposing mere isomorphisms, not strict equality. We refer
 to higher categories imposing equality as strict. In fact, lax categories induce strict ones by equivalence classes. By
 extension, 0-categories are sets, as they are the collection type which morphisms of 1-categories inhabit. 
 
 Then, we have that monoids are 1-categories with one object, and monoidal categories are 2-categories with one object
-at the first level. Let us denote monoids as `(0,1)`-categories and monoidal categories as `(1,1)`-categories, and, in
-general, let a `(n, k)`-category be a `(n + k)`-category which has one object at the first `k` levels. Alternatively,
-this can be phrased as a `(k-1)`-connected `(n+k)`-category, where a `j`-connected category is one where all
+at the first level. Let us denote monoids as `{0,1}`-categories and monoidal categories as `{1,1}`-categories, and, in
+general, let a `{n, k}`-category be a `n + k`-category which has one object at the first `k` levels. Alternatively,
+this can be phrased as a `k - 1`-connected `n + k`-category, where a `j`-connected category is one where all
 `l`-cells for `j >= l` are equivalent (i.e. either isomorphic or equal depending on strictness).
 
-Consider a `(0,2)`-category. It is given by a 2-category whose 1-cell is a monoid. In fact, it is a monoid in two
+Consider a `{0, 2}`-category. It is given by a 2-category whose 1-cell is a monoid. In fact, it is a monoid in two
 different ways: by horizontal and vertical composition. The two monoids have the same identity, which we will denote
 `1`. By the exchange law, `a . b = (a * 1) . (1 * b) = (a . 1) * (1 . b) = a * b`, so in fact the two monoids are
 equivalent. Let us denote `a b = a . b = a * b`. Then, `a b = (1 a) (b 1) = (1 b) (a 1) = b a`. In other words, we
-have that a `(0, 2)`-category is a commutative monoid. This is known as the Eckmann-Hilton argument.
+have that a `{0, 2}`-category is a commutative monoid. This is known as the Eckmann-Hilton argument.
 
-The process of forming `(n, k)`-categories from `(k-1)`-connected `n+k`-categories is known as delooping. A related
-result is known as the stabilization hypothesis. It states that if `k >= n + 2`, a `(n, k)`-category is equivalent to
-a `(n, n + 2)`-category. Despite the name, this is in fact proven if delooping is well-behaved. A `(n, k)`-category is
-also referred to as a `k`-tuply monoidal `n`-category. Intuitively, a `(n, 1)`-category is monoidal, and going upwards
+The process of forming `{n, k}`-categories from `k - 1`-connected `n + k`-categories is known as delooping. A related
+result is known as the stabilization hypothesis. It states that if `k >= n + 2`, a `{n, k}`-category is equivalent to
+a `(n, n + 2)`-category. Despite the name, this is in fact proven if delooping is well-behaved. A `{n, k}`-category is
+also referred to as a `k`-tuply monoidal `n`-category. Intuitively, a `{n, 1}`-category is monoidal, and going upwards
 in `k`-tupledness induces higher levels of commutativity, which when `n > 0`, is not a binary property.
 
 ## n-Groupoids
@@ -62,20 +62,20 @@ A Groupoid is a category where all morphisms are isomorphisms, taken non-skeleta
 insofar as a group is a groupoid with one object. A morphism being an isomorphism means it is invertible, which is the
 property that defines groups. More broadly, an n-Groupoid is an n-Category where all `k`-cells for `k > 0` are
 invertible. 0-categories only have identity morphisms, which are their own inverse, so all 0-categoies are 0-groupoids.
-`n`-Categories have as their morphisms `(n-1)`-categories, so there are always `n`-categories of `(n-1)`-groupoids.
+`n`-Categories have as their morphisms `n-1`-categories, so there are always `n`-categories of `n-1`-groupoids.
 
-A 1-category of 0-groupoids is any 1-category. A somewhat odd question is what the 0-category of `(-1)`-groupoids
+A 1-category of 0-groupoids is any 1-category. A somewhat odd question is what the 0-category of `-1`-groupoids
 entails. In fact, sets form a poset by inclusion, given by the morphisms the subobject classifier maps to `1`. By
 extension, a morphism between sets is a truth value, either binary or multivalued in the case of sheaves. Thus, the
-`(-1)`-groupoid is the set of truth values. By extension, a `(-2)`-groupoid are morphisms on truth values, where `1`
-is terminal. Thus, a `(-2)`-groupoid is the value `1`, or alternatively `TRUE`. It is also known as the point.
+`-1`-groupoid is the set of truth values. By extension, a `-2`-groupoid are morphisms on truth values, where `1`
+is terminal. Thus, a `-2`-groupoid is the value `1`, or alternatively `TRUE`. It is also known as the point.
 
 ## Pointed n-Categories
 
-Going back to `(n, k)`-categories, a `(n, 0)`-category is an `n`-category which is `(-1)`-connected, so that all
-`(-1)`-cells are equivalent. We do not have a concept for a `(-1)`-cell, however, by extension, its morphisms ought to
+Going back to `{n, k}`-categories, a `{n, 0}`-category is an `n`-category which is `-1`-connected, so that all
+`-1`-cells are equivalent. We do not have a concept for a `-1`-cell, however, by extension, its morphisms ought to
 be 0-cells, and it must have at least one such morphism, the identity morphism. Then, by slight abuse of notation,
-we say that a `(-1)`-connected n-category is one that is inhabited. Thus, a `(n, 0)`-category is an inhabited
+we say that a `-1`-connected n-category is one that is inhabited. Thus, a `{n, 0}`-category is an inhabited
 n-category. Alternatively, it is a pointed n-category, as in, an n-category `C` with a morphism `p : 1 -> C`.
 
 ## Higher Categories
