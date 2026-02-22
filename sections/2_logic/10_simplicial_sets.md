@@ -1,4 +1,4 @@
-## II. 10. Simplicial Sets
+## II. 10. Simplicial Sets [WIP]
 
 A totally ordered sets is a poset so that all objects have a morphism between them. In ZFC, natural numbers are defined
 so that if `a < b`, then `a` is a subset of `b`. Then, for any value `n :: FinSet`, every totally ordered set is
