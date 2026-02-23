@@ -52,7 +52,7 @@ sets corresponding to quasicategories is an `(inf, 2)`-category. One example is 
 finite `n`. By extension, one can also define `(m, n)`-categories, where all `k`-morphisms for `k > m` are trivial.
 In particular, `(n, n)`-categories are simply `n`-categories, which we now have a concrete definition for.
 
-## `(inf, 0)`-topoi
+## `inf`-topoi
 
 `InfGrpd` is an `(inf, 1)`-category, so that its category of presheaves, `[op InfGrpd, InfGrpd]` is an `(inf, 1)`-topos.
 One particular covering family is given, for each `o :: InfGrpd`, by the maximal and empty sieves. This reduces the
