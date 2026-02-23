@@ -73,7 +73,7 @@ and whose equalities have structure. All `inf`-topoi share basic structure in th
 able to study specific `inf`-topoi and their particular features.
 
 Do note that, from the perspective of univalent foundations, Kan complexes and quasicategories model `inf`-groupoids
-and `(inf, 1)`-categories respectively. In fact, `(m, n)`-categories are the more fundamental object of studies, not
+and `(inf, 1)`-categories respectively. In fact, `(m, n)`-categories are the more fundamental object of study, not
 any particular model of them. Given a `(m, n)`-category, a simplicial set that models it is called a nerve of the
 category. It is a functor `N : C -> [op Simp, Set]` whose left adjoint `R : [op Simp, Set] -> C` is denoted its
 realization. By the generalized Yoneda lemma, this perspective does not miss anything about the category in question.
