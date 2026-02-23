@@ -49,6 +49,6 @@ will accept large contributions, as to keep a consistent style throughout.
 9. [Homotopies](sections/2_logic/09_homotopies.md) (+ Frames, Locales)
 10. [Simplicial Sets](sections/2_logic/10_simplicial_sets.md) (+ Kan complexes) 
 
-## Section III: Univalence
+### Section III: Univalence
 1. [Quasicategories](sections/3_univalence/01_quasicategories.md) (+ Infinity-Topoi)
 2. Kan Fibrations [COMING SOON]
