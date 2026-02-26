@@ -51,4 +51,4 @@ will accept large contributions, as to keep a consistent style throughout.
 
 ### Section III: Univalence
 1. [Quasicategories](sections/3_univalence/01_quasicategories.md) (+ Infinity-Topoi)
-2. Kan Fibrations [COMING SOON]
+2. [Kan Fibrations](sections/3_univalence/02_kan_fibrations.md) [WIP]
