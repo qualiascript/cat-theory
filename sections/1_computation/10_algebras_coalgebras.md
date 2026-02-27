@@ -53,7 +53,8 @@ continue the recursion. This is the same as selecting a number of elements of `X
 
 F-coalgebras are the dual concept to F-Algebras. Given a `F :: [C, C]`, an F-coalgebra comprises an object `c :: C`
 and a morphism `c -> F c`. A terminal coalgebra, if it exists, is the terminal object in the category of coalgebras.
-Similarly to F-Algebras, if it exists, the terminal coalgebra's value is given by `c = F c`.
+Similarly to F-Algebras, if it exists, the terminal coalgebra's value is given by `c = F c`. Types given by initial
+algebras are known as inductive types, and types given by terminal coalgebras are known as coinductive types.
 
 Coalgebras can be thought of as an encoding of potentially infinite sequential operations. For instance, for functor
 `F C = X + C * C`, there is no initial algebra `a : F C -> C`. In order to construct a `c :: C`, one would need
@@ -66,7 +67,7 @@ labeled some value `x :: X`. Thus, coalgebras have the unique property of being 
 Given some F-algebra `a : F c -> c`, there is a unique homomorphism from the initial algebra `i : F d -> d` to it,
 which is given by a morphism `f : d -> c`. This morphism is denoted as a catamorphism. As an initial algebra is a
 fixed point, it denotes some sort of recursive data structure, and the catamorphism maps each inhabitant of `d` to an
-inhabitant of `c`. In other words, a catamorphism is a folding operation.
+inhabitant of `c`. In other words, a catamorphism is a folding operation. 
 
 Dually, an anamorphism is the unique morphism from some F-coalgebra to the terminal coalgebra. It is an unfolding
 operation, as it maps into a recursive data structure. After mapping an algebra to a terminal coalgebra using an

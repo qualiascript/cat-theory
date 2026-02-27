@@ -49,4 +49,4 @@ will accept large contributions, as to keep a consistent style throughout.
 9. [Homotopies](sections/2_logic/09_homotopies.md) (+ Frames, Locales)
 10. [Simplicial Sets](sections/2_logic/10_simplicial_sets.md) (+ Kan complexes) 
 11. [Quasicategories](sections/2_logic/11_quasicategories.md) (+ Infinity-Topoi)
-12. [Kan Fibrations](sections/2_logic/12_kan_fibrations.md) [WIP]
+12. [Kan Fibrations](sections/2_logic/12_kan_fibrations.md) (+ Higher Inductive Types)
