@@ -67,7 +67,7 @@ Inductive infix = :: A -> A -> Type :=
 
 Breaking this down, `=` is a type parametrized by two values `x, y :: A`, and `idpath` is required to be given in order
 to construct `=`. It is an infix type, so that one writes `a = b`. Then, `idpath` takes any value `x :: A` and, using
-dependent products, constructs `Id x x`, which is an inhabitant of `Id`. The recursive definition functions due to it
+dependent products, constructs `x = x`, which is an inhabitant of `=`. The recursive definition functions due to it
 being an initial algebra, and as such being defined by having fixed points. `Type` is a type universe, which contains
 all types that do not depend on `Type` itself. Then, the interval and circle types are as follows:
 
