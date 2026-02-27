@@ -1,4 +1,4 @@
-# III. 2. Kan Fibrations
+# II. 12. Kan Fibrations
 
 The definition of a Kan Complex is that of a simplicial set where all horns have fillers. If `S` is a simplicial set,
 selecting a horn is akin to a function `f : H n k -> S`, and a filler is a function `g : H n k -> Simp n`. Then, in
