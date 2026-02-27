@@ -1,4 +1,4 @@
-# III. 1. Quasicategories
+# II. 11. Quasicategories
 
 We have found that Kan complexes serve as a model for the fundamental `inf`-groupoids of homotopies. However, in
 general, topological spaces can have continuous maps between them that are not invertible. When modeling such spaces,
