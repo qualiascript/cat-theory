@@ -77,7 +77,7 @@ Inductive Interval :: Type :=
     1 :: Interval
     path := 0 = 1
     
-inductive Circle :: Type :=
+Inductive Circle :: Type :=
     base :: Circle
     lap := base = base
 ```
